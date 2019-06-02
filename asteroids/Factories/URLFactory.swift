@@ -10,11 +10,11 @@ import Foundation
 internal class URLFactory {
     private static let API_KEY = "K2O45BgzWeaeHQUueqOSeVCa95d2nckyadRYC8IL"
 
-    public static func requestPictureOfTheDay(date: String, quality: Bool) -> URL? {
+    public static func requestPictureOfTheDay(date: Date, quality: Bool) -> URL? {
         var request = URLComponentsFactory.create(queryType: .pictureOfTheDay)
         request.queryItems = [
             URLQueryItem(name: "api_key", value: API_KEY),
-            URLQueryItem(name: "date", value: date),
+            URLQueryItem(name: "date", value: DateFactory.parseToString(date: date)),
             URLQueryItem(name: "hd", value: String(quality))
         ]
         return request.url
@@ -58,12 +58,12 @@ internal class URLFactory {
         return request.url
     }
     
-    public static func requestClosestAsteroids(startDate: String, endDate: String) -> URL? {
+    public static func requestClosestAsteroids(startDate: Date, endDate: Date) -> URL? {
         var request = URLComponentsFactory.create(queryType: .closestAsteroids)
         request.queryItems = [
             URLQueryItem(name: "api_key", value: API_KEY),
-            URLQueryItem(name: "startDate", value: startDate),
-            URLQueryItem(name: "endDate", value: endDate)
+            URLQueryItem(name: "startDate", value: DateFactory.parseToString(date: startDate)),
+            URLQueryItem(name: "endDate", value: DateFactory.parseToString(date: startDate))
         ]
         return request.url
     }

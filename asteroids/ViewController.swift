@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     private func startDownload() {
         // REQUEST FACTORY?
         // DATE VALIDATOR ?
-        guard let requestURL = URLFactory.requestPictureOfTheDay(date: StringDateFactory.create(year: 2018, month: 02, day: 02), quality: true) else {
+        guard let requestURL = URLFactory.requestPictureOfTheDay(date: DateFactory.create(year: 2018, month: 08, day: 16), quality: true) else {
             fatalError("UNABLE TO GET URL")
         }
         print(requestURL)
