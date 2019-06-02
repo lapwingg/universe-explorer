@@ -7,9 +7,9 @@
 
 import Foundation
 
-public enum BaseURLForQuery : String {
+internal enum BaseURLForQuery : String {
     case pictureOfTheDay = "https://api.nasa.gov/planetary/apod"
-    case singleAsteroidData = "https://api.nasa.gov/neo/rest/v1/neo/"
+    case singleAsteroidData = "https://api.nasa.gov/neo/rest/v1/neo"
     case marsRoverPhotos = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos"
     case asteroidsStats = "https://api.nasa.gov/neo/rest/v1/neo/browse"
     case asteroidsData = ""

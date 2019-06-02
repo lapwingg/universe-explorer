@@ -16,7 +16,8 @@ class ViewController: UIViewController {
 
     private func startDownload() {
         // REQUEST FACTORY?
-        guard let requestURL = URLFactory.requestPictureOfTheDay(date: Date(), quality: true) else {
+        // DATE VALIDATOR ?
+        guard let requestURL = URLFactory.requestPictureOfTheDay(date: StringDateFactory.create(year: 2018, month: 02, day: 02), quality: true) else {
             fatalError("UNABLE TO GET URL")
         }
         print(requestURL)
@@ -35,8 +36,18 @@ class ViewController: UIViewController {
                 fatalError("NO DATA")
             }
             // DECODER CLASS?
+            // DON'T KNOW IF IT'S JSON XDDD
+            // ADAPTER :D 
+//            do {
+//                if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+//                    // Print out dictionary
+//                    print(convertedJsonIntoDict)
+//                }
+//            } catch let error as NSError {
+//                print(error.localizedDescription)
+//            }
             let json = try? JSONDecoder().decode(PictureOfTheDay.self, from: data)
-            
+
             DispatchQueue.main.async {
                 self.resultField.text = "\(json?.date)\n\(json?.explanation)\n\(json?.hdurl)\n\(json?.media_type)\n\(json?.service_version)\n\(json?.title)\n\(json?.url)"
             }
