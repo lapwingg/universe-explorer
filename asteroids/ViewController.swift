@@ -10,24 +10,25 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var resultField: UITextView!
     private var downloader: DataDownloadService?
+    private var serializer: Serializer?
+    private var formatter: DataFormatter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         downloader = NASADownloadService()
+        serializer = JSONSerializer()
+        formatter = NasaDataFormatter()
     }
 
-    private func startDownload() {
-        var json = downloader?.startDownload()
-        
-        DispatchQueue.main.async {
-            print("ADADADAD")
-            self.resultField.text = "\(json?.date)\n\(json?.explanation)\n\(json?.hdurl)\n\(json?.media_type)\n\(json?.service_version)\n\(json?.title)\n\(json?.url)"
+    private func performDownloadAction() {
+        _ = downloader?.runDownload { [unowned self] data in
+            self.serializer?.decode(data: data) { [unowned self] pictureOfTheDay in
+                self.resultField.text = self.formatter?.getFormattedData(pictureOfTheDay: pictureOfTheDay)
+            }
         }
     }
     
-    // PRESENTER?
     @IBAction func downloadButton(_ sender: Any) {
-        startDownload()
+        performDownloadAction()
     }
 }
-

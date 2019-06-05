@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DataDownloadService {
-    func startDownload() -> PictureOfTheDay?
+    func runDownload(completion: @escaping (Data) -> Void)
 }
