@@ -18,7 +18,7 @@ public class ViewController: UIViewController {
 
     }
 
-    private func performDownloadAction() {
+    private func performPOTDDownloadAction() {
         downloader = NASADayDownloadService()
         serializer = JSONSerializer()
         formatter = NasaDataFormatter()
@@ -29,7 +29,7 @@ public class ViewController: UIViewController {
         }
     }
     
-    private func performDownload2Action() {
+    private func performMPADownloadAction() {
         downloader = MarsPhotosDownloadService()
         serializer = JSONSerializer()
         formatter = NasaDataFormatter()
@@ -40,27 +40,35 @@ public class ViewController: UIViewController {
         }
     }
     
-    private func performDownload3Action() {
-        
+    private func performCAEDownloadAction() {
+        downloader = AsteroidsDownloadService()
+        serializer = JSONSerializer()
+        formatter = NasaDataFormatter()
+        _ = downloader?.runDownload  { [unowned self] data in
+            self.serializer?.decode(ofType: ClosestAsteroidsRoot.self, data: data) { [unowned self] closestAsteroids in
+                self.resultField.text = "\(closestAsteroids.links.linksSelf.count)\n\(closestAsteroids.elementCount)\n\(closestAsteroids.nearEarthObjects.count)"
+            }
+        }
     }
     
-    private func performDownload4Action() {
-        
+    private func performFavouritePhotosAction() {
+        resultField.text = "Favourite photos to do ..."
     }
     
-    @IBAction func downloadButton(_ sender: Any) {
-        performDownloadAction()
+    @IBAction func showPictureOfTheDay(_ sender: Any) {
+        performPOTDDownloadAction()
     }
     
-    @IBAction func download2Button(_ sender: Any) {
-        performDownload2Action()
+    @IBAction func showMarsPhotosAlbum(_ sender: Any) {
+        performMPADownloadAction()
     }
     
-    @IBAction func download3Button(_ sender: Any) {
-        performDownload3Action()
+    @IBAction func showClosestAsteroids(_ sender: Any) {
+        performCAEDownloadAction()
     }
     
-    @IBAction func download4Button(_ sender: Any) {
-        performDownload4Action()
+    @IBAction func showFavouritePhotos(_ sender: Any) {
+        performFavouritePhotosAction()
     }
+    
 }

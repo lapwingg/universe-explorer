@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="asteroids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Data" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COl-C6-j7l">
@@ -25,38 +25,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-yf-BS8">
-                                <rect key="frame" x="16" y="600" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download"/>
-                                <connections>
-                                    <action selector="downloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NfG-iY-NI1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBS-gh-m79">
-                                <rect key="frame" x="93" y="600" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download2"/>
-                                <connections>
-                                    <action selector="download2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2f-ez-oro"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3i-nF-wq6">
-                                <rect key="frame" x="184" y="600" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download3"/>
-                                <connections>
-                                    <action selector="download3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40k-oL-6sH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="300-Wa-Zvx">
-                                <rect key="frame" x="281" y="600" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download4"/>
-                                <connections>
-                                    <action selector="download4Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sG-fh-7XD"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-oc-Ejh">
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="POTD" id="v7n-pK-zxU">
+                                        <connections>
+                                            <action selector="showPictureOfTheDay:" destination="BYZ-38-t0r" id="8R5-2S-a50"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="MarsPhotos" id="lXn-Na-tFM">
+                                        <connections>
+                                            <action selector="showMarsPhotosAlbum:" destination="BYZ-38-t0r" id="wEK-DX-aKp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Asteroids" id="BDX-N0-xfL">
+                                        <connections>
+                                            <action selector="showClosestAsteroids:" destination="BYZ-38-t0r" id="18w-zw-QTq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Favourite" id="3wF-Xo-BNd">
+                                        <connections>
+                                            <action selector="showFavouritePhotos:" destination="BYZ-38-t0r" id="7bS-eM-7AR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

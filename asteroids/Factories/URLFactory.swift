@@ -19,16 +19,7 @@ internal class URLFactory {
         ]
         return request.url
     }
-    
-    public static func requestSingleAsteroidData(asteroidID: Int) -> URL? {
-        var request = URLComponentsProvider.get(queryType: .asteroidsData)
-        request.queryItems = [
-            URLQueryItem(name: "api_key", value: API_KEY),
-            URLQueryItem(name: "asteroidID", value: String(asteroidID))
-        ]
-        return request.url
-    }
-    
+
     public static func requestMarsRoverPhotos(date: Date) -> URL? {
         var request = URLComponentsProvider.get(queryType: .marsRoverPhotos)
         request.queryItems = [
@@ -38,31 +29,37 @@ internal class URLFactory {
         return request.url
     }
     
-    public static func requestAsteroidsStats() -> URL? {
-        var request = URLComponentsProvider.get(queryType: .asteroidsStats)
-        request.queryItems = [
-            URLQueryItem(name: "api_key", value: API_KEY)
-        ]
-        return request.url
-    }
-    
-    public static func requestAsteroidsData(page: Int, size: Int) -> URL? {
-        var request = URLComponentsProvider.get(queryType: .asteroidsData)
-        request.queryItems = [
-            URLQueryItem(name: "api_key", value: API_KEY),
-            URLQueryItem(name: "page", value: String(page)),
-            URLQueryItem(name: "size", value: String(size))
-        ]
-        return request.url
-    }
-    
-    public static func requestClosestAsteroids(startDate: Date, endDate: Date) -> URL? {
+    public static func requestClosestAsteroids(date: Date) -> URL? {
         var request = URLComponentsProvider.get(queryType: .closestAsteroids)
         request.queryItems = [
             URLQueryItem(name: "api_key", value: API_KEY),
-            URLQueryItem(name: "startDate", value: DateParser.parseToString(date: startDate)),
-            URLQueryItem(name: "endDate", value: DateParser.parseToString(date: endDate))
+            URLQueryItem(name: "startDate", value: DateParser.parseToString(date: date))
         ]
         return request.url
-    }
+    }    
+//    public static func requestSingleAsteroidData(asteroidID: Int) -> URL? {
+//        var request = URLComponentsProvider.get(queryType: .asteroidsData)
+//        request.queryItems = [
+//            URLQueryItem(name: "api_key", value: API_KEY),
+//            URLQueryItem(name: "asteroidID", value: String(asteroidID))
+//        ]
+//        return request.url
+//    }
+//    public static func requestAsteroidsStats() -> URL? {
+//        var request = URLComponentsProvider.get(queryType: .asteroidsStats)
+//        request.queryItems = [
+//            URLQueryItem(name: "api_key", value: API_KEY)
+//        ]
+//        return request.url
+//    }
+//
+//    public static func requestAsteroidsData(page: Int, size: Int) -> URL? {
+//        var request = URLComponentsProvider.get(queryType: .asteroidsData)
+//        request.queryItems = [
+//            URLQueryItem(name: "api_key", value: API_KEY),
+//            URLQueryItem(name: "page", value: String(page)),
+//            URLQueryItem(name: "size", value: String(size))
+//        ]
+//        return request.url
+//    }
 }
