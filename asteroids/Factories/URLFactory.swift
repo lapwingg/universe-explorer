@@ -29,13 +29,11 @@ internal class URLFactory {
         return request.url
     }
     
-    public static func requestMarsRoverPhotos(page: Int, sol: Int, camera: String) -> URL? {
+    public static func requestMarsRoverPhotos(date: Date) -> URL? {
         var request = URLComponentsProvider.get(queryType: .marsRoverPhotos)
         request.queryItems = [
             URLQueryItem(name: "api_key", value: API_KEY),
-            URLQueryItem(name: "page", value: String(page)),
-            URLQueryItem(name: "sol", value: String(sol)),
-            URLQueryItem(name: "camera", value: camera)
+            URLQueryItem(name: "earth_date", value: DateParser.parseToString(date: date))
         ]
         return request.url
     }

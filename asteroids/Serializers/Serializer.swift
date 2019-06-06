@@ -8,5 +8,5 @@
 import Foundation
 
 protocol Serializer {
-    func decode(data: Data, completion: @escaping (PictureOfTheDay) -> Void)
+    func decode<Entity>(ofType: Entity.Type, data: Data, completion: @escaping (Entity) -> Void) where Entity : Codable
 }

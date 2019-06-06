@@ -8,15 +8,15 @@
 import Foundation
 
 internal class JSONSerializer : Serializer {
-    internal func decode(data: Data, completion: @escaping (PictureOfTheDay) -> Void) {
+    func decode<Entity>(ofType: Entity.Type, data: Data, completion: @escaping (Entity) -> Void) where Entity : Codable {
         DispatchQueue.global(qos: .utility).async {
-            let pictureOfTheDay = try? JSONDecoder().decode(PictureOfTheDay.self, from: data)
-            if pictureOfTheDay == nil {
+            let resultEntity = try? JSONDecoder().decode(ofType.self, from: data)
+            if resultEntity == nil {
                 fatalError("Cannot deserialize data from JSON")
             }
             
             DispatchQueue.main.async {
-                completion(pictureOfTheDay!)
+                completion(resultEntity!)
             }
         }
     }

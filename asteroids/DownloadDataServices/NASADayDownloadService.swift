@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal class NASADownloadService: DataDownloadService {
+internal class NASADayDownloadService: DataDownloadService {
     internal func runDownload(completion: @escaping (Data) -> Void) {
         let requestURL = getRequestURL()
  
@@ -22,7 +22,7 @@ internal class NASADownloadService: DataDownloadService {
                 }
                 
                 guard let data = data else {
-                    fatalError("NO DATA")
+                    fatalError("NO DATA PICTURE OF THE DAY")
                 }
 
                 DispatchQueue.main.async {
@@ -32,10 +32,10 @@ internal class NASADownloadService: DataDownloadService {
         }
     }
     
-    
     private func getRequestURL() -> URL {
-        guard let requestURL = URLFactory.requestPictureOfTheDay(date: DateFactory.create(year: 2019, month: 06, day: 04), quality: true) else {
-            fatalError("UNABLE TO GET URL")
+        let date = DateFactory.create(year: 2019, month: 06, day: 04)
+        guard let requestURL = URLFactory.requestPictureOfTheDay(date: date, quality: true) else {
+            fatalError("UNABLE TO GET URL PICTURE OF THE DAY")
         }
         return requestURL
     }

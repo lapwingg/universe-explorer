@@ -26,11 +26,35 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-yf-BS8">
-                                <rect key="frame" x="153" y="595" width="69" height="30"/>
+                                <rect key="frame" x="16" y="600" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Download"/>
                                 <connections>
                                     <action selector="downloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NfG-iY-NI1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBS-gh-m79">
+                                <rect key="frame" x="93" y="600" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download2"/>
+                                <connections>
+                                    <action selector="download2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2f-ez-oro"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3i-nF-wq6">
+                                <rect key="frame" x="184" y="600" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download3"/>
+                                <connections>
+                                    <action selector="download3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40k-oL-6sH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="300-Wa-Zvx">
+                                <rect key="frame" x="281" y="600" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download4"/>
+                                <connections>
+                                    <action selector="download4Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sG-fh-7XD"/>
                                 </connections>
                             </button>
                         </subviews>
