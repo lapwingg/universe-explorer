@@ -8,11 +8,13 @@
 import Foundation
 
 internal class DateParser {
+    // non-static init
     internal static func parseToString(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let dateInString = formatter.string(from: date)
-        if dateInString.isEmpty {
+        let validateResult = DateParserValidator().isValid(dateInString)
+        if validateResult == false {
             fatalError("Unable parse to string for date: \(date)")
         }
         return dateInString

@@ -8,10 +8,13 @@
 import Foundation
 
 internal class URLComponentsProvider {
-    internal static func get(queryType: BaseURLForQuery) -> URLComponents {
-        guard let urlCompoments = URLComponents(string: queryType.rawValue) else {
-            fatalError("Not created URLComponents for \(queryType)")
+    // non-static , init
+    internal static func get(queryType: QueryType) -> URLComponents {
+        let urlCompoments = URLComponents(string: queryType.associatedData.baseURL)
+        let validateResult = URLComponentsValidator().isValid(urlCompoments)
+        if validateResult == false {
+            fatalError("UNABLE TO GET COMPONENT")
         }
-        return urlCompoments
+        return urlCompoments!
     }
 }

@@ -19,10 +19,10 @@ public class ViewController: UIViewController {
     }
 
     private func performPOTDDownloadAction() {
-        downloader = NASADayDownloadService()
+        let downloader = NASADownloadService()
         serializer = JSONSerializer()
         formatter = NasaDataFormatter()
-        _ = downloader?.runDownload { [unowned self] data in
+        _ = downloader.runDownload(queryType: .pictureOfTheDay) { [unowned self] data in
             self.serializer?.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
                 self.resultField.text = self.formatter?.getFormattedData(pictureOfTheDay: pictureOfTheDay)
             }
@@ -30,10 +30,10 @@ public class ViewController: UIViewController {
     }
     
     private func performMPADownloadAction() {
-        downloader = MarsPhotosDownloadService()
+        let downloader = NASADownloadService()
         serializer = JSONSerializer()
         formatter = NasaDataFormatter()
-        _ = downloader?.runDownload { [unowned self] data in
+        _ = downloader.runDownload(queryType: .marsRoverPhotos) { [unowned self] data in
             self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
                 self.resultField.text = "\(marsPhotosRoot.photos.count)"
             }
@@ -41,10 +41,10 @@ public class ViewController: UIViewController {
     }
     
     private func performCAEDownloadAction() {
-        downloader = AsteroidsDownloadService()
+        let downloader = NASADownloadService()
         serializer = JSONSerializer()
         formatter = NasaDataFormatter()
-        _ = downloader?.runDownload  { [unowned self] data in
+        _ = downloader.runDownload(queryType: .closestAsteroids) { [unowned self] data in
             self.serializer?.decode(ofType: ClosestAsteroidsRoot.self, data: data) { [unowned self] closestAsteroids in
                 self.resultField.text = "\(closestAsteroids.links.linksSelf.count)\n\(closestAsteroids.elementCount)\n\(closestAsteroids.nearEarthObjects.count)"
             }
