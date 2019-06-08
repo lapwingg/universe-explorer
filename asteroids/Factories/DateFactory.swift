@@ -2,25 +2,11 @@
 //  DateFactory.swift
 //  asteroids
 //
-//  Created by Czajka, Kamil on 6/2/19.
+//  Created by Czajka, Kamil on 6/8/19.
 //
 
 import Foundation
 
-internal class DateFactory {
-    // non-static init
-    internal static func create(year: Int, month: Int, day: Int) -> Date {
-        let calendar = Calendar.init(identifier: .gregorian)
-        let timeZone = TimeZone(secondsFromGMT: 2)
-        let dateComponents = DateComponents(calendar: calendar, timeZone: timeZone, year: year, month: month, day: day)
-        let dateValidator = DateValidator()
-        if dateValidator.isValidDateInCalendar(dateComponents: dateComponents, calendar: calendar) == false {
-            fatalError("Invalid data \(year) - \(month) - \(day) in Gregorian calendar")
-        }
-        let date = dateComponents.date
-        if dateValidator.isValidDateObject(date) == false {
-            fatalError("Unable to create data for \(year) - \(month) - \(day)")
-        }
-        return date!
-    }
+protocol DateFactory {
+    func create(year: Int, month: Int, day: Int) -> Date
 }

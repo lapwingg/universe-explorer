@@ -8,16 +8,18 @@
 import Foundation
 
 internal class JSONSerializer : Serializer {
-    // Validator 
+    private var modelValidator: ModelValidator!
+    
+    init() {
+        modelValidator = ModelValidatorImpl()
+    }
+    
     func decode<Entity>(ofType: Entity.Type, data: Data, completion: @escaping (Entity) -> Void) where Entity : Codable {
         DispatchQueue.global(qos: .utility).async {
             let resultEntity = try? JSONDecoder().decode(ofType.self, from: data)
-            if resultEntity == nil {
-                fatalError("Cannot deserialize data from JSON")
-            }
-            
+            let validEntity = self.modelValidator.validate(resultEntity)
             DispatchQueue.main.async {
-                completion(resultEntity!)
+                completion(validEntity)
             }
         }
     }

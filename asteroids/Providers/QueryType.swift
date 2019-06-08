@@ -15,7 +15,7 @@ internal enum QueryType : String {
     case asteroidsData
     case closestAsteroids
     
-    var associatedData: (baseURL: String, parameterName: String) {
+    internal var associatedData: (baseURL: String, parameterName: String) {
         switch self {
         case .pictureOfTheDay:
             return ("https://api.nasa.gov/planetary/apod", "date")
