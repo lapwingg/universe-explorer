@@ -7,6 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050601D222A43EEA00EE760C /* DateFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601D122A43EEA00EE760C /* DateFactoryImpl.swift */; };
+		050601D522A662C200EE760C /* DateParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601D422A662C200EE760C /* DateParserImpl.swift */; };
+		050601D922A6636D00EE760C /* URLComponentsProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601D822A6636D00EE760C /* URLComponentsProviderImpl.swift */; };
+		050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601DD22A6649500EE760C /* DataDownloadService.swift */; };
+		050601E022A664E400EE760C /* NASADownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601DF22A664E400EE760C /* NASADownloadService.swift */; };
+		050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601E622A84A0900EE760C /* JSONSerializer.swift */; };
+		050601E922A84B3D00EE760C /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601E822A84B3D00EE760C /* Serializer.swift */; };
+		050601EB22A84F0800EE760C /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601EA22A84F0800EE760C /* DataFormatter.swift */; };
+		050601EE22A84F2E00EE760C /* NasaDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601ED22A84F2E00EE760C /* NasaDataFormatter.swift */; };
+		051819F622A92FFA009DD6BF /* MarsPhotosRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819F522A92FFA009DD6BF /* MarsPhotosRoot.swift */; };
+		051819F822A9303D009DD6BF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819F722A9303D009DD6BF /* Photo.swift */; };
+		051819FA22A93064009DD6BF /* PhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819F922A93064009DD6BF /* PhotoCamera.swift */; };
+		051819FC22A930A5009DD6BF /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819FB22A930A5009DD6BF /* Rover.swift */; };
+		051819FE22A930E0009DD6BF /* CameraElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819FD22A930E0009DD6BF /* CameraElement.swift */; };
+		05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0322A95205009DD6BF /* ClosestAsteroidsRoot.swift */; };
+		05181A0622A95237009DD6BF /* ClosestAsteroidsLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0522A95237009DD6BF /* ClosestAsteroidsLinks.swift */; };
+		05181A0822A95276009DD6BF /* NearEarthObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0722A95276009DD6BF /* NearEarthObject.swift */; };
+		05181A0A22A952BD009DD6BF /* CloseApproachDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0922A952BD009DD6BF /* CloseApproachDatum.swift */; };
+		05181A0C22A952E1009DD6BF /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0B22A952E1009DD6BF /* MissDistance.swift */; };
+		05181A0E22A95317009DD6BF /* OrbitingBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0D22A95317009DD6BF /* OrbitingBody.swift */; };
+		05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A0F22A9533D009DD6BF /* RelativeVelocity.swift */; };
+		05181A1222A9536F009DD6BF /* EstimatedDiameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A1122A9536F009DD6BF /* EstimatedDiameter.swift */; };
+		05181A1422A9539B009DD6BF /* Feet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A1322A9539B009DD6BF /* Feet.swift */; };
+		05181A1622A953C8009DD6BF /* NearEarthObjectLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A1522A953C8009DD6BF /* NearEarthObjectLinks.swift */; };
+		05181A1A22AA8030009DD6BF /* URLQueryItemProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A1922AA8030009DD6BF /* URLQueryItemProviderImpl.swift */; };
+		05181A1C22AA8308009DD6BF /* QueryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A1B22AA8308009DD6BF /* QueryType.swift */; };
+		05181A2022AA8A85009DD6BF /* URLComponentsValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A1F22AA8A85009DD6BF /* URLComponentsValidatorImpl.swift */; };
+		05181A2322AA8C6A009DD6BF /* DateParserValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2222AA8C6A009DD6BF /* DateParserValidatorImpl.swift */; };
+		05181A2522AA8D3C009DD6BF /* DateValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2422AA8D3C009DD6BF /* DateValidatorImpl.swift */; };
+		05181A2722ABBD0F009DD6BF /* URLComponentsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2622ABBD0F009DD6BF /* URLComponentsValidator.swift */; };
+		05181A2922ABBF46009DD6BF /* URLComponentsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2822ABBF46009DD6BF /* URLComponentsProvider.swift */; };
+		05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2A22ABBFE4009DD6BF /* URLQueryItemProvider.swift */; };
+		05181A2D22ABC0B2009DD6BF /* DateParserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2C22ABC0B2009DD6BF /* DateParserValidator.swift */; };
+		05181A2F22ABC107009DD6BF /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A2E22ABC107009DD6BF /* DateValidator.swift */; };
+		05181A3122ABC151009DD6BF /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3022ABC151009DD6BF /* URLFactory.swift */; };
+		05181A3322ABC511009DD6BF /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3222ABC511009DD6BF /* URLValidator.swift */; };
+		05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */; };
+		05181A3722ABC7A5009DD6BF /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3622ABC7A5009DD6BF /* DateFactory.swift */; };
+		05181A3922ABC8EE009DD6BF /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3822ABC8EE009DD6BF /* DateParser.swift */; };
+		05181A3B22ABCAF0009DD6BF /* ModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */; };
+		05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */; };
+		05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */; };
+		05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */; };
+		05181A4322ABEE81009DD6BF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4222ABEE81009DD6BF /* PageViewController.swift */; };
+		05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */; };
+		05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4622ABEECE009DD6BF /* TableViewController.swift */; };
+		05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */; };
+		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
+		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
 		05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201D22A29CEB000E0CB7 /* ViewController.swift */; };
 		05D8202122A29CEB000E0CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D8201F22A29CEB000E0CB7 /* Main.storyboard */; };
@@ -26,6 +75,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050601D122A43EEA00EE760C /* DateFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactoryImpl.swift; sourceTree = "<group>"; };
+		050601D422A662C200EE760C /* DateParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParserImpl.swift; sourceTree = "<group>"; };
+		050601D822A6636D00EE760C /* URLComponentsProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsProviderImpl.swift; sourceTree = "<group>"; };
+		050601DD22A6649500EE760C /* DataDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDownloadService.swift; sourceTree = "<group>"; };
+		050601DF22A664E400EE760C /* NASADownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASADownloadService.swift; sourceTree = "<group>"; };
+		050601E622A84A0900EE760C /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		050601E822A84B3D00EE760C /* Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		050601EA22A84F0800EE760C /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
+		050601ED22A84F2E00EE760C /* NasaDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDataFormatter.swift; sourceTree = "<group>"; };
+		051819F522A92FFA009DD6BF /* MarsPhotosRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosRoot.swift; sourceTree = "<group>"; };
+		051819F722A9303D009DD6BF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		051819F922A93064009DD6BF /* PhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCamera.swift; sourceTree = "<group>"; };
+		051819FB22A930A5009DD6BF /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		051819FD22A930E0009DD6BF /* CameraElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraElement.swift; sourceTree = "<group>"; };
+		05181A0322A95205009DD6BF /* ClosestAsteroidsRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosestAsteroidsRoot.swift; sourceTree = "<group>"; };
+		05181A0522A95237009DD6BF /* ClosestAsteroidsLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosestAsteroidsLinks.swift; sourceTree = "<group>"; };
+		05181A0722A95276009DD6BF /* NearEarthObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObject.swift; sourceTree = "<group>"; };
+		05181A0922A952BD009DD6BF /* CloseApproachDatum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseApproachDatum.swift; sourceTree = "<group>"; };
+		05181A0B22A952E1009DD6BF /* MissDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
+		05181A0D22A95317009DD6BF /* OrbitingBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitingBody.swift; sourceTree = "<group>"; };
+		05181A0F22A9533D009DD6BF /* RelativeVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
+		05181A1122A9536F009DD6BF /* EstimatedDiameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameter.swift; sourceTree = "<group>"; };
+		05181A1322A9539B009DD6BF /* Feet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feet.swift; sourceTree = "<group>"; };
+		05181A1522A953C8009DD6BF /* NearEarthObjectLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectLinks.swift; sourceTree = "<group>"; };
+		05181A1922AA8030009DD6BF /* URLQueryItemProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryItemProviderImpl.swift; sourceTree = "<group>"; };
+		05181A1B22AA8308009DD6BF /* QueryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryType.swift; sourceTree = "<group>"; };
+		05181A1F22AA8A85009DD6BF /* URLComponentsValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A2222AA8C6A009DD6BF /* DateParserValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParserValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A2422AA8D3C009DD6BF /* DateValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A2622ABBD0F009DD6BF /* URLComponentsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsValidator.swift; sourceTree = "<group>"; };
+		05181A2822ABBF46009DD6BF /* URLComponentsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsProvider.swift; sourceTree = "<group>"; };
+		05181A2A22ABBFE4009DD6BF /* URLQueryItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryItemProvider.swift; sourceTree = "<group>"; };
+		05181A2C22ABC0B2009DD6BF /* DateParserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParserValidator.swift; sourceTree = "<group>"; };
+		05181A2E22ABC107009DD6BF /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
+		05181A3022ABC151009DD6BF /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
+		05181A3222ABC511009DD6BF /* URLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
+		05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A3622ABC7A5009DD6BF /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
+		05181A3822ABC8EE009DD6BF /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
+		05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelValidator.swift; sourceTree = "<group>"; };
+		05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidator.swift; sourceTree = "<group>"; };
+		05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A4222ABEE81009DD6BF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		05181A4622ABEECE009DD6BF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
+		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D8201D22A29CEB000E0CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +154,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050601D622A662FC00EE760C /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				050601D422A662C200EE760C /* DateParserImpl.swift */,
+				05181A3822ABC8EE009DD6BF /* DateParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		050601D722A6635000EE760C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				05181A1B22AA8308009DD6BF /* QueryType.swift */,
+				050601D822A6636D00EE760C /* URLComponentsProviderImpl.swift */,
+				05181A2822ABBF46009DD6BF /* URLComponentsProvider.swift */,
+				05181A1922AA8030009DD6BF /* URLQueryItemProviderImpl.swift */,
+				05181A2A22ABBFE4009DD6BF /* URLQueryItemProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		050601DC22A6641600EE760C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05181A0222A93AA5009DD6BF /* ClosestAsteroids */,
+				05181A0122A93A88009DD6BF /* MarsPhotos */,
+				05181A0022A93A7A009DD6BF /* PictureOfTheDay */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		050601E122A6686100EE760C /* DownloadDataServices */ = {
+			isa = PBXGroup;
+			children = (
+				050601DD22A6649500EE760C /* DataDownloadService.swift */,
+				050601DF22A664E400EE760C /* NASADownloadService.swift */,
+			);
+			path = DownloadDataServices;
+			sourceTree = "<group>";
+		};
+		050601E522A849E000EE760C /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				050601E622A84A0900EE760C /* JSONSerializer.swift */,
+				050601E822A84B3D00EE760C /* Serializer.swift */,
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
+		050601EC22A84F1A00EE760C /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				050601EA22A84F0800EE760C /* DataFormatter.swift */,
+				050601ED22A84F2E00EE760C /* NasaDataFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		05181A0022A93A7A009DD6BF /* PictureOfTheDay */ = {
+			isa = PBXGroup;
+			children = (
+				0577A90522A3254600870FED /* PictureOfTheDay.swift */,
+			);
+			path = PictureOfTheDay;
+			sourceTree = "<group>";
+		};
+		05181A0122A93A88009DD6BF /* MarsPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				051819F522A92FFA009DD6BF /* MarsPhotosRoot.swift */,
+				051819F722A9303D009DD6BF /* Photo.swift */,
+				051819F922A93064009DD6BF /* PhotoCamera.swift */,
+				051819FB22A930A5009DD6BF /* Rover.swift */,
+				051819FD22A930E0009DD6BF /* CameraElement.swift */,
+			);
+			path = MarsPhotos;
+			sourceTree = "<group>";
+		};
+		05181A0222A93AA5009DD6BF /* ClosestAsteroids */ = {
+			isa = PBXGroup;
+			children = (
+				05181A0322A95205009DD6BF /* ClosestAsteroidsRoot.swift */,
+				05181A0522A95237009DD6BF /* ClosestAsteroidsLinks.swift */,
+				05181A0722A95276009DD6BF /* NearEarthObject.swift */,
+				05181A0922A952BD009DD6BF /* CloseApproachDatum.swift */,
+				05181A0B22A952E1009DD6BF /* MissDistance.swift */,
+				05181A0D22A95317009DD6BF /* OrbitingBody.swift */,
+				05181A0F22A9533D009DD6BF /* RelativeVelocity.swift */,
+				05181A1122A9536F009DD6BF /* EstimatedDiameter.swift */,
+				05181A1322A9539B009DD6BF /* Feet.swift */,
+				05181A1522A953C8009DD6BF /* NearEarthObjectLinks.swift */,
+			);
+			path = ClosestAsteroids;
+			sourceTree = "<group>";
+		};
+		05181A2122AA8BC2009DD6BF /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				05181A1F22AA8A85009DD6BF /* URLComponentsValidatorImpl.swift */,
+				05181A2622ABBD0F009DD6BF /* URLComponentsValidator.swift */,
+				05181A2222AA8C6A009DD6BF /* DateParserValidatorImpl.swift */,
+				05181A2C22ABC0B2009DD6BF /* DateParserValidator.swift */,
+				05181A2422AA8D3C009DD6BF /* DateValidatorImpl.swift */,
+				05181A2E22ABC107009DD6BF /* DateValidator.swift */,
+				05181A3222ABC511009DD6BF /* URLValidator.swift */,
+				05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */,
+				05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */,
+				05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */,
+				05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */,
+				05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		0577A91922A4174200870FED /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0577A90822A327E200870FED /* URLFactoryImpl.swift */,
+				05181A3022ABC151009DD6BF /* URLFactory.swift */,
+				050601D122A43EEA00EE760C /* DateFactoryImpl.swift */,
+				05181A3622ABC7A5009DD6BF /* DateFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		05D8200F22A29CEB000E0CB7 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +300,21 @@
 		05D8201A22A29CEB000E0CB7 /* asteroids */ = {
 			isa = PBXGroup;
 			children = (
+				050601D622A662FC00EE760C /* Parsers */,
+				050601D722A6635000EE760C /* Providers */,
+				05181A2122AA8BC2009DD6BF /* Validators */,
+				050601EC22A84F1A00EE760C /* Formatters */,
+				050601E522A849E000EE760C /* Serializers */,
+				050601E122A6686100EE760C /* DownloadDataServices */,
+				050601DC22A6641600EE760C /* Models */,
+				0577A91922A4174200870FED /* Factories */,
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
+				05181A4222ABEE81009DD6BF /* PageViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
+				05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */,
+				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
+				05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */,
 				05D8202222A29CEC000E0CB7 /* Assets.xcassets */,
 				05D8202422A29CEC000E0CB7 /* LaunchScreen.storyboard */,
 				05D8202722A29CEC000E0CB7 /* Info.plist */,
@@ -196,8 +431,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05181A2722ABBD0F009DD6BF /* URLComponentsValidator.swift in Sources */,
+				050601D222A43EEA00EE760C /* DateFactoryImpl.swift in Sources */,
+				051819FE22A930E0009DD6BF /* CameraElement.swift in Sources */,
+				05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */,
+				05181A0822A95276009DD6BF /* NearEarthObject.swift in Sources */,
+				05181A1C22AA8308009DD6BF /* QueryType.swift in Sources */,
+				050601E922A84B3D00EE760C /* Serializer.swift in Sources */,
+				05181A3B22ABCAF0009DD6BF /* ModelValidator.swift in Sources */,
+				05181A2322AA8C6A009DD6BF /* DateParserValidatorImpl.swift in Sources */,
+				05181A3922ABC8EE009DD6BF /* DateParser.swift in Sources */,
+				05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */,
+				05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */,
+				050601EB22A84F0800EE760C /* DataFormatter.swift in Sources */,
+				050601EE22A84F2E00EE760C /* NasaDataFormatter.swift in Sources */,
+				050601E022A664E400EE760C /* NASADownloadService.swift in Sources */,
+				05181A4322ABEE81009DD6BF /* PageViewController.swift in Sources */,
+				05181A2D22ABC0B2009DD6BF /* DateParserValidator.swift in Sources */,
+				051819F622A92FFA009DD6BF /* MarsPhotosRoot.swift in Sources */,
+				05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */,
+				050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */,
+				05181A2922ABBF46009DD6BF /* URLComponentsProvider.swift in Sources */,
+				05181A0A22A952BD009DD6BF /* CloseApproachDatum.swift in Sources */,
 				05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */,
+				05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */,
+				050601D922A6636D00EE760C /* URLComponentsProviderImpl.swift in Sources */,
+				051819F822A9303D009DD6BF /* Photo.swift in Sources */,
+				05181A0622A95237009DD6BF /* ClosestAsteroidsLinks.swift in Sources */,
+				05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */,
+				050601D522A662C200EE760C /* DateParserImpl.swift in Sources */,
+				05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */,
+				05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */,
+				05181A3322ABC511009DD6BF /* URLValidator.swift in Sources */,
+				05181A2F22ABC107009DD6BF /* DateValidator.swift in Sources */,
+				051819FC22A930A5009DD6BF /* Rover.swift in Sources */,
+				05181A0C22A952E1009DD6BF /* MissDistance.swift in Sources */,
+				05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */,
 				05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */,
+				05181A1A22AA8030009DD6BF /* URLQueryItemProviderImpl.swift in Sources */,
+				051819FA22A93064009DD6BF /* PhotoCamera.swift in Sources */,
+				05181A3722ABC7A5009DD6BF /* DateFactory.swift in Sources */,
+				05181A1622A953C8009DD6BF /* NearEarthObjectLinks.swift in Sources */,
+				05181A3122ABC151009DD6BF /* URLFactory.swift in Sources */,
+				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
+				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
+				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,
+				05181A2522AA8D3C009DD6BF /* DateValidatorImpl.swift in Sources */,
+				05181A1222A9536F009DD6BF /* EstimatedDiameter.swift in Sources */,
+				05181A1422A9539B009DD6BF /* Feet.swift in Sources */,
+				05181A2022AA8A85009DD6BF /* URLComponentsValidatorImpl.swift in Sources */,
+				0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */,
+				05181A0E22A95317009DD6BF /* OrbitingBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
