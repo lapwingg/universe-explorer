@@ -13,7 +13,6 @@
         <!--Favourite-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="asteroids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -24,6 +23,7 @@
                     <tabBarItem key="tabBarItem" title="Favourite" id="1cL-9C-1dn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="1303"/>
         </scene>
@@ -95,11 +95,26 @@
         <scene sceneID="9Pw-BT-k0L">
             <objects>
                 <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PictureOfTheDay" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Fk1-HO-xJx" customClass="PageViewController" customModule="asteroids" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="POTD" id="A3J-4T-NPA"/>
+                    <navigationItem key="navigationItem" id="BnK-Hd-910">
+                        <barButtonItem key="leftBarButtonItem" title="Search by date" id="c3A-Ik-8GU">
+                            <connections>
+                                <action selector="searchByDateTapped:" destination="Fk1-HO-xJx" id="GHd-DA-qiO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add to Favourite" id="PKW-WN-eN3">
+                            <connections>
+                                <action selector="addToFavouriteTapped:" destination="Fk1-HO-xJx" id="5Jb-UY-ZJ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addToFavourite" destination="PKW-WN-eN3" id="otn-6O-U4p"/>
+                        <outlet property="searchByDate" destination="c3A-Ik-8GU" id="0GV-DY-P6w"/>
+                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJU-R9-DRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="-950"/>
+            <point key="canvasLocation" x="2890.4000000000001" y="-950.2463054187192"/>
         </scene>
         <!--Page View1 Controller-->
         <scene sceneID="UFh-xq-OCT">
@@ -114,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ug-L0-fJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="-950"/>
+            <point key="canvasLocation" x="3732" y="-950.2463054187192"/>
         </scene>
         <!--Page View2 Controller-->
         <scene sceneID="Ugb-bJ-s1C">
@@ -129,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98H-6G-6zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3657" y="-950"/>
+            <point key="canvasLocation" x="4599.1999999999998" y="-950.2463054187192"/>
         </scene>
         <!--MainScreen-->
         <scene sceneID="viq-WH-kE4">
@@ -137,11 +152,12 @@
                 <tabBarController storyboardIdentifier="MainScreenView" title="MainScreen" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IEo-YL-zdK" customClass="MainScreenViewController" customModule="asteroids" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7ZK-Fb-sTy">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Fk1-HO-xJx" kind="relationship" relationship="viewControllers" id="YnF-SK-rRU"/>
+                        <segue destination="Fa3-w0-3fm" kind="relationship" relationship="viewControllers" id="YnF-SK-rRU"/>
                         <segue destination="C6L-G6-oEk" kind="relationship" relationship="viewControllers" id="Dlc-Ck-QHZ"/>
                         <segue destination="Wr3-fi-wxd" kind="relationship" relationship="viewControllers" id="cAU-ef-8vx"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2tR-bQ-xeT"/>
@@ -150,6 +166,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgC-hq-Ue2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="170"/>
+        </scene>
+        <!--POTD-->
+        <scene sceneID="mXz-X9-GI2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8P-nZ-qFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fa3-w0-3fm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="POTD" id="A3J-4T-NPA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sWA-lq-1f7">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fk1-HO-xJx" kind="relationship" relationship="rootViewController" id="h49-mA-L8x"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1948" y="-950.2463054187192"/>
         </scene>
     </scenes>
 </document>

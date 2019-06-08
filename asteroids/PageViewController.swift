@@ -8,6 +8,9 @@
 import UIKit
 
 internal class PageViewController: UIPageViewController {
+    @IBOutlet weak var searchByDate: UIBarButtonItem!
+    @IBOutlet weak var addToFavourite: UIBarButtonItem!
+    
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [newColoredViewController(name: "PageView1"),
                 newColoredViewController(name: "PageView2")]
@@ -24,6 +27,15 @@ internal class PageViewController: UIPageViewController {
         }
     }
 
+    
+    @IBAction func addToFavouriteTapped(_ sender: Any) {
+        print("Add To Favourite Was Tapped")
+    }
+    
+    @IBAction func searchByDateTapped(_ sender: Any) {
+        print("Search By Date Was Tapped")
+    }
+    
     private func newColoredViewController(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
     }
