@@ -25,12 +25,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1060" y="876"/>
+            <point key="canvasLocation" x="1948" y="1303"/>
         </scene>
-        <!--Photos-->
+        <!--MarsPhotos-->
         <scene sceneID="ROI-nX-Jpr">
             <objects>
-                <collectionViewController storyboardIdentifier="CollectionView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C6L-G6-oEk" customClass="CollectionViewController" customModule="asteroids" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CollectionView" title="MarsPhotos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C6L-G6-oEk" customClass="CollectionViewController" customModule="asteroids" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MBx-5l-7Z3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,12 +60,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eX-lL-oCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2850" y="7"/>
+            <point key="canvasLocation" x="1948" y="-202"/>
         </scene>
-        <!--Asteroids-->
+        <!--ClosestAsteroids-->
         <scene sceneID="tzv-3h-PVv">
             <objects>
-                <tableViewController storyboardIdentifier="TableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wr3-fi-wxd" customClass="TableViewController" customModule="asteroids" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableView" title="ClosestAsteroids" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wr3-fi-wxd" customClass="TableViewController" customModule="asteroids" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c1U-GV-UJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,17 +89,47 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL1-Xi-3d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="567"/>
+            <point key="canvasLocation" x="1948" y="550"/>
         </scene>
-        <!--POTD-->
+        <!--PictureOfTheDay-->
         <scene sceneID="9Pw-BT-k0L">
             <objects>
-                <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Fk1-HO-xJx" customClass="PageViewController" customModule="asteroids" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PictureOfTheDay" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Fk1-HO-xJx" customClass="PageViewController" customModule="asteroids" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="POTD" id="A3J-4T-NPA"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJU-R9-DRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="-432"/>
+            <point key="canvasLocation" x="1948" y="-950"/>
+        </scene>
+        <!--Page View1 Controller-->
+        <scene sceneID="UFh-xq-OCT">
+            <objects>
+                <viewController storyboardIdentifier="PageView1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NXx-r7-HFZ" customClass="PageView1Controller" customModule="asteroids" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EWD-LL-k6U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20065009019999999" green="0.64072259440000001" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4rx-h5-G4q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ug-L0-fJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790" y="-950"/>
+        </scene>
+        <!--Page View2 Controller-->
+        <scene sceneID="Ugb-bJ-s1C">
+            <objects>
+                <viewController storyboardIdentifier="PageView2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0E4-m9-ClN" customClass="PageView2Controller" customModule="asteroids" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qg8-fT-FO0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="uEi-fZ-v8r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98H-6G-6zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657" y="-950"/>
         </scene>
         <!--MainScreen-->
         <scene sceneID="viq-WH-kE4">
@@ -119,7 +149,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgC-hq-Ue2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="7"/>
+            <point key="canvasLocation" x="1063" y="170"/>
         </scene>
     </scenes>
 </document>

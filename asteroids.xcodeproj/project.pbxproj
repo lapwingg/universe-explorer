@@ -54,6 +54,8 @@
 		05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */; };
 		05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4622ABEECE009DD6BF /* TableViewController.swift */; };
 		05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */; };
+		05181A4D22AC0CFF009DD6BF /* PageView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PageView1Controller.swift */; };
+		05181A4F22AC0D0E009DD6BF /* PageView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4E22AC0D0E009DD6BF /* PageView2Controller.swift */; };
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
@@ -122,6 +124,8 @@
 		05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		05181A4622ABEECE009DD6BF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		05181A4C22AC0CFF009DD6BF /* PageView1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView1Controller.swift; sourceTree = "<group>"; };
+		05181A4E22AC0D0E009DD6BF /* PageView2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView2Controller.swift; sourceTree = "<group>"; };
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +316,8 @@
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05181A4222ABEE81009DD6BF /* PageViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
+				05181A4C22AC0CFF009DD6BF /* PageView1Controller.swift */,
+				05181A4E22AC0D0E009DD6BF /* PageView2Controller.swift */,
 				05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */,
 				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
 				05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */,
@@ -462,6 +468,7 @@
 				050601D522A662C200EE760C /* DateParserImpl.swift in Sources */,
 				05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */,
 				05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */,
+				05181A4F22AC0D0E009DD6BF /* PageView2Controller.swift in Sources */,
 				05181A3322ABC511009DD6BF /* URLValidator.swift in Sources */,
 				05181A2F22ABC107009DD6BF /* DateValidator.swift in Sources */,
 				051819FC22A930A5009DD6BF /* Rover.swift in Sources */,
@@ -476,6 +483,7 @@
 				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
 				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
 				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,
+				05181A4D22AC0CFF009DD6BF /* PageView1Controller.swift in Sources */,
 				05181A2522AA8D3C009DD6BF /* DateValidatorImpl.swift in Sources */,
 				05181A1222A9536F009DD6BF /* EstimatedDiameter.swift in Sources */,
 				05181A1422A9539B009DD6BF /* Feet.swift in Sources */,
