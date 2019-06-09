@@ -91,12 +91,37 @@
             </objects>
             <point key="canvasLocation" x="1948" y="550"/>
         </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="7qT-1t-YJo">
+            <objects>
+                <viewController storyboardIdentifier="SearchByDatePopover" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hND-Wv-xZj" customClass="PopoverViewController" customModule="asteroids" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvT-mM-1vZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-zE-Pkp">
+                                <rect key="frame" x="0.0" y="44" width="375" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kPp-9X-PS8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERU-rQ-7Tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888.8000000000002" y="-1663.3004926108374"/>
+        </scene>
         <!--PictureOfTheDay-->
         <scene sceneID="9Pw-BT-k0L">
             <objects>
                 <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PictureOfTheDay" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Fk1-HO-xJx" customClass="PageViewController" customModule="asteroids" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BnK-Hd-910">
-                        <barButtonItem key="leftBarButtonItem" title="Search by date" id="c3A-Ik-8GU">
+                        <barButtonItem key="leftBarButtonItem" title="Seach By Date" id="c3A-Ik-8GU">
                             <connections>
                                 <action selector="searchByDateTapped:" destination="Fk1-HO-xJx" id="GHd-DA-qiO"/>
                             </connections>
@@ -123,6 +148,12 @@
                     <view key="view" contentMode="scaleToFill" id="EWD-LL-k6U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="53K-j6-Mj8">
+                                <rect key="frame" x="168" y="365" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" red="0.20065009019999999" green="0.64072259440000001" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4rx-h5-G4q"/>
                     </view>
@@ -138,6 +169,12 @@
                     <view key="view" contentMode="scaleToFill" id="Qg8-fT-FO0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="BzZ-Qj-SXc">
+                                <rect key="frame" x="196" y="388" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="uEi-fZ-v8r"/>
                     </view>
@@ -170,7 +207,6 @@
         <!--POTD-->
         <scene sceneID="mXz-X9-GI2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u8P-nZ-qFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fa3-w0-3fm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="POTD" id="A3J-4T-NPA"/>
                     <toolbarItems/>
@@ -183,6 +219,7 @@
                         <segue destination="Fk1-HO-xJx" kind="relationship" relationship="rootViewController" id="h49-mA-L8x"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8P-nZ-qFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="-950.2463054187192"/>
         </scene>
