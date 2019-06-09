@@ -11,29 +11,26 @@ import JTAppleCalendar
 class PopoverViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     var dateFactory: DateFactory!
+    var dateParser: DateParser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFactory = DateFactoryImpl()
+        dateParser = DateParserImpl()
         calendarView.calendarDataSource = self
         calendarView.calendarDelegate = self
         calendarView.scrollDirection = .horizontal
         calendarView.scrollingMode   = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
-        calendarView.scrollToDate(dateFactory.create(year: 2019, month: 06, day: 08))
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapped(_:)))
-        calendarView.addGestureRecognizer(gesture)
+        calendarView.scrollToDate(dateFactory.create(year: 2019, month: 06, day: 09))
+        calendarView.selectDates([dateFactory.create(year: 2019, month: 06, day: 09)])
     }
     
-    @objc func didTapped(_ gesture: UITapGestureRecognizer) {
-        print("OK - WHICH CELL? RETURN BACK CELL")
-    }
-    
-    func configureCell(view: JTAppleCell?, cellState: CellState) {
+    func configureCell(view: JTAppleCell?, cellState: CellState, date: Date) {
         guard let cell = view as? DateCell  else { return }
         cell.dateLabel.text = cellState.text
         handleCellTextColor(cell: cell, cellState: cellState)
-//        handleCellSelected(cell: cell, cellState: cellState)
+        handleCellSelected(cell: cell, cellState: cellState, date: date)
     }
     
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
@@ -44,31 +41,24 @@ class PopoverViewController: UIViewController {
         }
     }
     
-////
-//    func configureCell(view: JTAppleCell?, cellState: CellState) {
-//        guard let cell = view as? DateCell  else { return }
-//        cell.dateLabel.text = cellState.text
-//        handleCellTextColor(cell: cell, cellState: cellState)
-//
-//    }
+    func handleCellSelected(cell: DateCell, cellState: CellState, date: Date) {
+        if cellState.isSelected {
+            cell.selectedView.layer.cornerRadius =  13
+            cell.selectedView.isHidden = false
+            print(date.addingTimeInterval(60 * 60 * 2))
+            print(dateParser.parseToString(date: date.addingTimeInterval(60 * 60 * 2)))
+        } else {
+            cell.selectedView.isHidden = true
+        }
+    }
 
-//    func handleCellSelected(cell: DateCell, cellState: CellState) {
-//        if cellState.isSelected {
-//            cell.selectedView.layer.cornerRadius =  13
-//            cell.selectedView.isHidden = false
-//        } else {
-//            cell.selectedView.isHidden = true
-//        }
-//    }
-//
-//
-//    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-//        configureCell(view: cell, cellState: cellState)
-//    }
-//
-//    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-//        configureCell(view: cell, cellState: cellState)
-//    }
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        configureCell(view: cell, cellState: cellState, date: date)
+    }
+
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        configureCell(view: cell, cellState: cellState, date: date)
+    }
 }
 
 extension PopoverViewController: JTAppleCalendarViewDataSource {
@@ -82,9 +72,9 @@ extension PopoverViewController: JTAppleCalendarViewDataSource {
 }
 
 extension PopoverViewController: JTAppleCalendarViewDelegate {
-//    func calendar(_ calendar: JTAppleCalendarView, shouldSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) -> Bool {
-//        return true // Based on a criteria, return true or false
-//    }
+    func calendar(_ calendar: JTAppleCalendarView, shouldSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) -> Bool {
+        return true
+    }
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as! DateCell
@@ -93,7 +83,7 @@ extension PopoverViewController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        configureCell(view: cell, cellState: cellState)
+        configureCell(view: cell, cellState: cellState, date: date)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
