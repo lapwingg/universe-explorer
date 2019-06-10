@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DataDownloadService {
-    func runDownload(queryType: QueryType, completion: @escaping (Data) -> Void)
+    func runDownload(date: Date, queryType: QueryType, completion: @escaping (Data) -> Void)
 }

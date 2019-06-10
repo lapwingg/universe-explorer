@@ -11,7 +11,6 @@ internal class NASADownloadService : DataDownloadService {
     private var urlFactory: URLFactory!
     private var dateFactory: DateFactory!
     private var urlSessionValidator: URLSessionValidator!
-    private let DATE = (YEAR: 2019, MONTH: 06, DAY: 06)
     
     init() {
         urlFactory = URLFactoryImpl()
@@ -19,8 +18,8 @@ internal class NASADownloadService : DataDownloadService {
         urlSessionValidator = URLSessionValidatorImpl()
     }
     
-    internal func runDownload(queryType: QueryType, completion: @escaping (Data) -> Void) {
-        let requestURL = getRequestURL(queryType)
+    internal func runDownload(date: Date, queryType: QueryType, completion: @escaping (Data) -> Void) {
+        let requestURL = getRequestURL(date: date, queryType: queryType)
 
         DispatchQueue.global(qos: .userInteractive).async {
             _ = URLSession.shared.dataTask(with: requestURL) { data, response, error in
@@ -34,8 +33,7 @@ internal class NASADownloadService : DataDownloadService {
         }
     }
     
-    private func getRequestURL(_ queryType: QueryType) -> URL {
-        let date = dateFactory.create(year: DATE.YEAR, month: DATE.MONTH, day: DATE.DAY)
+    private func getRequestURL(date: Date, queryType: QueryType) -> URL {
         return urlFactory.createRequest(queryType: queryType, date: date)
     }
 }

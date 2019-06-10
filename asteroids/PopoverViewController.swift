@@ -12,6 +12,29 @@ class PopoverViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     var dateFactory: DateFactory!
     var dateParser: DateParser!
+    var completionAction: ((Date) -> Void)?
+    var value: Date?
+    
+    public static func create(controller: UIViewController, completion: ((Date) -> Void)?) -> UINavigationController {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let popoverContent = storyboard.instantiateViewController(withIdentifier: "SearchByDatePopover") as! PopoverViewController
+        
+        let nav = UINavigationController(rootViewController: popoverContent)
+        nav.modalPresentationStyle = .popover
+        let popover = nav.popoverPresentationController
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            popoverContent.preferredContentSize = CGSize(width: 500, height: 500)
+        } else {
+            popoverContent.preferredContentSize = CGSize(width: 250, height: 280)
+        }
+        
+        popover!.delegate = controller as? UIPopoverPresentationControllerDelegate
+        popover!.sourceView = controller.view
+        popover!.sourceRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        popoverContent.completionAction = completion
+        popoverContent.loadViewIfNeeded()
+        return nav
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +45,14 @@ class PopoverViewController: UIViewController {
         calendarView.scrollDirection = .horizontal
         calendarView.scrollingMode   = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
-        calendarView.scrollToDate(dateFactory.create(year: 2019, month: 06, day: 09))
-        calendarView.selectDates([dateFactory.create(year: 2019, month: 06, day: 09)])
+        calendarView.scrollToDate(dateFactory.create(year: 2019, month: 06, day: 10))
+        calendarView.selectDates([dateFactory.create(year: 2019, month: 06, day: 10)])
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        print("OKK")
+        completionAction?(value!)
+        dismiss(animated: true)
     }
     
     func configureCell(view: JTAppleCell?, cellState: CellState, date: Date) {
@@ -35,7 +64,11 @@ class PopoverViewController: UIViewController {
     
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
         if cellState.dateBelongsTo == .thisMonth {
-            cell.dateLabel.textColor = UIColor.black
+            if cellState.day == .sunday {
+                cell.dateLabel.textColor = UIColor.red
+            } else {
+                cell.dateLabel.textColor = UIColor.black
+            }
         } else {
             cell.dateLabel.textColor = UIColor.gray
         }
@@ -46,6 +79,7 @@ class PopoverViewController: UIViewController {
             cell.selectedView.layer.cornerRadius =  13
             cell.selectedView.isHidden = false
             print(date.addingTimeInterval(60 * 60 * 2))
+            value = date.addingTimeInterval(60 * 60 * 2)
             print(dateParser.parseToString(date: date.addingTimeInterval(60 * 60 * 2)))
         } else {
             cell.selectedView.isHidden = true
@@ -67,7 +101,7 @@ extension PopoverViewController: JTAppleCalendarViewDataSource {
         formatter.dateFormat = "yyyy MM dd"
         let startDate = formatter.date(from: "2015 01 01")!
         let endDate = formatter.date(from: "2020 01 01")!
-        return ConfigurationParameters(startDate: startDate, endDate: endDate)
+        return ConfigurationParameters(startDate: startDate, endDate: endDate, firstDayOfWeek: .monday)
     }
 }
 

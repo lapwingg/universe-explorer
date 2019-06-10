@@ -7,14 +7,23 @@
 
 import UIKit
 
+extension Notification.Name {
+    static let dataTap = Notification.Name(rawValue: "dataTap")
+    static let dataNoTap = Notification.Name(rawValue: "dataNoTap")
+}
+
 internal class PageViewController: UIPageViewController, UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var searchByDate: UIBarButtonItem!
     @IBOutlet weak var addToFavourite: UIBarButtonItem!
-    
+    private var downloader: DataDownloadService?
+    private var serializer: Serializer?
+    private var formatter: DataFormatter?
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [newColoredViewController(name: "PageView1"),
                 newColoredViewController(name: "PageView2")]
     }()
+    private var pictureOfTheDay: PictureOfTheDay?
+    private var sendPicture: [String: PictureOfTheDay?]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +34,16 @@ internal class PageViewController: UIPageViewController, UIPopoverPresentationCo
                                animated: true,
                                completion: nil)
         }
+        downloader = NASADownloadService()
+        serializer = JSONSerializer()
+        formatter = NasaDataFormatter()
+        NotificationCenter.default.addObserver(self, selector: #selector(sendData), name: .dataNoTap, object: sendPicture)
     }
 
+    @objc func sendData() {
+        NotificationCenter.default.post(name: .dataTap, object: PageView1Controller.self, userInfo: sendPicture)
+        NotificationCenter.default.post(name: .dataTap, object: PageView2Controller.self, userInfo: sendPicture)
+    }
     
     @IBAction func addToFavouriteTapped(_ sender: Any) {
         print("Add To Favourite Was Tapped")
@@ -34,23 +51,17 @@ internal class PageViewController: UIPageViewController, UIPopoverPresentationCo
     
     @IBAction func searchByDateTapped(_ sender: UIBarButtonItem) {
         print("Search By Date Was Tapped")
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let popoverContent = storyboard.instantiateViewController(withIdentifier: "SearchByDatePopover")
-        let nav = UINavigationController(rootViewController: popoverContent)
-        nav.modalPresentationStyle = .popover
-        let popover = nav.popoverPresentationController
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            popoverContent.preferredContentSize = CGSize(width: 500, height: 500)
-        } else {
-            popoverContent.preferredContentSize = CGSize(width: 250, height: 250)
+        let nav = PopoverViewController.create(controller: self) { [unowned self] date in
+            _ = self.downloader?.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
+                self.serializer?.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
+                    self.pictureOfTheDay = pictureOfTheDay
+                    print(pictureOfTheDay)
+                    self.sendPicture = ["picture": pictureOfTheDay]
+                    self.sendData()
+                }
+            }
         }
-      
-        popover!.delegate = self
-        popover!.sourceView = self.view
-        popover!.sourceRect = CGRect(x: 0, y: 0, width: 100, height: 100)
-        self.present(nav, animated: true) {
-            
-        }
+        self.present(nav, animated: true)
     }
     
     private func newColoredViewController(name: String) -> UIViewController {
@@ -103,17 +114,4 @@ extension PageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
-    
-//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        return orderedViewControllers.count
-//    }
-//
-//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        guard let firstViewController = viewControllers?.first,
-//            let firstViewControllerIndex = orderedViewControllers.firstIndex(of: firstViewController) else {
-//                return 0
-//        }
-//
-//        return firstViewControllerIndex
-//    }
 }
