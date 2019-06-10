@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1948" y="550"/>
         </scene>
-        <!--Popover View Controller-->
+        <!--Search Date Popover-->
         <scene sceneID="7qT-1t-YJo">
             <objects>
-                <viewController storyboardIdentifier="SearchByDatePopover" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hND-Wv-xZj" customClass="PopoverViewController" customModule="asteroids" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchDatePopover" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hND-Wv-xZj" customClass="SearchDatePopover" customModule="asteroids" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gvT-mM-1vZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="Pgb-fl-h3x" customClass="DateHeader" customModule="asteroids">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="dateHeader" id="Pgb-fl-h3x" customClass="DateHeader" customModule="asteroids">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -182,7 +182,7 @@
         <!--PictureOfTheDay-->
         <scene sceneID="9Pw-BT-k0L">
             <objects>
-                <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PictureOfTheDay" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Fk1-HO-xJx" customClass="PageViewController" customModule="asteroids" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageView" autoresizesArchivedViewToFullSize="NO" title="PictureOfTheDay" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Fk1-HO-xJx" customClass="PictureOfTheDayViewController" customModule="asteroids" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BnK-Hd-910">
                         <barButtonItem key="leftBarButtonItem" title="Seach By Date" id="c3A-Ik-8GU">
                             <connections>
@@ -195,19 +195,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addToFavourite" destination="PKW-WN-eN3" id="otn-6O-U4p"/>
-                        <outlet property="searchByDate" destination="c3A-Ik-8GU" id="0GV-DY-P6w"/>
-                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJU-R9-DRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2890.4000000000001" y="-950.2463054187192"/>
         </scene>
-        <!--Page View1 Controller-->
+        <!--Picture Of The Day First View Page-->
         <scene sceneID="UFh-xq-OCT">
             <objects>
-                <viewController storyboardIdentifier="PageView1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NXx-r7-HFZ" customClass="PageView1Controller" customModule="asteroids" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PictureOfTheDayFirstPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NXx-r7-HFZ" customClass="PictureOfTheDayFirstViewPage" customModule="asteroids" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EWD-LL-k6U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="3732" y="-950.2463054187192"/>
         </scene>
-        <!--Page View2 Controller-->
+        <!--Picture Of The Day Second View Page-->
         <scene sceneID="Ugb-bJ-s1C">
             <objects>
-                <viewController storyboardIdentifier="PageView2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0E4-m9-ClN" customClass="PageView2Controller" customModule="asteroids" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PictureOfTheDaySecondPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0E4-m9-ClN" customClass="PictureOfTheDaySecondViewPage" customModule="asteroids" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qg8-fT-FO0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

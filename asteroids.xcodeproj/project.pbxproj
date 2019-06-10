@@ -50,15 +50,20 @@
 		05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */; };
 		05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */; };
 		05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */; };
-		05181A4322ABEE81009DD6BF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4222ABEE81009DD6BF /* PageViewController.swift */; };
+		05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */; };
 		05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */; };
 		05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4622ABEECE009DD6BF /* TableViewController.swift */; };
 		05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */; };
-		05181A4D22AC0CFF009DD6BF /* PageView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PageView1Controller.swift */; };
-		05181A4F22AC0D0E009DD6BF /* PageView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4E22AC0D0E009DD6BF /* PageView2Controller.swift */; };
-		05181A5322AC2A3F009DD6BF /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A5222AC2A3F009DD6BF /* PopoverViewController.swift */; };
+		05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */; };
+		05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */; };
+		05181A5322AC2A3F009DD6BF /* SearchDatePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */; };
 		056A3AEF22AD1BC800F60225 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AEE22AD1BC800F60225 /* DateCell.swift */; };
 		056A3AF122AD3D4800F60225 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF022AD3D4800F60225 /* DateHeader.swift */; };
+		056A3AF522AF055300F60225 /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF422AF055300F60225 /* NotificationExt.swift */; };
+		056A3AF722AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF622AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift */; };
+		056A3AF922AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF822AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift */; };
+		056A3AFE22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFD22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift */; };
+		056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */; };
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
@@ -125,15 +130,20 @@
 		05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelValidatorImpl.swift; sourceTree = "<group>"; };
 		05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidator.swift; sourceTree = "<group>"; };
 		05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidatorImpl.swift; sourceTree = "<group>"; };
-		05181A4222ABEE81009DD6BF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayViewContoller.swift; sourceTree = "<group>"; };
 		05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		05181A4622ABEECE009DD6BF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
-		05181A4C22AC0CFF009DD6BF /* PageView1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView1Controller.swift; sourceTree = "<group>"; };
-		05181A4E22AC0D0E009DD6BF /* PageView2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView2Controller.swift; sourceTree = "<group>"; };
-		05181A5222AC2A3F009DD6BF /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayFirstViewPage.swift; sourceTree = "<group>"; };
+		05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDaySecondViewPage.swift; sourceTree = "<group>"; };
+		05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDatePopover.swift; sourceTree = "<group>"; };
 		056A3AEE22AD1BC800F60225 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		056A3AF022AD3D4800F60225 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
+		056A3AF422AF055300F60225 /* NotificationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
+		056A3AF622AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPopoverPresentationControllerDelegateExt.swift; sourceTree = "<group>"; };
+		056A3AF822AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerDataSouceExt.swift; sourceTree = "<group>"; };
+		056A3AFD22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarViewDataSourceExt.swift; sourceTree = "<group>"; };
+		056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarViewDelegateExt.swift; sourceTree = "<group>"; };
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +298,47 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		056A3AF322AF053300F60225 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				056A3AFC22AF121D00F60225 /* SearchDatePopover */,
+				056A3AFA22AF0CFF00F60225 /* PictureOfTheDayViewController */,
+				056A3AF422AF055300F60225 /* NotificationExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		056A3AFA22AF0CFF00F60225 /* PictureOfTheDayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				056A3AF822AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift */,
+				056A3AF622AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift */,
+			);
+			path = PictureOfTheDayViewController;
+			sourceTree = "<group>";
+		};
+		056A3AFB22AF0D7500F60225 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */,
+				056A3AEE22AD1BC800F60225 /* DateCell.swift */,
+				056A3AF022AD3D4800F60225 /* DateHeader.swift */,
+				05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */,
+				05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */,
+				05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		056A3AFC22AF121D00F60225 /* SearchDatePopover */ = {
+			isa = PBXGroup;
+			children = (
+				056A3AFD22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift */,
+				056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */,
+			);
+			path = SearchDatePopover;
+			sourceTree = "<group>";
+		};
 		0577A91922A4174200870FED /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,15 +381,11 @@
 				050601E122A6686100EE760C /* DownloadDataServices */,
 				050601DC22A6641600EE760C /* Models */,
 				0577A91922A4174200870FED /* Factories */,
+				056A3AF322AF053300F60225 /* Extensions */,
+				056A3AFB22AF0D7500F60225 /* Controllers */,
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
-				05181A4222ABEE81009DD6BF /* PageViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
-				056A3AF022AD3D4800F60225 /* DateHeader.swift */,
-				056A3AEE22AD1BC800F60225 /* DateCell.swift */,
-				05181A5222AC2A3F009DD6BF /* PopoverViewController.swift */,
-				05181A4C22AC0CFF009DD6BF /* PageView1Controller.swift */,
-				05181A4E22AC0D0E009DD6BF /* PageView2Controller.swift */,
 				05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */,
 				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
 				05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */,
@@ -551,19 +598,22 @@
 				051819FE22A930E0009DD6BF /* CameraElement.swift in Sources */,
 				05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */,
 				056A3AEF22AD1BC800F60225 /* DateCell.swift in Sources */,
+				056A3AF522AF055300F60225 /* NotificationExt.swift in Sources */,
 				05181A0822A95276009DD6BF /* NearEarthObject.swift in Sources */,
 				05181A1C22AA8308009DD6BF /* QueryType.swift in Sources */,
 				050601E922A84B3D00EE760C /* Serializer.swift in Sources */,
 				05181A3B22ABCAF0009DD6BF /* ModelValidator.swift in Sources */,
 				05181A2322AA8C6A009DD6BF /* DateParserValidatorImpl.swift in Sources */,
 				05181A3922ABC8EE009DD6BF /* DateParser.swift in Sources */,
+				056A3AF722AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift in Sources */,
+				056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */,
 				05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */,
 				05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */,
 				050601EB22A84F0800EE760C /* DataFormatter.swift in Sources */,
 				050601EE22A84F2E00EE760C /* NasaDataFormatter.swift in Sources */,
 				050601E022A664E400EE760C /* NASADownloadService.swift in Sources */,
-				05181A4322ABEE81009DD6BF /* PageViewController.swift in Sources */,
-				05181A5322AC2A3F009DD6BF /* PopoverViewController.swift in Sources */,
+				05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */,
+				05181A5322AC2A3F009DD6BF /* SearchDatePopover.swift in Sources */,
 				05181A2D22ABC0B2009DD6BF /* DateParserValidator.swift in Sources */,
 				051819F622A92FFA009DD6BF /* MarsPhotosRoot.swift in Sources */,
 				05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */,
@@ -573,13 +623,14 @@
 				05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */,
 				05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */,
 				050601D922A6636D00EE760C /* URLComponentsProviderImpl.swift in Sources */,
+				056A3AFE22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift in Sources */,
 				051819F822A9303D009DD6BF /* Photo.swift in Sources */,
 				05181A0622A95237009DD6BF /* ClosestAsteroidsLinks.swift in Sources */,
 				05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */,
 				050601D522A662C200EE760C /* DateParserImpl.swift in Sources */,
 				05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */,
 				05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */,
-				05181A4F22AC0D0E009DD6BF /* PageView2Controller.swift in Sources */,
+				05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */,
 				05181A3322ABC511009DD6BF /* URLValidator.swift in Sources */,
 				05181A2F22ABC107009DD6BF /* DateValidator.swift in Sources */,
 				051819FC22A930A5009DD6BF /* Rover.swift in Sources */,
@@ -594,11 +645,12 @@
 				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
 				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
 				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,
-				05181A4D22AC0CFF009DD6BF /* PageView1Controller.swift in Sources */,
+				05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */,
 				05181A2522AA8D3C009DD6BF /* DateValidatorImpl.swift in Sources */,
 				05181A1222A9536F009DD6BF /* EstimatedDiameter.swift in Sources */,
 				05181A1422A9539B009DD6BF /* Feet.swift in Sources */,
 				05181A2022AA8A85009DD6BF /* URLComponentsValidatorImpl.swift in Sources */,
+				056A3AF922AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift in Sources */,
 				0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */,
 				05181A0E22A95317009DD6BF /* OrbitingBody.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 import JTAppleCalendar
 import UIKit
 
-class DateCell: JTAppleCell {
+internal class DateCell: JTAppleCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet weak var selectedView: UIView!
 }

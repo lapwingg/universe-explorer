@@ -8,7 +8,7 @@
 import UIKit
 import JTAppleCalendar
 
-class DateHeader: JTAppleCollectionReusableView  {
+internal class DateHeader: JTAppleCollectionReusableView  {
     @IBOutlet weak var monthYearTitle: UILabel!
     
 }
