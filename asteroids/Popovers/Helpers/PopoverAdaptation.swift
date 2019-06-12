@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 extension PictureOfTheDayViewController: UIPopoverPresentationControllerDelegate {
     internal func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none

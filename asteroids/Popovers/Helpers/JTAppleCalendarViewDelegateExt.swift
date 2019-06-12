@@ -11,6 +11,7 @@ extension SearchDatePopover: JTAppleCalendarViewDelegate {
     private static let CELL_IDENTIFIER = "dateCell"
     private static let HEADER_IDENTIFIER = "dateHeader"
     private static let DATE_FORMAT_SHORT = "MMM YYYY"
+    private static let MONTH_LONG: CGFloat = 50
     
     internal func calendar(_ calendar: JTAppleCalendarView, shouldSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) -> Bool {
         return true
@@ -27,16 +28,14 @@ extension SearchDatePopover: JTAppleCalendarViewDelegate {
     }
     
     internal func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
-        let formatter = DateFormatter()
-        formatter.dateFormat = SearchDatePopover.DATE_FORMAT_SHORT
-        
+        let dateParser = DateParserImpl()
         let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: SearchDatePopover.HEADER_IDENTIFIER, for: indexPath) as! DateHeader
-        header.monthYearTitle.text = formatter.string(from: range.start)
+        header.monthYearTitle.text = dateParser.parseToString(date: range.start, format: SearchDatePopover.DATE_FORMAT_SHORT)
         return header
     }
     
     internal func calendarSizeForMonths(_ calendar: JTAppleCalendarView?) -> MonthSize? {
-        return MonthSize(defaultSize: 50)
+        return MonthSize(defaultSize: SearchDatePopover.MONTH_LONG)
     }
     
     internal func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

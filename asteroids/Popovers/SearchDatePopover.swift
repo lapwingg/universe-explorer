@@ -14,14 +14,14 @@ internal class SearchDatePopover: UIViewController {
     private var dateParser: DateParser!
     private var completionAction: ((Date) -> Void)?
     private var date: Date?
-    private static let STORYBOARD_NAME = "Main"
+    private static var uiViewControllerFactory: UIViewControllerFactory!
     private static let POPOVER_NAME = "SearchDatePopover"
-    private let DATE = (YEAR: 2019, MONTH: 06, DAY: 10)
+    private let DATE = (YEAR: 2019, MONTH: 06, DAY: 12)
     private let OFFSET: Double = 60 * 60 * 2
     
     public static func create(controller: UIViewController, completion: ((Date) -> Void)?) -> UINavigationController {
-        let storyboard : UIStoryboard = UIStoryboard(name: STORYBOARD_NAME, bundle: nil)
-        let popoverContent = storyboard.instantiateViewController(withIdentifier: POPOVER_NAME) as! SearchDatePopover
+        SearchDatePopover.uiViewControllerFactory = UIViewControllerFactoryImpl()
+        let popoverContent = SearchDatePopover.uiViewControllerFactory.create(name: SearchDatePopover.POPOVER_NAME) as! SearchDatePopover
         let nav = UINavigationController(rootViewController: popoverContent)
         nav.modalPresentationStyle = .popover
         let popover = nav.popoverPresentationController
@@ -44,17 +44,17 @@ internal class SearchDatePopover: UIViewController {
         dismiss(animated: true)
     }
     
+    private func configure() {
+        setupServices()
+        setupCalendarDelegates()
+        setupCalendar()
+    }
+    
     internal func configureCell(view: JTAppleCell?, cellState: CellState, date: Date) {
         guard let cell = view as? DateCell  else { return }
         cell.dateLabel.text = cellState.text
         handleCellTextColor(cell: cell, cellState: cellState)
         handleCellSelected(cell: cell, cellState: cellState, date: date)
-    }
-    
-    private func configure() {
-        setupHelpers()
-        setupCalendarDelegates()
-        setupCalendar()
     }
     
     private func handleCellTextColor(cell: DateCell, cellState: CellState) {
@@ -79,7 +79,7 @@ internal class SearchDatePopover: UIViewController {
         }
     }
     
-    fileprivate func setupHelpers() {
+    fileprivate func setupServices() {
         dateFactory = DateFactoryImpl()
         dateParser = DateParserImpl()
     }

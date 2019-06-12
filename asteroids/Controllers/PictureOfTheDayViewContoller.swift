@@ -11,15 +11,16 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     private var downloader: DataDownloadService?
     private var serializer: Serializer?
     private var formatter: DataFormatter?
+    private var uiViewControllerFactory: UIViewControllerFactory!
+    private var uiViewControllerValidator: UIViewControllerValidator!
     private var sendPicture: [String: PictureOfTheDay?]?
     private let FIRST_PAGE_NAME = "PictureOfTheDayFirstPage"
     private let SECOND_PAGE_NAME = "PictureOfTheDaySecondPage"
-    private let STORYBOARD_NAME = "Main"
     private let PARAMETER_NAME = "picture"
     internal lazy var associatedPageViews: [UIViewController] = {
-        return [newPageView(name: FIRST_PAGE_NAME),
-                newPageView(name: SECOND_PAGE_NAME)]
-    }()
+        return [uiViewControllerFactory.create(name: FIRST_PAGE_NAME),
+                uiViewControllerFactory.create(name: SECOND_PAGE_NAME)]
+        }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +55,6 @@ internal class PictureOfTheDayViewController: UIPageViewController {
         NotificationCenter.default.post(name: .newDownloadedData, object: PictureOfTheDaySecondViewPage.self, userInfo: sendPicture)
     }
     
-    fileprivate func newPageView(name: String) -> UIViewController {
-        return UIStoryboard(name: STORYBOARD_NAME, bundle: nil).instantiateViewController(withIdentifier: name)
-    }
-    
     fileprivate func setupDelegates() {
         dataSource = self
     }
@@ -66,6 +63,8 @@ internal class PictureOfTheDayViewController: UIPageViewController {
         downloader = NASADownloadService()
         serializer = JSONSerializer()
         formatter = NasaDataFormatter()
+        uiViewControllerFactory = UIViewControllerFactoryImpl()
+        uiViewControllerValidator = UIViewControllerValidatorImpl()
     }
     
     fileprivate func setupObserver() {
@@ -73,9 +72,7 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     }
     
     fileprivate func setupAssosiatedPageViews() {
-        guard let firstViewController = associatedPageViews.first else {
-            fatalError("NONE PAGE")
-        }
+        let firstViewController = uiViewControllerValidator.validate(associatedPageViews.first)
         setViewControllers([firstViewController], direction: .forward, animated: true)
     }
 }

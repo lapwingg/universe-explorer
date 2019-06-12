@@ -8,13 +8,14 @@
 import Foundation
 
 internal class DateParserImpl : DateParser {
-    var dateFormatter: DateFormatter!
-    var dateParserValidator: DateParserValidator!
+    private var dateFormatter: DateFormatter!
+    private var dateParserValidator: DateParserValidator!
+    private let DEFAULT_FORMAT = "yyyy-MM-dd"
     
     init() {
         dateFormatter = DateFormatter()
         dateParserValidator = DateParserValidatorImpl()
-        setDateFormat()
+        setDefaultFormat()
     }
     
     internal func parseToString(date: Date) -> String {
@@ -22,7 +23,12 @@ internal class DateParserImpl : DateParser {
         return dateParserValidator.validate(dateInString)
     }
     
-    private func setDateFormat() {
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+    internal func parseToString(date: Date, format: String) -> String {
+        dateFormatter.dateFormat = format
+        return parseToString(date: date)
+    }
+    
+    private func setDefaultFormat() {
+        dateFormatter.dateFormat = DEFAULT_FORMAT
     }
 }

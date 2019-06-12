@@ -57,12 +57,16 @@
 		05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */; };
 		05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */; };
 		05181A5322AC2A3F009DD6BF /* SearchDatePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */; };
+		05414B8622B0FA9000307903 /* UIViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8522B0FA9000307903 /* UIViewControllerFactory.swift */; };
+		05414B8822B0FAE200307903 /* UIViewControllerFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */; };
+		05414B8A22B0FC3A00307903 /* UIViewControllerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */; };
+		05414B8C22B0FD1700307903 /* UIViewControllerValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */; };
 		056A3AEF22AD1BC800F60225 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AEE22AD1BC800F60225 /* DateCell.swift */; };
 		056A3AF122AD3D4800F60225 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF022AD3D4800F60225 /* DateHeader.swift */; };
 		056A3AF522AF055300F60225 /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF422AF055300F60225 /* NotificationExt.swift */; };
-		056A3AF722AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF622AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift */; };
-		056A3AF922AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF822AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift */; };
-		056A3AFE22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFD22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift */; };
+		056A3AF722AF0BDB00F60225 /* PopoverAdaptation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF622AF0BDB00F60225 /* PopoverAdaptation.swift */; };
+		056A3AF922AF0CA700F60225 /* PictureOfTheDayViewControllerPaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF822AF0CA700F60225 /* PictureOfTheDayViewControllerPaging.swift */; };
+		056A3AFE22AF123F00F60225 /* JTAppleCalendarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFD22AF123F00F60225 /* JTAppleCalendarConfigurator.swift */; };
 		056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */; };
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
@@ -137,12 +141,16 @@
 		05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayFirstViewPage.swift; sourceTree = "<group>"; };
 		05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDaySecondViewPage.swift; sourceTree = "<group>"; };
 		05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDatePopover.swift; sourceTree = "<group>"; };
+		05414B8522B0FA9000307903 /* UIViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactory.swift; sourceTree = "<group>"; };
+		05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactoryImpl.swift; sourceTree = "<group>"; };
+		05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerValidator.swift; sourceTree = "<group>"; };
+		05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerValidatorImpl.swift; sourceTree = "<group>"; };
 		056A3AEE22AD1BC800F60225 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		056A3AF022AD3D4800F60225 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 		056A3AF422AF055300F60225 /* NotificationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
-		056A3AF622AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPopoverPresentationControllerDelegateExt.swift; sourceTree = "<group>"; };
-		056A3AF822AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerDataSouceExt.swift; sourceTree = "<group>"; };
-		056A3AFD22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarViewDataSourceExt.swift; sourceTree = "<group>"; };
+		056A3AF622AF0BDB00F60225 /* PopoverAdaptation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAdaptation.swift; sourceTree = "<group>"; };
+		056A3AF822AF0CA700F60225 /* PictureOfTheDayViewControllerPaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayViewControllerPaging.swift; sourceTree = "<group>"; };
+		056A3AFD22AF123F00F60225 /* JTAppleCalendarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarConfigurator.swift; sourceTree = "<group>"; };
 		056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarViewDelegateExt.swift; sourceTree = "<group>"; };
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
@@ -282,61 +290,86 @@
 		05181A2122AA8BC2009DD6BF /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				05181A1F22AA8A85009DD6BF /* URLComponentsValidatorImpl.swift */,
-				05181A2622ABBD0F009DD6BF /* URLComponentsValidator.swift */,
-				05181A2222AA8C6A009DD6BF /* DateParserValidatorImpl.swift */,
-				05181A2C22ABC0B2009DD6BF /* DateParserValidator.swift */,
-				05181A2422AA8D3C009DD6BF /* DateValidatorImpl.swift */,
-				05181A2E22ABC107009DD6BF /* DateValidator.swift */,
-				05181A3222ABC511009DD6BF /* URLValidator.swift */,
-				05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */,
+				05414B9122B1040A00307903 /* URL */,
+				05414B9022B103F300307903 /* Date */,
 				05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */,
 				05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */,
-				05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */,
-				05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */,
+				05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */,
+				05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
 		};
-		056A3AF322AF053300F60225 /* Extensions */ = {
+		05414B8D22B1021300307903 /* Popovers */ = {
 			isa = PBXGroup;
 			children = (
-				056A3AFC22AF121D00F60225 /* SearchDatePopover */,
-				056A3AFA22AF0CFF00F60225 /* PictureOfTheDayViewController */,
-				056A3AF422AF055300F60225 /* NotificationExt.swift */,
+				05414B8F22B1032A00307903 /* Helpers */,
+				05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */,
 			);
-			path = Extensions;
+			path = Popovers;
 			sourceTree = "<group>";
 		};
-		056A3AFA22AF0CFF00F60225 /* PictureOfTheDayViewController */ = {
+		05414B8E22B1024D00307903 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				056A3AF822AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift */,
-				056A3AF622AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift */,
+				056A3AF822AF0CA700F60225 /* PictureOfTheDayViewControllerPaging.swift */,
+				05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */,
+				05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */,
 			);
-			path = PictureOfTheDayViewController;
+			name = Pages;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		05414B8F22B1032A00307903 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				056A3AFD22AF123F00F60225 /* JTAppleCalendarConfigurator.swift */,
+				056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */,
+				056A3AF622AF0BDB00F60225 /* PopoverAdaptation.swift */,
+				056A3AEE22AD1BC800F60225 /* DateCell.swift */,
+				056A3AF022AD3D4800F60225 /* DateHeader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		05414B9022B103F300307903 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				05181A2C22ABC0B2009DD6BF /* DateParserValidator.swift */,
+				05181A2222AA8C6A009DD6BF /* DateParserValidatorImpl.swift */,
+				05181A2E22ABC107009DD6BF /* DateValidator.swift */,
+				05181A2422AA8D3C009DD6BF /* DateValidatorImpl.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		05414B9122B1040A00307903 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				05181A2622ABBD0F009DD6BF /* URLComponentsValidator.swift */,
+				05181A1F22AA8A85009DD6BF /* URLComponentsValidatorImpl.swift */,
+				05181A3222ABC511009DD6BF /* URLValidator.swift */,
+				05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */,
+				05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */,
+				05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
+		056A3AF322AF053300F60225 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				056A3AF422AF055300F60225 /* NotificationExt.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		056A3AFB22AF0D7500F60225 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */,
-				056A3AEE22AD1BC800F60225 /* DateCell.swift */,
-				056A3AF022AD3D4800F60225 /* DateHeader.swift */,
-				05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */,
-				05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */,
 				05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		056A3AFC22AF121D00F60225 /* SearchDatePopover */ = {
-			isa = PBXGroup;
-			children = (
-				056A3AFD22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift */,
-				056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */,
-			);
-			path = SearchDatePopover;
 			sourceTree = "<group>";
 		};
 		0577A91922A4174200870FED /* Factories */ = {
@@ -346,6 +379,8 @@
 				05181A3022ABC151009DD6BF /* URLFactory.swift */,
 				050601D122A43EEA00EE760C /* DateFactoryImpl.swift */,
 				05181A3622ABC7A5009DD6BF /* DateFactory.swift */,
+				05414B8522B0FA9000307903 /* UIViewControllerFactory.swift */,
+				05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -373,16 +408,18 @@
 		05D8201A22A29CEB000E0CB7 /* asteroids */ = {
 			isa = PBXGroup;
 			children = (
+				056A3AFB22AF0D7500F60225 /* Controllers */,
+				050601E122A6686100EE760C /* DownloadDataServices */,
+				050601EC22A84F1A00EE760C /* Formatters */,
+				0577A91922A4174200870FED /* Factories */,
+				050601DC22A6641600EE760C /* Models */,
+				056A3AF322AF053300F60225 /* Notifications */,
+				05414B8E22B1024D00307903 /* Pages */,
 				050601D622A662FC00EE760C /* Parsers */,
+				05414B8D22B1021300307903 /* Popovers */,
 				050601D722A6635000EE760C /* Providers */,
 				05181A2122AA8BC2009DD6BF /* Validators */,
-				050601EC22A84F1A00EE760C /* Formatters */,
 				050601E522A849E000EE760C /* Serializers */,
-				050601E122A6686100EE760C /* DownloadDataServices */,
-				050601DC22A6641600EE760C /* Models */,
-				0577A91922A4174200870FED /* Factories */,
-				056A3AF322AF053300F60225 /* Extensions */,
-				056A3AFB22AF0D7500F60225 /* Controllers */,
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
@@ -605,7 +642,8 @@
 				05181A3B22ABCAF0009DD6BF /* ModelValidator.swift in Sources */,
 				05181A2322AA8C6A009DD6BF /* DateParserValidatorImpl.swift in Sources */,
 				05181A3922ABC8EE009DD6BF /* DateParser.swift in Sources */,
-				056A3AF722AF0BDB00F60225 /* UIPopoverPresentationControllerDelegateExt.swift in Sources */,
+				056A3AF722AF0BDB00F60225 /* PopoverAdaptation.swift in Sources */,
+				05414B8822B0FAE200307903 /* UIViewControllerFactoryImpl.swift in Sources */,
 				056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */,
 				05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */,
 				05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */,
@@ -616,6 +654,7 @@
 				05181A5322AC2A3F009DD6BF /* SearchDatePopover.swift in Sources */,
 				05181A2D22ABC0B2009DD6BF /* DateParserValidator.swift in Sources */,
 				051819F622A92FFA009DD6BF /* MarsPhotosRoot.swift in Sources */,
+				05414B8C22B0FD1700307903 /* UIViewControllerValidatorImpl.swift in Sources */,
 				05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */,
 				050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */,
 				05181A2922ABBF46009DD6BF /* URLComponentsProvider.swift in Sources */,
@@ -623,7 +662,7 @@
 				05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */,
 				05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */,
 				050601D922A6636D00EE760C /* URLComponentsProviderImpl.swift in Sources */,
-				056A3AFE22AF123F00F60225 /* JTAppleCalendarViewDataSourceExt.swift in Sources */,
+				056A3AFE22AF123F00F60225 /* JTAppleCalendarConfigurator.swift in Sources */,
 				051819F822A9303D009DD6BF /* Photo.swift in Sources */,
 				05181A0622A95237009DD6BF /* ClosestAsteroidsLinks.swift in Sources */,
 				05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */,
@@ -642,6 +681,7 @@
 				05181A3722ABC7A5009DD6BF /* DateFactory.swift in Sources */,
 				05181A1622A953C8009DD6BF /* NearEarthObjectLinks.swift in Sources */,
 				05181A3122ABC151009DD6BF /* URLFactory.swift in Sources */,
+				05414B8622B0FA9000307903 /* UIViewControllerFactory.swift in Sources */,
 				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
 				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
 				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,
@@ -650,7 +690,8 @@
 				05181A1222A9536F009DD6BF /* EstimatedDiameter.swift in Sources */,
 				05181A1422A9539B009DD6BF /* Feet.swift in Sources */,
 				05181A2022AA8A85009DD6BF /* URLComponentsValidatorImpl.swift in Sources */,
-				056A3AF922AF0CA700F60225 /* UIPageViewControllerDataSouceExt.swift in Sources */,
+				056A3AF922AF0CA700F60225 /* PictureOfTheDayViewControllerPaging.swift in Sources */,
+				05414B8A22B0FC3A00307903 /* UIViewControllerValidator.swift in Sources */,
 				0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */,
 				05181A0E22A95317009DD6BF /* OrbitingBody.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 
 import Foundation
 
-protocol DateParser {
+@objc protocol DateParser {
     func parseToString(date: Date) -> String
+    @objc optional func parseToString(date: Date, format: String) -> String
 }
