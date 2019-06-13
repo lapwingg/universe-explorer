@@ -12,7 +12,7 @@ public class ViewController: UIViewController {
     @IBOutlet weak var resultView: UIView!
     private var downloader: DataDownloadService?
     private var serializer: Serializer?
-    private var formatter: DataFormatter?
+   // private var formatter: DataFormatter?
     
     override public func viewDidLoad() {
         super.viewDidLoad()

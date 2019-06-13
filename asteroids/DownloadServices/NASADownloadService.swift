@@ -9,12 +9,10 @@ import Foundation
 
 internal class NASADownloadService : DataDownloadService {
     private var urlFactory: URLFactory!
-    private var dateFactory: DateFactory!
     private var urlSessionValidator: URLSessionValidator!
     
     init() {
         urlFactory = URLFactoryImpl()
-        dateFactory = DateFactoryImpl()
         urlSessionValidator = URLSessionValidatorImpl()
     }
     

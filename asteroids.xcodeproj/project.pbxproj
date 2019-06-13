@@ -14,8 +14,6 @@
 		050601E022A664E400EE760C /* NASADownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601DF22A664E400EE760C /* NASADownloadService.swift */; };
 		050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601E622A84A0900EE760C /* JSONSerializer.swift */; };
 		050601E922A84B3D00EE760C /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601E822A84B3D00EE760C /* Serializer.swift */; };
-		050601EB22A84F0800EE760C /* DataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601EA22A84F0800EE760C /* DataFormatter.swift */; };
-		050601EE22A84F2E00EE760C /* NasaDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601ED22A84F2E00EE760C /* NasaDataFormatter.swift */; };
 		051819F622A92FFA009DD6BF /* MarsPhotosRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819F522A92FFA009DD6BF /* MarsPhotosRoot.swift */; };
 		051819F822A9303D009DD6BF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819F722A9303D009DD6BF /* Photo.swift */; };
 		051819FA22A93064009DD6BF /* PhotoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051819F922A93064009DD6BF /* PhotoCamera.swift */; };
@@ -100,8 +98,6 @@
 		050601DF22A664E400EE760C /* NASADownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASADownloadService.swift; sourceTree = "<group>"; };
 		050601E622A84A0900EE760C /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 		050601E822A84B3D00EE760C /* Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
-		050601EA22A84F0800EE760C /* DataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFormatter.swift; sourceTree = "<group>"; };
-		050601ED22A84F2E00EE760C /* NasaDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDataFormatter.swift; sourceTree = "<group>"; };
 		051819F522A92FFA009DD6BF /* MarsPhotosRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosRoot.swift; sourceTree = "<group>"; };
 		051819F722A9303D009DD6BF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		051819F922A93064009DD6BF /* PhotoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCamera.swift; sourceTree = "<group>"; };
@@ -245,15 +241,6 @@
 				050601E822A84B3D00EE760C /* Serializer.swift */,
 			);
 			path = Serializers;
-			sourceTree = "<group>";
-		};
-		050601EC22A84F1A00EE760C /* Formatters */ = {
-			isa = PBXGroup;
-			children = (
-				050601EA22A84F0800EE760C /* DataFormatter.swift */,
-				050601ED22A84F2E00EE760C /* NasaDataFormatter.swift */,
-			);
-			path = Formatters;
 			sourceTree = "<group>";
 		};
 		05181A0022A93A7A009DD6BF /* PictureOfTheDay */ = {
@@ -416,7 +403,6 @@
 			children = (
 				056A3AFB22AF0D7500F60225 /* Controllers */,
 				050601E122A6686100EE760C /* DownloadServices */,
-				050601EC22A84F1A00EE760C /* Formatters */,
 				0577A91922A4174200870FED /* Factories */,
 				050601DC22A6641600EE760C /* Models */,
 				056A3AF322AF053300F60225 /* Notifications */,
@@ -653,9 +639,7 @@
 				056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */,
 				05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */,
 				05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */,
-				050601EB22A84F0800EE760C /* DataFormatter.swift in Sources */,
 				05414B9322B1063C00307903 /* ImageDownloadService.swift in Sources */,
-				050601EE22A84F2E00EE760C /* NasaDataFormatter.swift in Sources */,
 				050601E022A664E400EE760C /* NASADownloadService.swift in Sources */,
 				05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */,
 				05181A5322AC2A3F009DD6BF /* SearchDatePopover.swift in Sources */,

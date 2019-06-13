@@ -10,13 +10,11 @@ import JTAppleCalendar
 
 internal class SearchDatePopover: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    private var dateFactory: DateFactory!
     private var dateParser: DateParser!
     private var completionAction: ((Date) -> Void)?
     private var date: Date?
     private static var uiViewControllerFactory: UIViewControllerFactory!
     private static let POPOVER_NAME = "SearchDatePopover"
-    private let DATE = (YEAR: 2019, MONTH: 06, DAY: 12)
     private let OFFSET: Double = 60 * 60 * 2
     
     public static func create(controller: UIViewController, completion: ((Date) -> Void)?) -> UINavigationController {
@@ -80,7 +78,6 @@ internal class SearchDatePopover: UIViewController {
     }
     
     fileprivate func setupServices() {
-        dateFactory = DateFactoryImpl()
         dateParser = DateParserImpl()
     }
     
@@ -89,11 +86,15 @@ internal class SearchDatePopover: UIViewController {
         calendarView.calendarDelegate = self
     }
     
+    fileprivate func getTodayDate() -> Date {
+        return Date()
+    }
+    
     fileprivate func setupCalendar() {
         calendarView.scrollDirection = .horizontal
         calendarView.scrollingMode = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
-        calendarView.scrollToDate(dateFactory.create(year: DATE.YEAR, month: DATE.MONTH, day: DATE.DAY))
-        calendarView.selectDates([dateFactory.create(year: DATE.YEAR, month: DATE.MONTH, day: DATE.DAY)])
+        calendarView.scrollToDate(getTodayDate())
+        calendarView.selectDates([getTodayDate()])
     }
 }

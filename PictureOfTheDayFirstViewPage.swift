@@ -14,13 +14,13 @@ internal class PictureOfTheDayFirstViewPage: UIViewController {
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var pictureImageView: UIImageView!
     private var imageDownloadService: ImageDownloadService!
+    private var entityValidator: ModelValidator!
     private let PARAMETER_NAME = "picture"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObserver()
         setupServices()
-        makeInitialUIUpdate()
     }
     
     private func setupObserver() {
@@ -29,19 +29,12 @@ internal class PictureOfTheDayFirstViewPage: UIViewController {
     
     private func setupServices() {
         imageDownloadService = ImageDownloadServiceImpl()
-    }
-    
-    private func makeInitialUIUpdate() {
-        NotificationCenter.default.post(name: .explicityUpdateUI, object: PictureOfTheDayViewController.self)
+        entityValidator = ModelValidatorImpl()
     }
     
     @objc private func updateUI(_ notification: NSNotification) {
         let p = notification.userInfo?[PARAMETER_NAME] as? PictureOfTheDay
-        guard let picture = p else {
-            dateLabel.text = "Date"
-            titleTextView.text = "Title"
-            return
-        }
+        let picture = entityValidator.validate(p)
         fillTextView(picture)
         setupImage(picture)
     }

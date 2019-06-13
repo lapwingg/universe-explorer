@@ -10,7 +10,6 @@ import UIKit
 internal class PictureOfTheDayViewController: UIPageViewController {
     private var downloader: DataDownloadService?
     private var serializer: Serializer?
-    private var formatter: DataFormatter?
     private var uiViewControllerFactory: UIViewControllerFactory!
     private var uiViewControllerValidator: UIViewControllerValidator!
     private var sendPicture: [String: PictureOfTheDay?]?
@@ -25,22 +24,31 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        getTodayPictureOfTheDay()
     }
 
     @IBAction internal func searchByDateTapped(_ sender: UIBarButtonItem) {
         let nav = SearchDatePopover.create(controller: self) { [unowned self] date in
-            _ = self.downloader?.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
-                self.serializer?.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
-                    self.sendPicture = [self.PARAMETER_NAME: pictureOfTheDay]
-                    self.sendData()
-                }
-            }
+            self.downloadJSONfromServer(date: date)
         }
         self.present(nav, animated: true)
     }
     
     @IBAction internal func addToFavouriteTapped(_ sender: Any) {
         print("Add To Favourite Was Tapped")
+    }
+    
+    internal func getTodayPictureOfTheDay() {
+        downloadJSONfromServer(date: getCurrentDate())
+    }
+    
+    internal func downloadJSONfromServer(date: Date) {
+        _ = downloader?.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
+            self.serializer?.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
+                self.sendPicture = [self.PARAMETER_NAME: pictureOfTheDay]
+                self.sendData()
+            }
+        }
     }
     
     private func configure() {
@@ -62,7 +70,6 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     fileprivate func setupServices() {
         downloader = NASADownloadService()
         serializer = JSONSerializer()
-        formatter = NasaDataFormatter()
         uiViewControllerFactory = UIViewControllerFactoryImpl()
         uiViewControllerValidator = UIViewControllerValidatorImpl()
     }
@@ -74,5 +81,9 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     fileprivate func setupAssosiatedPageViews() {
         let firstViewController = uiViewControllerValidator.validate(associatedPageViews.first)
         setViewControllers([firstViewController], direction: .forward, animated: true)
+    }
+    
+    fileprivate func getCurrentDate() -> Date {
+        return Date()
     }
 }

@@ -8,17 +8,25 @@
 import UIKit
 
 internal class PictureOfTheDaySecondViewPage: UIViewController {
-    @IBOutlet weak var textView2: UITextView!
+    private var entityValidator: ModelValidator!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var explanationTextView: UITextView!
     private let PARAMETER_NAME = "picture"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObserver()
+        setupServices()
         makeInitialUIUpdate()
     }
     
     private func setupObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(updateUI(_:)), name: .newDownloadedData, object: nil)
+    }
+    
+    private func setupServices() {
+        entityValidator = ModelValidatorImpl()
     }
     
     private func makeInitialUIUpdate() {
@@ -27,18 +35,18 @@ internal class PictureOfTheDaySecondViewPage: UIViewController {
     
     @objc private func updateUI(_ notification: NSNotification) {
         let p = notification.userInfo?[PARAMETER_NAME] as? PictureOfTheDay
-        fillTextView(p)
+        let picture = entityValidator.validate(p)
+        fillTextView(picture)
     }
     
-    private func fillTextView(_ p: PictureOfTheDay?) {
-        guard let picture = p else {
-            textView2.text = "Page2"
-            return
-        }
-        textView2.text = getTextToDisplay(picture)
+    private func fillTextView(_ picture: PictureOfTheDay) {
+        let result = getDataToDisplay(picture)
+        dateLabel.text = result.date
+        titleTextView.text = result.title
+        explanationTextView.text = result.explanation
     }
     
-    private func getTextToDisplay(_ picture: PictureOfTheDay) -> String {
-        return "\(picture.date)\n\n\n\(picture.title)\n\n\(picture.explanation)"
+    private func getDataToDisplay(_ picture: PictureOfTheDay) -> (date: String, title: String, explanation: String) {
+        return ("\(picture.date)", "\(picture.title)", "\(picture.explanation)")
     }
 }
