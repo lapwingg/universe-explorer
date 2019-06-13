@@ -18,12 +18,17 @@ internal class URLFactoryImpl : URLFactory {
         urlValidator = URLValidatorImpl()
     }
     
-    public func createRequest(queryType: QueryType, date: Date) -> URL {
+    internal func createRequest(queryType: QueryType, date: Date) -> URL {
         var request = urlComponentsProvider.get(queryType: queryType)
         request.queryItems = [
             urlQueryItemProvider.getAuthenticationItem(),
             urlQueryItemProvider.get(queryType: queryType, date: date)
         ]
         return urlValidator.validate(request.url)
+    }
+    
+    internal func createRequest(link: String) -> URL {
+        let url = URL(string: link)
+        return urlValidator.validate(url)
     }
 }

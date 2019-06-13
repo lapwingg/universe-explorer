@@ -61,6 +61,8 @@
 		05414B8822B0FAE200307903 /* UIViewControllerFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */; };
 		05414B8A22B0FC3A00307903 /* UIViewControllerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */; };
 		05414B8C22B0FD1700307903 /* UIViewControllerValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */; };
+		05414B9322B1063C00307903 /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B9222B1063C00307903 /* ImageDownloadService.swift */; };
+		05414B9522B1069100307903 /* ImageDownloadServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B9422B1069100307903 /* ImageDownloadServiceImpl.swift */; };
 		056A3AEF22AD1BC800F60225 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AEE22AD1BC800F60225 /* DateCell.swift */; };
 		056A3AF122AD3D4800F60225 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF022AD3D4800F60225 /* DateHeader.swift */; };
 		056A3AF522AF055300F60225 /* NotificationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AF422AF055300F60225 /* NotificationExt.swift */; };
@@ -145,6 +147,8 @@
 		05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactoryImpl.swift; sourceTree = "<group>"; };
 		05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerValidator.swift; sourceTree = "<group>"; };
 		05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerValidatorImpl.swift; sourceTree = "<group>"; };
+		05414B9222B1063C00307903 /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
+		05414B9422B1069100307903 /* ImageDownloadServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadServiceImpl.swift; sourceTree = "<group>"; };
 		056A3AEE22AD1BC800F60225 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		056A3AF022AD3D4800F60225 /* DateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
 		056A3AF422AF055300F60225 /* NotificationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExt.swift; sourceTree = "<group>"; };
@@ -223,13 +227,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		050601E122A6686100EE760C /* DownloadDataServices */ = {
+		050601E122A6686100EE760C /* DownloadServices */ = {
 			isa = PBXGroup;
 			children = (
 				050601DD22A6649500EE760C /* DataDownloadService.swift */,
 				050601DF22A664E400EE760C /* NASADownloadService.swift */,
+				05414B9222B1063C00307903 /* ImageDownloadService.swift */,
+				05414B9422B1069100307903 /* ImageDownloadServiceImpl.swift */,
 			);
-			path = DownloadDataServices;
+			path = DownloadServices;
 			sourceTree = "<group>";
 		};
 		050601E522A849E000EE760C /* Serializers */ = {
@@ -313,8 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				056A3AF822AF0CA700F60225 /* PictureOfTheDayViewControllerPaging.swift */,
-				05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */,
 				05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */,
+				05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */,
 			);
 			name = Pages;
 			path = ..;
@@ -409,7 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				056A3AFB22AF0D7500F60225 /* Controllers */,
-				050601E122A6686100EE760C /* DownloadDataServices */,
+				050601E122A6686100EE760C /* DownloadServices */,
 				050601EC22A84F1A00EE760C /* Formatters */,
 				0577A91922A4174200870FED /* Factories */,
 				050601DC22A6641600EE760C /* Models */,
@@ -648,6 +654,7 @@
 				05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */,
 				05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */,
 				050601EB22A84F0800EE760C /* DataFormatter.swift in Sources */,
+				05414B9322B1063C00307903 /* ImageDownloadService.swift in Sources */,
 				050601EE22A84F2E00EE760C /* NasaDataFormatter.swift in Sources */,
 				050601E022A664E400EE760C /* NASADownloadService.swift in Sources */,
 				05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */,
@@ -658,6 +665,7 @@
 				05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */,
 				050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */,
 				05181A2922ABBF46009DD6BF /* URLComponentsProvider.swift in Sources */,
+				05414B9522B1069100307903 /* ImageDownloadServiceImpl.swift in Sources */,
 				05181A0A22A952BD009DD6BF /* CloseApproachDatum.swift in Sources */,
 				05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */,
 				05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */,

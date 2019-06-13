@@ -7,18 +7,28 @@
 
 import UIKit
 
+// download picture and display its
+
 internal class PictureOfTheDayFirstViewPage: UIViewController {
-    @IBOutlet weak var textView1: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var pictureImageView: UIImageView!
+    private var imageDownloadService: ImageDownloadService!
     private let PARAMETER_NAME = "picture"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObserver()
+        setupServices()
         makeInitialUIUpdate()
     }
     
     private func setupObserver() {
          NotificationCenter.default.addObserver(self, selector: #selector(updateUI(_:)), name: .newDownloadedData, object: nil)
+    }
+    
+    private func setupServices() {
+        imageDownloadService = ImageDownloadServiceImpl()
     }
     
     private func makeInitialUIUpdate() {
@@ -27,18 +37,28 @@ internal class PictureOfTheDayFirstViewPage: UIViewController {
     
     @objc private func updateUI(_ notification: NSNotification) {
         let p = notification.userInfo?[PARAMETER_NAME] as? PictureOfTheDay
-        fillTextView(p)
-    }
-    
-    private func fillTextView(_ p: PictureOfTheDay?) {
         guard let picture = p else {
-            textView1.text = "Page1"
+            dateLabel.text = "Date"
+            titleTextView.text = "Title"
             return
         }
-        textView1.text = getTextToDisplay(picture)
+        fillTextView(picture)
+        setupImage(picture)
     }
     
-    private func getTextToDisplay(_ picture: PictureOfTheDay) -> String {
-        return "\(picture.date)\n\n\(picture.media_type)\n\(picture.url)"
+    private func setupImage(_ picture: PictureOfTheDay) {
+        _ = imageDownloadService.runDownload(link: picture.url) { [unowned self] image in
+            self.pictureImageView.image = image
+        }
+    }
+    
+    private func fillTextView(_ picture: PictureOfTheDay) {
+        let result = getDataToDisplay(picture)
+        dateLabel.text = result.date
+        titleTextView.text = result.title
+    }
+    
+    private func getDataToDisplay(_ picture: PictureOfTheDay) -> (date: String, title: String) {
+        return ("\(picture.date)", "\(picture.title)")
     }
 }
