@@ -72,6 +72,7 @@
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
 		05A55E7222B5524700224354 /* MarsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7122B5524700224354 /* MarsPhoto.swift */; };
+		05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
 		05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201D22A29CEB000E0CB7 /* ViewController.swift */; };
 		05D8202122A29CEB000E0CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D8201F22A29CEB000E0CB7 /* Main.storyboard */; };
@@ -158,6 +159,7 @@
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
 		05A55E7122B5524700224354 /* MarsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhoto.swift; sourceTree = "<group>"; };
+		05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoCollectionHeader.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D8201D22A29CEB000E0CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
+				05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */,
 				05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */,
 				05A55E7122B5524700224354 /* MarsPhoto.swift */,
 				0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */,
@@ -683,6 +686,7 @@
 				05181A3122ABC151009DD6BF /* URLFactory.swift in Sources */,
 				05414B8622B0FA9000307903 /* UIViewControllerFactory.swift in Sources */,
 				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
+				05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */,
 				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
 				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,
 				05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */,

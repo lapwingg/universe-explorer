@@ -15,6 +15,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
     private var dateFactory: DateFactory!
     private var imageDownloadService: ImageDownloadService!
     private let REUSE_IDENTIFIER = "marsPhoto"
+    private let HEADER_REUSE_IDENTIFIER = "marsPhotosHeader"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +65,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: REUSE_IDENTIFIER,
-                                                      for: indexPath) as! MarsPhotosCollectionViewCell
-        print(cell.photoImageView)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: REUSE_IDENTIFIER, for: indexPath) as! MarsPhotosCollectionViewCell
         let photos = photo(for: indexPath)
         cell.backgroundColor = .white
         cell.photoImageView.image = photos
@@ -76,6 +75,19 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
 
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HEADER_REUSE_IDENTIFIER, for: indexPath) as? MarsPhotoCollectionHeader else {
+                    fatalError("Invalid view type")
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM"
+        let date = marsPhoto[indexPath.section].date
+        let string = dateFormatter.string(from: date)
+        let searchTerm = string
+        headerView.dayMonthHeader.text = searchTerm
+        return headerView
     }
 
     // MARK: UICollectionViewDelegate
