@@ -17,7 +17,6 @@ internal class ImageDownloadServiceImpl : ImageDownloadService {
     }
     
     internal func runDownload(link: String, completion: @escaping (UIImage?) -> Void) {
-        // to do !
         let requestURL = urlFactory.createRequest(link: link)
         
         DispatchQueue.global(qos: .background).async {
@@ -28,7 +27,7 @@ internal class ImageDownloadServiceImpl : ImageDownloadService {
                 DispatchQueue.main.async {
                     completion(UIImage(data: data))
                 }
-                }.resume()
+            }.resume()
         }
     }
 }

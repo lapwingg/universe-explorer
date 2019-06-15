@@ -7,14 +7,12 @@
 
 import UIKit
 
-// download picture and display its
-
 internal class PictureOfTheDayFirstViewPage: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var pictureImageView: UIImageView!
     private var imageDownloadService: ImageDownloadService!
-    private var entityValidator: ModelValidator!
+    private var entityValidator: EntityValidator!
     private let PARAMETER_NAME = "picture"
     
     override func viewDidLoad() {
@@ -29,7 +27,7 @@ internal class PictureOfTheDayFirstViewPage: UIViewController {
     
     private func setupServices() {
         imageDownloadService = ImageDownloadServiceImpl()
-        entityValidator = ModelValidatorImpl()
+        entityValidator = EntityValidatorImpl()
     }
     
     @objc private func updateUI(_ notification: NSNotification) {
@@ -40,8 +38,12 @@ internal class PictureOfTheDayFirstViewPage: UIViewController {
     }
     
     private func setupImage(_ picture: PictureOfTheDay) {
+     //   let alert = UIAlertController(title: "Downloading...", message: "Please wait for end", preferredStyle: .alert)
+      //      self.present(alert, animated: true)
         _ = imageDownloadService.runDownload(link: picture.url) { [unowned self] image in
             self.pictureImageView.image = image
+       //     print("DOWNLOADED IMAGE")
+      //      self.dismiss(animated: true)
         }
     }
     

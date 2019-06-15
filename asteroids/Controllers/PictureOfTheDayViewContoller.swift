@@ -60,7 +60,7 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     
     @objc private func sendData() {
         NotificationCenter.default.post(name: .newDownloadedData, object: PictureOfTheDayFirstViewPage.self, userInfo: sendPicture)
-        NotificationCenter.default.post(name: .newDownloadedData, object: PictureOfTheDaySecondViewPage.self, userInfo: sendPicture)
+    //    NotificationCenter.default.post(name: .newDownloadedData, object: PictureOfTheDaySecondViewPage.self, userInfo: sendPicture)
     }
     
     fileprivate func setupDelegates() {

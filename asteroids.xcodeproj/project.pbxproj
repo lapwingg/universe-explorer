@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0503A39F22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */; };
 		050601D222A43EEA00EE760C /* DateFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601D122A43EEA00EE760C /* DateFactoryImpl.swift */; };
 		050601D522A662C200EE760C /* DateParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601D422A662C200EE760C /* DateParserImpl.swift */; };
 		050601D922A6636D00EE760C /* URLComponentsProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050601D822A6636D00EE760C /* URLComponentsProviderImpl.swift */; };
@@ -44,12 +45,12 @@
 		05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */; };
 		05181A3722ABC7A5009DD6BF /* DateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3622ABC7A5009DD6BF /* DateFactory.swift */; };
 		05181A3922ABC8EE009DD6BF /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3822ABC8EE009DD6BF /* DateParser.swift */; };
-		05181A3B22ABCAF0009DD6BF /* ModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */; };
-		05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */; };
+		05181A3B22ABCAF0009DD6BF /* EntityValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3A22ABCAF0009DD6BF /* EntityValidator.swift */; };
+		05181A3D22ABCB2B009DD6BF /* EntityValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3C22ABCB2B009DD6BF /* EntityValidatorImpl.swift */; };
 		05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */; };
 		05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */; };
 		05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */; };
-		05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */; };
+		05181A4522ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */; };
 		05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4622ABEECE009DD6BF /* TableViewController.swift */; };
 		05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */; };
 		05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */; };
@@ -70,6 +71,7 @@
 		056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */; };
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
+		05A55E7222B5524700224354 /* MarsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7122B5524700224354 /* MarsPhoto.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
 		05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201D22A29CEB000E0CB7 /* ViewController.swift */; };
 		05D8202122A29CEB000E0CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D8201F22A29CEB000E0CB7 /* Main.storyboard */; };
@@ -91,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		050601D122A43EEA00EE760C /* DateFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactoryImpl.swift; sourceTree = "<group>"; };
 		050601D422A662C200EE760C /* DateParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParserImpl.swift; sourceTree = "<group>"; };
 		050601D822A6636D00EE760C /* URLComponentsProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsProviderImpl.swift; sourceTree = "<group>"; };
@@ -128,12 +131,12 @@
 		05181A3422ABC541009DD6BF /* URLValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidatorImpl.swift; sourceTree = "<group>"; };
 		05181A3622ABC7A5009DD6BF /* DateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactory.swift; sourceTree = "<group>"; };
 		05181A3822ABC8EE009DD6BF /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
-		05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelValidator.swift; sourceTree = "<group>"; };
-		05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelValidatorImpl.swift; sourceTree = "<group>"; };
+		05181A3A22ABCAF0009DD6BF /* EntityValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityValidator.swift; sourceTree = "<group>"; };
+		05181A3C22ABCB2B009DD6BF /* EntityValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityValidatorImpl.swift; sourceTree = "<group>"; };
 		05181A3E22ABCC49009DD6BF /* URLSessionValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidator.swift; sourceTree = "<group>"; };
 		05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidatorImpl.swift; sourceTree = "<group>"; };
 		05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayViewContoller.swift; sourceTree = "<group>"; };
-		05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		05181A4622ABEECE009DD6BF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayFirstViewPage.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarViewDelegateExt.swift; sourceTree = "<group>"; };
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
+		05A55E7122B5524700224354 /* MarsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhoto.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D8201D22A29CEB000E0CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -285,8 +289,8 @@
 			children = (
 				05414B9122B1040A00307903 /* URL */,
 				05414B9022B103F300307903 /* Date */,
-				05181A3A22ABCAF0009DD6BF /* ModelValidator.swift */,
-				05181A3C22ABCB2B009DD6BF /* ModelValidatorImpl.swift */,
+				05181A3A22ABCAF0009DD6BF /* EntityValidator.swift */,
+				05181A3C22ABCB2B009DD6BF /* EntityValidatorImpl.swift */,
 				05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */,
 				05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */,
 			);
@@ -415,9 +419,11 @@
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
+				05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */,
+				05A55E7122B5524700224354 /* MarsPhoto.swift */,
+				0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */,
 				05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */,
 				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
-				05181A4422ABEEA0009DD6BF /* CollectionViewController.swift */,
 				05D8202222A29CEC000E0CB7 /* Assets.xcassets */,
 				05D8202422A29CEC000E0CB7 /* LaunchScreen.storyboard */,
 				05D8202722A29CEC000E0CB7 /* Info.plist */,
@@ -631,14 +637,14 @@
 				05181A0822A95276009DD6BF /* NearEarthObject.swift in Sources */,
 				05181A1C22AA8308009DD6BF /* QueryType.swift in Sources */,
 				050601E922A84B3D00EE760C /* Serializer.swift in Sources */,
-				05181A3B22ABCAF0009DD6BF /* ModelValidator.swift in Sources */,
+				05181A3B22ABCAF0009DD6BF /* EntityValidator.swift in Sources */,
 				05181A2322AA8C6A009DD6BF /* DateParserValidatorImpl.swift in Sources */,
 				05181A3922ABC8EE009DD6BF /* DateParser.swift in Sources */,
 				056A3AF722AF0BDB00F60225 /* PopoverAdaptation.swift in Sources */,
 				05414B8822B0FAE200307903 /* UIViewControllerFactoryImpl.swift in Sources */,
 				056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */,
 				05181A1022A9533D009DD6BF /* RelativeVelocity.swift in Sources */,
-				05181A3D22ABCB2B009DD6BF /* ModelValidatorImpl.swift in Sources */,
+				05181A3D22ABCB2B009DD6BF /* EntityValidatorImpl.swift in Sources */,
 				05414B9322B1063C00307903 /* ImageDownloadService.swift in Sources */,
 				050601E022A664E400EE760C /* NASADownloadService.swift in Sources */,
 				05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */,
@@ -646,7 +652,7 @@
 				05181A2D22ABC0B2009DD6BF /* DateParserValidator.swift in Sources */,
 				051819F622A92FFA009DD6BF /* MarsPhotosRoot.swift in Sources */,
 				05414B8C22B0FD1700307903 /* UIViewControllerValidatorImpl.swift in Sources */,
-				05181A4522ABEEA0009DD6BF /* CollectionViewController.swift in Sources */,
+				05181A4522ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift in Sources */,
 				050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */,
 				05181A2922ABBF46009DD6BF /* URLComponentsProvider.swift in Sources */,
 				05414B9522B1069100307903 /* ImageDownloadServiceImpl.swift in Sources */,
@@ -661,9 +667,11 @@
 				050601D522A662C200EE760C /* DateParserImpl.swift in Sources */,
 				05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */,
 				05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */,
+				0503A39F22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift in Sources */,
 				05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */,
 				05181A3322ABC511009DD6BF /* URLValidator.swift in Sources */,
 				05181A2F22ABC107009DD6BF /* DateValidator.swift in Sources */,
+				05A55E7222B5524700224354 /* MarsPhoto.swift in Sources */,
 				051819FC22A930A5009DD6BF /* Rover.swift in Sources */,
 				05181A0C22A952E1009DD6BF /* MissDistance.swift in Sources */,
 				05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */,

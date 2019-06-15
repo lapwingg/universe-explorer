@@ -8,7 +8,7 @@
 import UIKit
 
 internal class PictureOfTheDaySecondViewPage: UIViewController {
-    private var entityValidator: ModelValidator!
+    private var entityValidator: EntityValidator!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet weak var explanationTextView: UITextView!
@@ -26,7 +26,7 @@ internal class PictureOfTheDaySecondViewPage: UIViewController {
     }
     
     private func setupServices() {
-        entityValidator = ModelValidatorImpl()
+        entityValidator = EntityValidatorImpl()
     }
     
     private func makeInitialUIUpdate() {

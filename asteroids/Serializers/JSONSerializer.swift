@@ -8,10 +8,10 @@
 import Foundation
 
 internal class JSONSerializer : Serializer {
-    private var modelValidator: ModelValidator!
+    private var modelValidator: EntityValidator!
     
     init() {
-        modelValidator = ModelValidatorImpl()
+        modelValidator = EntityValidatorImpl()
     }
     
     func decode<Entity>(ofType: Entity.Type, data: Data, completion: @escaping (Entity) -> Void) where Entity : Codable {

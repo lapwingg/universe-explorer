@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ModelValidator {
+protocol EntityValidator {
     func validate<Entity>(_ entity: Entity?) -> Entity where Entity : Codable
 }
