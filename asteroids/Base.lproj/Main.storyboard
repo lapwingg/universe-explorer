@@ -91,28 +91,40 @@
                             <outlet property="delegate" destination="C6L-G6-oEk" id="oHC-Pf-SXv"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="DcT-fw-lnS"/>
+                    <navigationItem key="navigationItem" title="Mars Photos" id="DcT-fw-lnS"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eX-lL-oCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857.971014492754" y="-202.23214285714286"/>
+            <point key="canvasLocation" x="2890" y="-202"/>
         </scene>
         <!--ClosestAsteroids-->
         <scene sceneID="tzv-3h-PVv">
             <objects>
                 <tableViewController storyboardIdentifier="TableView" title="ClosestAsteroids" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wr3-fi-wxd" customClass="TableViewController" customModule="asteroids" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c1U-GV-UJB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c1U-GV-UJB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ieZ-Mm-eUH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="asteroidCell" id="ieZ-Mm-eUH" customClass="ClosestAsteroidsViewCell" customModule="asteroids">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ieZ-Mm-eUH" id="XRQ-vu-QQv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I34-N4-7GP">
+                                            <rect key="frame" x="20" y="11" width="394" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dataLabel" destination="I34-N4-7GP" id="9Cr-1s-mw8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -120,11 +132,11 @@
                             <outlet property="delegate" destination="Wr3-fi-wxd" id="HHq-ks-H2e"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Asteroids" id="sfe-pk-KFS"/>
+                    <navigationItem key="navigationItem" title="Closest Asteroids" id="gtU-KB-jDJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL1-Xi-3d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="550"/>
+            <point key="canvasLocation" x="2857.971014492754" y="549.77678571428567"/>
         </scene>
         <!--Search Date Popover-->
         <scene sceneID="7qT-1t-YJo">
@@ -427,7 +439,7 @@
                     <connections>
                         <segue destination="Fa3-w0-3fm" kind="relationship" relationship="viewControllers" id="YnF-SK-rRU"/>
                         <segue destination="Jdq-pp-22Q" kind="relationship" relationship="viewControllers" id="Dlc-Ck-QHZ"/>
-                        <segue destination="Wr3-fi-wxd" kind="relationship" relationship="viewControllers" id="cAU-ef-8vx"/>
+                        <segue destination="jPq-4Q-Bl1" kind="relationship" relationship="viewControllers" id="cAU-ef-8vx"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2tR-bQ-xeT"/>
                     </connections>
                 </tabBarController>
@@ -472,6 +484,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sod-yI-sLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1947.826086956522" y="-202.23214285714286"/>
+        </scene>
+        <!--Asteroids-->
+        <scene sceneID="HDb-wm-Poh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jPq-4Q-Bl1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Asteroids" id="sfe-pk-KFS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uib-Vv-Cy9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wr3-fi-wxd" kind="relationship" relationship="rootViewController" id="L1S-h1-IpZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpU-7L-OFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947.826086956522" y="549.77678571428567"/>
         </scene>
     </scenes>
 </document>

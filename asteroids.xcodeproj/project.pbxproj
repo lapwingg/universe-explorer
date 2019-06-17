@@ -71,6 +71,8 @@
 		056A3B0022AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */; };
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
+		05942CDB22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */; };
+		05942CDD22B7C9F400EEB089 /* PrepareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05942CDC22B7C9F400EEB089 /* PrepareData.swift */; };
 		05A55E7222B5524700224354 /* MarsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7122B5524700224354 /* MarsPhoto.swift */; };
 		05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
@@ -158,6 +160,8 @@
 		056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarViewDelegateExt.swift; sourceTree = "<group>"; };
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
+		05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosestAsteroidsViewCell.swift; sourceTree = "<group>"; };
+		05942CDC22B7C9F400EEB089 /* PrepareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareData.swift; sourceTree = "<group>"; };
 		05A55E7122B5524700224354 /* MarsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhoto.swift; sourceTree = "<group>"; };
 		05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoCollectionHeader.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -384,6 +388,27 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		05942CD922B7C01400EEB089 /* MARS */ = {
+			isa = PBXGroup;
+			children = (
+				05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */,
+				05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */,
+				0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */,
+				05A55E7122B5524700224354 /* MarsPhoto.swift */,
+			);
+			path = MARS;
+			sourceTree = "<group>";
+		};
+		05942CDE22B7DD0800EEB089 /* ASTEROID */ = {
+			isa = PBXGroup;
+			children = (
+				05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */,
+				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
+				05942CDC22B7C9F400EEB089 /* PrepareData.swift */,
+			);
+			path = ASTEROID;
+			sourceTree = "<group>";
+		};
 		05D8200F22A29CEB000E0CB7 = {
 			isa = PBXGroup;
 			children = (
@@ -418,15 +443,12 @@
 				050601D722A6635000EE760C /* Providers */,
 				05181A2122AA8BC2009DD6BF /* Validators */,
 				050601E522A849E000EE760C /* Serializers */,
+				05942CD922B7C01400EEB089 /* MARS */,
+				05942CDE22B7DD0800EEB089 /* ASTEROID */,
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
-				05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */,
-				05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */,
-				05A55E7122B5524700224354 /* MarsPhoto.swift */,
-				0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */,
 				05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */,
-				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
 				05D8202222A29CEC000E0CB7 /* Assets.xcassets */,
 				05D8202422A29CEC000E0CB7 /* LaunchScreen.storyboard */,
 				05D8202722A29CEC000E0CB7 /* Info.plist */,
@@ -637,6 +659,7 @@
 				05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */,
 				056A3AEF22AD1BC800F60225 /* DateCell.swift in Sources */,
 				056A3AF522AF055300F60225 /* NotificationExt.swift in Sources */,
+				05942CDD22B7C9F400EEB089 /* PrepareData.swift in Sources */,
 				05181A0822A95276009DD6BF /* NearEarthObject.swift in Sources */,
 				05181A1C22AA8308009DD6BF /* QueryType.swift in Sources */,
 				050601E922A84B3D00EE760C /* Serializer.swift in Sources */,
@@ -667,6 +690,7 @@
 				051819F822A9303D009DD6BF /* Photo.swift in Sources */,
 				05181A0622A95237009DD6BF /* ClosestAsteroidsLinks.swift in Sources */,
 				05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */,
+				05942CDB22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift in Sources */,
 				050601D522A662C200EE760C /* DateParserImpl.swift in Sources */,
 				05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */,
 				05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */,

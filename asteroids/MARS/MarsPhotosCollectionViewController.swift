@@ -14,23 +14,30 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
     private var marsPhoto: [MarsPhoto] = []
     private var dateFactory: DateFactory!
     private var imageDownloadService: ImageDownloadService!
+    private var lastDownloadedDate: Date!
     private let REUSE_IDENTIFIER = "marsPhoto"
     private let HEADER_REUSE_IDENTIFIER = "marsPhotosHeader"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupServices()
-        runDownload()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.prefetchDataSource = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        if marsPhoto.isEmpty {
+            runDownload()
+        }
+    }
+    
     private func runDownload() {
-       _ = downloader?.runDownload(date: dateFactory.create(year: 2019, month: 06, day: 12), queryType: .marsRoverPhotos) { [unowned self] data in
+        lastDownloadedDate = Date()
+       _ = downloader?.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
             self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
                 self.marsPhotosRoot = marsPhotosRoot
-                self.marsPhoto.append(MarsPhoto(date: self.dateFactory.create(year: 2019, month: 06, day: 12)))
+                self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate))
                 self.marsPhoto.last?.downloadPhotos(self.marsPhotosRoot!) {
                     self.collectionView.reloadData()
                 }
@@ -74,7 +81,17 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
 
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-
+        lastDownloadedDate = Calendar.current.date(byAdding: .day, value: -1, to: lastDownloadedDate)
+        print("DOWNLOAD FOR \(lastDownloadedDate)")
+        _ = downloader?.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
+            self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
+                self.marsPhotosRoot = marsPhotosRoot
+                self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate))
+                self.marsPhoto.last?.downloadPhotos(self.marsPhotosRoot!) {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -89,7 +106,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
         headerView.dayMonthHeader.text = searchTerm
         return headerView
     }
-
+    
     // MARK: UICollectionViewDelegate
 
     /*
