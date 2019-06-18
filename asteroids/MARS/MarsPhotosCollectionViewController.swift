@@ -82,7 +82,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         lastDownloadedDate = Calendar.current.date(byAdding: .day, value: -1, to: lastDownloadedDate)
-        print("DOWNLOAD FOR \(lastDownloadedDate)")
+        print("DOWNLOAD FOR \(String(describing: lastDownloadedDate))")
         _ = downloader?.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
             self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
                 self.marsPhotosRoot = marsPhotosRoot

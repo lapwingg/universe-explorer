@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-asteroids/Pods-asteroids-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework
+${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework

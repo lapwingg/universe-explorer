@@ -34,7 +34,6 @@ internal class TableViewController: UITableViewController {
         _ = downloader?.runDownload(date: Date(), queryType: .closestAsteroids) { [unowned self] data in
             self.serializer?.decode(ofType: ClosestAsteroidsRoot.self, data: data) { closestAsteroids in
                 self.closestAsteroids = closestAsteroids
-                print("\(closestAsteroids.links.linksSelf.count)\n\(closestAsteroids.elementCount)\n\(closestAsteroids.nearEarthObjects.count)")
                 for p in closestAsteroids.nearEarthObjects {
                     self.prepareData.append(PrepareData(date: p.key))
                     for x in p.value {
