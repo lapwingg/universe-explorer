@@ -56,6 +56,10 @@
 		05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */; };
 		05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */; };
 		05181A5322AC2A3F009DD6BF /* SearchDatePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */; };
+		053830E722BAE5FE0075BB8C /* FavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053830E622BAE5FE0075BB8C /* FavouriteTableViewController.swift */; };
+		053830E922BAE7F40075BB8C /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */; };
+		053830EB22BB7D140075BB8C /* FavouriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053830EA22BB7D140075BB8C /* FavouriteDetailViewController.swift */; };
+		053830ED22BB7D680075BB8C /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053830EC22BB7D680075BB8C /* DatabaseModel.swift */; };
 		05414B8622B0FA9000307903 /* UIViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8522B0FA9000307903 /* UIViewControllerFactory.swift */; };
 		05414B8822B0FAE200307903 /* UIViewControllerFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */; };
 		05414B8A22B0FC3A00307903 /* UIViewControllerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */; };
@@ -148,6 +152,10 @@
 		05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayFirstViewPage.swift; sourceTree = "<group>"; };
 		05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDaySecondViewPage.swift; sourceTree = "<group>"; };
 		05181A5222AC2A3F009DD6BF /* SearchDatePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDatePopover.swift; sourceTree = "<group>"; };
+		053830E622BAE5FE0075BB8C /* FavouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewController.swift; sourceTree = "<group>"; };
+		053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
+		053830EA22BB7D140075BB8C /* FavouriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailViewController.swift; sourceTree = "<group>"; };
+		053830EC22BB7D680075BB8C /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
 		05414B8522B0FA9000307903 /* UIViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactory.swift; sourceTree = "<group>"; };
 		05414B8722B0FAE200307903 /* UIViewControllerFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactoryImpl.swift; sourceTree = "<group>"; };
 		05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerValidator.swift; sourceTree = "<group>"; };
@@ -456,8 +464,12 @@
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
+				053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */,
+				053830E622BAE5FE0075BB8C /* FavouriteTableViewController.swift */,
 				05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */,
 				05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */,
+				053830EC22BB7D680075BB8C /* DatabaseModel.swift */,
+				053830EA22BB7D140075BB8C /* FavouriteDetailViewController.swift */,
 				05FCAFD922B7E5B400A1E7E5 /* FavouriteViewController.swift */,
 				05D8202222A29CEC000E0CB7 /* Assets.xcassets */,
 				05D8202422A29CEC000E0CB7 /* LaunchScreen.storyboard */,
@@ -692,6 +704,7 @@
 				05414B8C22B0FD1700307903 /* UIViewControllerValidatorImpl.swift in Sources */,
 				05181A4522ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift in Sources */,
 				050601E722A84A0900EE760C /* JSONSerializer.swift in Sources */,
+				053830EB22BB7D140075BB8C /* FavouriteDetailViewController.swift in Sources */,
 				05181A2922ABBF46009DD6BF /* URLComponentsProvider.swift in Sources */,
 				05414B9522B1069100307903 /* ImageDownloadServiceImpl.swift in Sources */,
 				05181A0A22A952BD009DD6BF /* CloseApproachDatum.swift in Sources */,
@@ -706,6 +719,7 @@
 				050601D522A662C200EE760C /* DateParserImpl.swift in Sources */,
 				05181A2B22ABBFE4009DD6BF /* URLQueryItemProvider.swift in Sources */,
 				05181A3522ABC541009DD6BF /* URLValidatorImpl.swift in Sources */,
+				053830E922BAE7F40075BB8C /* FavouriteTableViewCell.swift in Sources */,
 				0503A39F22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift in Sources */,
 				05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */,
 				05181A3322ABC511009DD6BF /* URLValidator.swift in Sources */,
@@ -722,10 +736,12 @@
 				05181A1622A953C8009DD6BF /* NearEarthObjectLinks.swift in Sources */,
 				05A1774D22B948A400D2A0D6 /* DatabaseHandlerImpl.swift in Sources */,
 				05181A3122ABC151009DD6BF /* URLFactory.swift in Sources */,
+				053830ED22BB7D680075BB8C /* DatabaseModel.swift in Sources */,
 				05414B8622B0FA9000307903 /* UIViewControllerFactory.swift in Sources */,
 				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
 				05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */,
 				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
+				053830E722BAE5FE0075BB8C /* FavouriteTableViewController.swift in Sources */,
 				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,
 				05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */,
 				05181A2522AA8D3C009DD6BF /* DateValidatorImpl.swift in Sources */,

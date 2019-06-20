@@ -9,8 +9,9 @@ import UIKit
 
 protocol DatabaseHandler {
     func connect()
-    func insert(image: UIImage)
-    func delete()
-    func read()
-    func update()
+    func insert(url eUrl: String, name eName: String, image: UIImage)
+    func delete(whereUrl: String)
+    func read() -> [DatabaseModel]
+    func update(whereUrl: String, toName: String)
+    func contain(url eUrl: String) -> Bool
 }

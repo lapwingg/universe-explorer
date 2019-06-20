@@ -7,7 +7,9 @@
 
 import UIKit
 
+// CORRECT STATE AFTER DELETE SOME ROWS IN DATABASE
 internal class PictureOfTheDayViewController: UIPageViewController {
+    @IBOutlet weak var favouriteButton: UIBarButtonItem!
     private var downloader: DataDownloadService?
     private var serializer: Serializer?
     private var uiViewControllerFactory: UIViewControllerFactory!
@@ -35,15 +37,13 @@ internal class PictureOfTheDayViewController: UIPageViewController {
         self.present(nav, animated: true)
     }
     
-    // zabieranie pobranego obrazka z controllera 1 !!!
-    // wyjmowanie obrazka z bazy !!!
-    // rozszerzenie bazy o kolejna kolumne !!!
-    // implementacja bazy w Split View Controllerze !!!
     @IBAction internal func addToFavouriteTapped(_ sender: Any) {
-        print("Add To Favourite Was Tapped")
-        databaseHandler.connect()
-        databaseHandler.insert(image: UIImage(named: "cameraPreview")!)
-        databaseHandler.read()
+        if favouriteButton.title == "Delete from favourite" {
+            favouriteButton.title = "Add to favourite"
+        } else {
+            favouriteButton.title = "Delete from favourite"
+        }
+        NotificationCenter.default.post(name: .savePictureInDatabase, object: PictureOfTheDayFirstViewPage.self, userInfo: sendPicture)
     }
     
     internal func getTodayPictureOfTheDay() {
@@ -53,6 +53,12 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     internal func downloadJSONfromServer(date: Date) {
         _ = downloader?.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
             self.serializer?.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
+                self.databaseHandler.connect()
+                if self.databaseHandler.contain(url: pictureOfTheDay.url) {
+                    self.favouriteButton.title = "Delete from favourite"
+                } else {
+                    self.favouriteButton.title = "Add to favourite"
+                }
                 self.sendPicture = [self.PARAMETER_NAME: pictureOfTheDay]
                 self.sendData()
             }

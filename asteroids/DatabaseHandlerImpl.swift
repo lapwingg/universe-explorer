@@ -23,9 +23,9 @@ extension UIImage: Value {
 internal class DatabaseHandlerImpl : DatabaseHandler {
     var db: Connection!
     var table: Table!
-    let picture = Expression<Blob>("picture")
-    let id = Expression<Int64>("id")
+    let url = Expression<String>("url")
     let name = Expression<String>("name")
+    let picture = Expression<Blob>("picture")
     
     func connect() {
         do {
@@ -33,7 +33,7 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
             db = try Connection("\(path)/db.sqlit3")
             table = Table("favourite")
             try db.run(table.create(ifNotExists: true) { t in
-                t.column(id, primaryKey: .autoincrement)
+                t.column(url, primaryKey: true)
                 t.column(picture)
                 t.column(name)
             })
@@ -43,19 +43,19 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         }
     }
     
-    func insert(image: UIImage) {
+    func insert(url eUrl: String, name eName: String, image: UIImage) {
         do {
             let blob = image.datatypeValue
-            try db.run(table.insert(picture <- blob))
+            try db.run(table.insert(url <- eUrl, name <- eName, picture <- blob))
             print("INSERT")
         } catch {
             print("Sorrry I")
         }
     }
 
-    func delete() {
+    func delete(whereUrl: String) {
         do {
-            let rows = table.filter(name == "ABC")
+            let rows = table.filter(url == whereUrl)
             try db.run(rows.delete())
             print("DELETE")
         } catch {
@@ -63,27 +63,44 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         }
     }
     
-    func read() {
+    // Stworzyc model i go zaimplikowac do Master View
+    // Pozniej jakos wytransportowac to do Detail View
+    // Potem ogarniecie UPDATE, DELETE w MasterView
+    // Oraz DELETE w Pages i bedzie raczej gotowe :D
+    func read() -> [DatabaseModel] {
+        var dbModel = [DatabaseModel]()
         do {
-            let rows = try db.prepare(table.select(picture))
-            var i = 1
-            for _ in rows {
-                print(i)
-                i = i + 1
+            let rows = try db.prepare(table.select(url, name, picture))
+            for r in rows {
+                dbModel.append(DatabaseModel(url: r[url], name: r[name], picture: UIImage.fromDatatypeValue(r[picture])))
             }
-            print("READ")
+            print("READ \(dbModel.count)")
         } catch {
             print("Sorry R")
         }
+        return dbModel
     }
     
-    func update() {
+    func update(whereUrl: String, toName: String) {
         do {
-            let rows = table.filter(name == "ABC")
-            try db.run(rows.update(name <- "NEXT"))
+            let rows = table.filter(url == whereUrl)
+            try db.run(rows.update(name <- toName))
             print("UPDATE")
         } catch {
             print("Sorry U")
         }
+    }
+    
+    func contain(url eUrl: String) -> Bool {
+        do {
+            let rows = try db.prepare(table.select(url).where(url == eUrl))
+            for r in rows {
+                print("R")
+                return true
+            }
+        } catch {
+            print("Sorry C")
+        }
+        return false
     }
 }
