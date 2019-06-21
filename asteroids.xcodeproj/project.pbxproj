@@ -51,7 +51,7 @@
 		05181A4122ABCCE0009DD6BF /* URLSessionValidatorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */; };
 		05181A4322ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */; };
 		05181A4522ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */; };
-		05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4622ABEECE009DD6BF /* TableViewController.swift */; };
+		05181A4722ABEECE009DD6BF /* ClosestAsteroidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4622ABEECE009DD6BF /* ClosestAsteroidsViewController.swift */; };
 		05181A4B22AC0740009DD6BF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */; };
 		05181A4D22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */; };
 		05181A4F22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */; };
@@ -76,11 +76,12 @@
 		0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90522A3254600870FED /* PictureOfTheDay.swift */; };
 		0577A90922A327E200870FED /* URLFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0577A90822A327E200870FED /* URLFactoryImpl.swift */; };
 		05942CDB22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */; };
-		05942CDD22B7C9F400EEB089 /* PrepareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05942CDC22B7C9F400EEB089 /* PrepareData.swift */; };
+		05942CDD22B7C9F400EEB089 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05942CDC22B7C9F400EEB089 /* Asteroid.swift */; };
 		05A1774B22B9487800D2A0D6 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */; };
 		05A1774D22B948A400D2A0D6 /* DatabaseHandlerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */; };
 		05A55E7222B5524700224354 /* MarsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7122B5524700224354 /* MarsPhoto.swift */; };
 		05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */; };
+		05D614DA22BD00E4005A9C14 /* AsteroidListDependsOnDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */; };
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
 		05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201D22A29CEB000E0CB7 /* ViewController.swift */; };
 		05D8202122A29CEB000E0CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D8201F22A29CEB000E0CB7 /* Main.storyboard */; };
@@ -147,7 +148,7 @@
 		05181A4022ABCCE0009DD6BF /* URLSessionValidatorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidatorImpl.swift; sourceTree = "<group>"; };
 		05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayViewContoller.swift; sourceTree = "<group>"; };
 		05181A4422ABEEA0009DD6BF /* MarsPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosCollectionViewController.swift; sourceTree = "<group>"; };
-		05181A4622ABEECE009DD6BF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		05181A4622ABEECE009DD6BF /* ClosestAsteroidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosestAsteroidsViewController.swift; sourceTree = "<group>"; };
 		05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayFirstViewPage.swift; sourceTree = "<group>"; };
 		05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDaySecondViewPage.swift; sourceTree = "<group>"; };
@@ -172,12 +173,13 @@
 		0577A90522A3254600870FED /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
 		0577A90822A327E200870FED /* URLFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImpl.swift; sourceTree = "<group>"; };
 		05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosestAsteroidsViewCell.swift; sourceTree = "<group>"; };
-		05942CDC22B7C9F400EEB089 /* PrepareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareData.swift; sourceTree = "<group>"; };
+		05942CDC22B7C9F400EEB089 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandlerImpl.swift; sourceTree = "<group>"; };
 		05A55E7122B5524700224354 /* MarsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhoto.swift; sourceTree = "<group>"; };
 		05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoCollectionHeader.swift; sourceTree = "<group>"; };
 		05AFD3F422B94D0200479E78 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidListDependsOnDate.swift; sourceTree = "<group>"; };
 		05D8201822A29CEB000E0CB7 /* asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05D8201D22A29CEB000E0CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		050601DC22A6641600EE760C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05D614DF22BD1ADB005A9C14 /* AsteroidsTableView */,
 				05181A0222A93AA5009DD6BF /* ClosestAsteroids */,
 				05181A0122A93A88009DD6BF /* MarsPhotos */,
 				05181A0022A93A7A009DD6BF /* PictureOfTheDay */,
@@ -318,6 +321,20 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		053830EE22BBB6570075BB8C /* FAVOURITE */ = {
+			isa = PBXGroup;
+			children = (
+				053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */,
+				053830E622BAE5FE0075BB8C /* FavouriteTableViewController.swift */,
+				05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */,
+				05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */,
+				053830EC22BB7D680075BB8C /* DatabaseModel.swift */,
+				053830EA22BB7D140075BB8C /* FavouriteDetailViewController.swift */,
+				05FCAFD922B7E5B400A1E7E5 /* FavouriteViewController.swift */,
+			);
+			path = FAVOURITE;
+			sourceTree = "<group>";
+		};
 		05414B8D22B1021300307903 /* Popovers */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +404,7 @@
 			children = (
 				05181A4A22AC0740009DD6BF /* MainScreenViewController.swift */,
 				05181A4222ABEE81009DD6BF /* PictureOfTheDayViewContoller.swift */,
+				05181A4622ABEECE009DD6BF /* ClosestAsteroidsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -415,14 +433,22 @@
 			path = MARS;
 			sourceTree = "<group>";
 		};
-		05942CDE22B7DD0800EEB089 /* ASTEROID */ = {
+		05D614DF22BD1ADB005A9C14 /* AsteroidsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				05942CDC22B7C9F400EEB089 /* Asteroid.swift */,
+				05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */,
+			);
+			path = AsteroidsTableView;
+			sourceTree = "<group>";
+		};
+		05D614E022BD1AFF005A9C14 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */,
-				05181A4622ABEECE009DD6BF /* TableViewController.swift */,
-				05942CDC22B7C9F400EEB089 /* PrepareData.swift */,
 			);
-			path = ASTEROID;
+			name = Cells;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		05D8200F22A29CEB000E0CB7 = {
@@ -448,6 +474,7 @@
 		05D8201A22A29CEB000E0CB7 /* asteroids */ = {
 			isa = PBXGroup;
 			children = (
+				05D614E022BD1AFF005A9C14 /* Cells */,
 				056A3AFB22AF0D7500F60225 /* Controllers */,
 				050601E122A6686100EE760C /* DownloadServices */,
 				0577A91922A4174200870FED /* Factories */,
@@ -460,17 +487,10 @@
 				05181A2122AA8BC2009DD6BF /* Validators */,
 				050601E522A849E000EE760C /* Serializers */,
 				05942CD922B7C01400EEB089 /* MARS */,
-				05942CDE22B7DD0800EEB089 /* ASTEROID */,
+				053830EE22BBB6570075BB8C /* FAVOURITE */,
 				05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */,
 				05D8201D22A29CEB000E0CB7 /* ViewController.swift */,
 				05D8201F22A29CEB000E0CB7 /* Main.storyboard */,
-				053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */,
-				053830E622BAE5FE0075BB8C /* FavouriteTableViewController.swift */,
-				05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */,
-				05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */,
-				053830EC22BB7D680075BB8C /* DatabaseModel.swift */,
-				053830EA22BB7D140075BB8C /* FavouriteDetailViewController.swift */,
-				05FCAFD922B7E5B400A1E7E5 /* FavouriteViewController.swift */,
 				05D8202222A29CEC000E0CB7 /* Assets.xcassets */,
 				05D8202422A29CEC000E0CB7 /* LaunchScreen.storyboard */,
 				05D8202722A29CEC000E0CB7 /* Info.plist */,
@@ -683,7 +703,7 @@
 				05181A3F22ABCC49009DD6BF /* URLSessionValidator.swift in Sources */,
 				056A3AEF22AD1BC800F60225 /* DateCell.swift in Sources */,
 				056A3AF522AF055300F60225 /* NotificationExt.swift in Sources */,
-				05942CDD22B7C9F400EEB089 /* PrepareData.swift in Sources */,
+				05942CDD22B7C9F400EEB089 /* Asteroid.swift in Sources */,
 				05181A0822A95276009DD6BF /* NearEarthObject.swift in Sources */,
 				05181A1C22AA8308009DD6BF /* QueryType.swift in Sources */,
 				050601E922A84B3D00EE760C /* Serializer.swift in Sources */,
@@ -709,7 +729,7 @@
 				05414B9522B1069100307903 /* ImageDownloadServiceImpl.swift in Sources */,
 				05181A0A22A952BD009DD6BF /* CloseApproachDatum.swift in Sources */,
 				05D8201E22A29CEB000E0CB7 /* ViewController.swift in Sources */,
-				05181A4722ABEECE009DD6BF /* TableViewController.swift in Sources */,
+				05181A4722ABEECE009DD6BF /* ClosestAsteroidsViewController.swift in Sources */,
 				050601D922A6636D00EE760C /* URLComponentsProviderImpl.swift in Sources */,
 				056A3AFE22AF123F00F60225 /* JTAppleCalendarConfigurator.swift in Sources */,
 				051819F822A9303D009DD6BF /* Photo.swift in Sources */,
@@ -740,6 +760,7 @@
 				05414B8622B0FA9000307903 /* UIViewControllerFactory.swift in Sources */,
 				0577A90622A3254600870FED /* PictureOfTheDay.swift in Sources */,
 				05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */,
+				05D614DA22BD00E4005A9C14 /* AsteroidListDependsOnDate.swift in Sources */,
 				05181A0422A95205009DD6BF /* ClosestAsteroidsRoot.swift in Sources */,
 				053830E722BAE5FE0075BB8C /* FavouriteTableViewController.swift in Sources */,
 				050601DE22A6649500EE760C /* DataDownloadService.swift in Sources */,

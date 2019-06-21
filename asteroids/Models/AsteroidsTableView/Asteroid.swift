@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataA {
+internal class Asteroid {
     var name: String
     var diameterMax: Double
     var hazardous: Bool
@@ -22,14 +22,5 @@ class DataA {
         self.sentry = sentry
         self.absoluteMagnitude = absoluteMagnitude
         self.relativeVelocity = relativeVelocity
-    }
-}
-
-class PrepareData {
-    var date: String
-    var data: [DataA] = []
-    
-    init(date: String) {
-        self.date = date
     }
 }

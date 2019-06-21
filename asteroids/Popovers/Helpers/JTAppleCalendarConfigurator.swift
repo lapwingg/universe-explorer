@@ -9,7 +9,6 @@ import JTAppleCalendar
 
 extension SearchDatePopover: JTAppleCalendarViewDataSource {
     private static let START_DATE = (YEAR: 2015, MONTH: 01, DAY: 01)
-    private static let END_DATE = (YEAR: 2020, MONTH: 01, DAY: 01)
     
     internal func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let rangeDates = createRangeDates()
@@ -19,7 +18,11 @@ extension SearchDatePopover: JTAppleCalendarViewDataSource {
     private func createRangeDates() -> (start: Date, end: Date) {
         let dateFactory = DateFactoryImpl()
         let startDate = dateFactory.create(year: SearchDatePopover.START_DATE.YEAR, month: SearchDatePopover.START_DATE.MONTH, day: SearchDatePopover.START_DATE.DAY)
-        let endDate = dateFactory.create(year: SearchDatePopover.END_DATE.YEAR, month: SearchDatePopover.END_DATE.MONTH, day: SearchDatePopover.END_DATE.DAY)
+        let endDate = getNextYear()
         return (startDate, endDate)
+    }
+    
+    private func getNextYear() -> Date {
+        return Calendar.current.date(byAdding: .year, value: 1, to: Date())!
     }
 }

@@ -29,19 +29,31 @@ class FavouriteTableViewController: UITableViewController {
     }
     
     @objc func updateCell(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        let p = gestureRecognizer.location(in: self.tableView)
-        let indexPath = self.tableView.indexPathForRow(at: p)
-        let cell = self.tableView.cellForRow(at: indexPath!) as? FavouriteTableViewCell
-        print("LONG")
-        let alert = UIAlertController(title: "New name", message: "Current name \(String(describing: cell!.funnyName!.text!))", preferredStyle: .alert)
-        alert.addTextField { textField in }
-        alert.addAction(UIAlertAction(title: "OK", style: .default){ [weak alert] (_) in
-            let text = alert?.textFields![0].text
-            self.databaseHandler.connect()
-            self.databaseHandler.update(whereUrl: self.dbModel?[indexPath?.row ?? 0].url ?? "", toName: text ?? "No name")
-            cell?.funnyName.text = text
-        })
-        self.present(alert, animated: true)
+        switch gestureRecognizer.state {
+        case .changed:
+            fallthrough
+        case .ended:
+            let p = gestureRecognizer.location(in: self.tableView)
+            let indexPath = self.tableView.indexPathForRow(at: p)
+            if indexPath == nil {
+                return
+            }
+            let cell = self.tableView.cellForRow(at: indexPath!) as? FavouriteTableViewCell
+            print("LONG")
+            let alert = UIAlertController(title: "New name", message: "Current name \(String(describing: cell!.funnyName!.text!))", preferredStyle: .alert)
+            alert.addTextField { textField in }
+            alert.addAction(UIAlertAction(title: "OK", style: .default){ [weak alert] (_) in
+                let text = alert?.textFields![0].text
+                self.databaseHandler.connect()
+                self.databaseHandler.update(whereUrl: self.dbModel?[indexPath?.row ?? 0].url ?? "", toName: text ?? "No name")
+                cell?.funnyName.text = text
+            })
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+            self.present(alert, animated: true)
+        default:
+            break
+        }
+        
     }
     
     private func readData() {

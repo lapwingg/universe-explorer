@@ -178,7 +178,7 @@
         <!--ClosestAsteroids-->
         <scene sceneID="tzv-3h-PVv">
             <objects>
-                <tableViewController storyboardIdentifier="TableView" title="ClosestAsteroids" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wr3-fi-wxd" customClass="TableViewController" customModule="asteroids" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableView" title="ClosestAsteroids" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wr3-fi-wxd" customClass="ClosestAsteroidsViewController" customModule="asteroids" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c1U-GV-UJB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,14 +191,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I34-N4-7GP">
-                                            <rect key="frame" x="20" y="11" width="394" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I34-N4-7GP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I34-N4-7GP" firstAttribute="centerX" secondItem="XRQ-vu-QQv" secondAttribute="centerX" id="2YQ-8V-s3i"/>
+                                        <constraint firstItem="I34-N4-7GP" firstAttribute="height" secondItem="XRQ-vu-QQv" secondAttribute="height" id="8MS-sM-Z4Y"/>
+                                        <constraint firstItem="I34-N4-7GP" firstAttribute="centerY" secondItem="XRQ-vu-QQv" secondAttribute="centerY" id="Trw-nV-akK"/>
+                                        <constraint firstItem="I34-N4-7GP" firstAttribute="width" secondItem="XRQ-vu-QQv" secondAttribute="width" id="kWF-RV-lif"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dataLabel" destination="I34-N4-7GP" id="9Cr-1s-mw8"/>
