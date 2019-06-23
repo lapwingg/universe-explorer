@@ -43,27 +43,24 @@ internal class PictureOfTheDayFirstViewPage: UIViewController {
     @objc private func savePicture(_ notification: NSNotification) {
         let p = notification.userInfo?[PARAMETER_NAME] as? PictureOfTheDay
         let picture = entityValidator.validate(p)
-        print ("RUN")
         databaseHandler.connect()
         if databaseHandler.contain(url: picture.url) {
             databaseHandler.delete(whereUrl: picture.url)
-            print("DELETED")
         }
         else {
             databaseHandler.insert(url: "\(picture.url)", name: "POTD_\(picture.date)", image: pictureImageView.image!)
-            print("INSERTED")
         }
     }
     
     private func setupImage(_ picture: PictureOfTheDay) {
-     //   let alert = UIAlertController(title: "Downloading...", message: "Please wait for end", preferredStyle: .alert)
-      //      self.present(alert, animated: true)
         _ = imageDownloadService.runDownload(link: picture.url) { [unowned self] image in
-            print("DOWNLOAD")
             self.pictureImageView.image = image
-       //     print("DOWNLOADED IMAGE")
-      //      self.dismiss(animated: true)
+            self.notifyStopDownloading()
         }
+    }
+    
+    private func notifyStopDownloading() {
+        NotificationCenter.default.post(name: .stopActivityIndicator, object: PictureOfTheDayViewController.self, userInfo: nil)
     }
     
     private func fillTextView(_ picture: PictureOfTheDay) {

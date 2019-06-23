@@ -11,9 +11,9 @@ import SQLite
 internal class DatabaseHandlerImpl : DatabaseHandler {
     private var db: Connection!
     private var table: Table!
-    private let url = Expression<String>("url")
-    private let name = Expression<String>("name")
-    private let picture = Expression<Blob>("picture")
+    private let URL = Expression<String>("url")
+    private let NAME = Expression<String>("name")
+    private let PICTURE = Expression<Blob>("picture")
     
     internal func connect() {
         do {
@@ -21,69 +21,63 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
             db = try Connection("\(path)/db.sqlit3")
             table = Table("favourite")
             try db.run(table.create(ifNotExists: true) { t in
-                t.column(url, primaryKey: true)
-                t.column(picture)
-                t.column(name)
+                t.column(URL, primaryKey: true)
+                t.column(PICTURE)
+                t.column(NAME)
             })
-            print("CONNECT")
         } catch {
-            print("Sorry")
+            print("Unable to connect with database")
         }
     }
     
-    internal func insert(url eUrl: String, name eName: String, image: UIImage) {
+    internal func insert(url: String, name: String, image: UIImage) {
         do {
             let blob = image.datatypeValue
-            try db.run(table.insert(url <- eUrl, name <- eName, picture <- blob))
-            print("INSERT")
+            try db.run(table.insert(URL <- url, NAME <- name, PICTURE <- blob))
         } catch {
-            print("Sorrry I")
+            print("Unable to insert data")
         }
     }
 
     internal func delete(whereUrl: String) {
         do {
-            let rows = table.filter(url == whereUrl)
+            let rows = table.filter(URL == whereUrl)
             try db.run(rows.delete())
-            print("DELETE")
         } catch {
-            print("Sorry D")
+            print("Unable to delete data")
         }
     }
     
     internal func read() -> [FavouriteTable] {
         var dbModel = [FavouriteTable]()
         do {
-            let rows = try db.prepare(table.select(url, name, picture))
+            let rows = try db.prepare(table.select(URL, NAME, PICTURE))
             for r in rows {
-                dbModel.append(FavouriteTable(url: r[url], name: r[name], picture: UIImage.fromDatatypeValue(r[picture])))
+                dbModel.append(FavouriteTable(url: r[URL], name: r[NAME], picture: UIImage.fromDatatypeValue(r[PICTURE])))
             }
-            print("READ \(dbModel.count)")
         } catch {
-            print("Sorry R")
+            print("Unable to read data")
         }
         return dbModel
     }
     
     internal func update(whereUrl: String, toName: String) {
         do {
-            let rows = table.filter(url == whereUrl)
-            try db.run(rows.update(name <- toName))
-            print("UPDATE")
+            let rows = table.filter(URL == whereUrl)
+            try db.run(rows.update(NAME <- toName))
         } catch {
-            print("Sorry U")
+            print("Unable to update data")
         }
     }
     
-    internal func contain(url eUrl: String) -> Bool {
+    internal func contain(url: String) -> Bool {
         do {
-            let rows = try db.prepare(table.select(url).where(url == eUrl))
+            let rows = try db.prepare(table.select(URL).where(URL == url))
             for _ in rows {
-                print("R")
                 return true
             }
         } catch {
-            print("Sorry C")
+            print("Unable to check containing data")
         }
         return false
     }

@@ -11,12 +11,14 @@ internal class ClosestAsteroidsViewController: UITableViewController {
     private var downloader: DataDownloadService!
     private var serializer: Serializer!
     private var asteroidsList: [AsteroidListDependsOnDate] = []
+    private var activityIndicator: UIActivityIndicatorView!
     private let HEADER_HEIGHT = CGFloat(40.0)
     private let CELL_HEIGHT = CGFloat(30.0)
     private let REUSE_IDENTIFIER = "asteroidCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        runActivityIndicator()
         setupServices()
     }
     
@@ -67,12 +69,24 @@ internal class ClosestAsteroidsViewController: UITableViewController {
         }
     }
     
+    internal func runActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+        activityIndicator.center = tableView.center
+        activityIndicator.hidesWhenStopped = true
+        tableView.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
     internal func runDownload() {
         _ = downloader.runDownload(date: getTodayDate(), queryType: .closestAsteroids) { [unowned self] data in
             self.serializer.decode(ofType: ClosestAsteroidsRoot.self, data: data) { closestAsteroids in
                 self.fetchData(from: closestAsteroids)
                 self.sortedByDate(asteroids: self.asteroidsList)
                 self.tableView.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    self.activityIndicator.stopAnimating()
+                }
             }
         }
     }
