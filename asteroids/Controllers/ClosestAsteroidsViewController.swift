@@ -12,6 +12,7 @@ internal class ClosestAsteroidsViewController: UITableViewController {
     private var serializer: Serializer!
     private var asteroidsList: [AsteroidListDependsOnDate] = []
     private let HEADER_HEIGHT = CGFloat(40.0)
+    private let CELL_HEIGHT = CGFloat(30.0)
     private let REUSE_IDENTIFIER = "asteroidCell"
     
     override func viewDidLoad() {
@@ -51,6 +52,10 @@ internal class ClosestAsteroidsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return HEADER_HEIGHT
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CELL_HEIGHT
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

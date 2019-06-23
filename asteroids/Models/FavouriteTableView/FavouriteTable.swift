@@ -7,10 +7,10 @@
 
 import UIKit
 
-class DatabaseModel {
-    var url: String
-    var name: String
-    var picture: UIImage
+internal class FavouriteTable {
+    internal var url: String
+    internal var name: String
+    internal var picture: UIImage
     
     init(url: String, name: String, picture: UIImage) {
         self.url = url

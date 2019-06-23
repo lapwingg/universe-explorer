@@ -8,8 +8,8 @@
 import Foundation
 
 internal class AsteroidListDependsOnDate {
-    var date: String
-    var asteroids: [Asteroid] = []
+    internal var date: String
+    internal var asteroids: [Asteroid] = []
     
     init(date: String) {
         self.date = date

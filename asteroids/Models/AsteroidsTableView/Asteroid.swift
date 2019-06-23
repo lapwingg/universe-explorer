@@ -8,12 +8,12 @@
 import Foundation
 
 internal class Asteroid {
-    var name: String
-    var diameterMax: Double
-    var hazardous: Bool
-    var sentry: Bool
-    var absoluteMagnitude: Double
-    var relativeVelocity: String
+    internal var name: String
+    internal var diameterMax: Double
+    internal var hazardous: Bool
+    internal var sentry: Bool
+    internal var absoluteMagnitude: Double
+    internal var relativeVelocity: String
     
     init(name: String, diameterMax: Double, hazardous: Bool, sentry: Bool, absoluteMagnitude: Double, relativeVelocity: String) {
         self.name = name

@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51w-CI-Nxo">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="51w-CI-Nxo">
+                                <rect key="frame" x="0.0" y="2.5" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="51w-CI-Nxo" firstAttribute="centerY" secondItem="vwk-dt-a2V" secondAttribute="centerY" id="4F5-cs-XnS"/>
+                            <constraint firstItem="51w-CI-Nxo" firstAttribute="height" secondItem="KKT-WG-wgn" secondAttribute="height" id="GAM-ig-LcF"/>
+                            <constraint firstItem="51w-CI-Nxo" firstAttribute="width" secondItem="KKT-WG-wgn" secondAttribute="width" id="XyM-Nl-8M2"/>
+                            <constraint firstItem="51w-CI-Nxo" firstAttribute="centerX" secondItem="vwk-dt-a2V" secondAttribute="centerX" id="aac-hS-5p3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vwk-dt-a2V"/>
                     </view>
                     <connections>
@@ -50,17 +55,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zU-5g-hOe">
-                                            <rect key="frame" x="8" y="0.0" width="406" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zU-5g-hOe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7zU-5g-hOe" firstAttribute="centerY" secondItem="Qm0-2H-9Fp" secondAttribute="centerY" id="7fn-BN-l17"/>
+                                        <constraint firstItem="7zU-5g-hOe" firstAttribute="width" secondItem="Qm0-2H-9Fp" secondAttribute="width" id="Etd-rK-VN6"/>
+                                        <constraint firstItem="7zU-5g-hOe" firstAttribute="centerX" secondItem="Qm0-2H-9Fp" secondAttribute="centerX" id="KKF-EP-sVz"/>
+                                        <constraint firstItem="7zU-5g-hOe" firstAttribute="height" secondItem="Qm0-2H-9Fp" secondAttribute="height" id="bOx-h7-kxX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="funnyName" destination="7zU-5g-hOe" id="a1a-Y2-e6O"/>
+                                    <outlet property="titleLabel" destination="7zU-5g-hOe" id="RX7-Vk-JWo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,7 +104,7 @@
         <!--Favourite-->
         <scene sceneID="fyE-cz-5VA">
             <objects>
-                <splitViewController id="NkP-0c-e7c" customClass="FavouriteViewController" customModule="asteroids" sceneMemberID="viewController">
+                <splitViewController id="NkP-0c-e7c" customClass="FavouriteSplitViewController" customModule="asteroids" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favourite" id="X5g-rG-iDy"/>
                     <connections>
                         <segue destination="s0a-FH-9nK" kind="relationship" relationship="masterViewController" id="zKv-ey-oRV"/>

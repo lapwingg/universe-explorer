@@ -8,26 +8,14 @@
 import UIKit
 import SQLite
 
-extension UIImage: Value {
-    public class var declaredDatatype: String {
-        return Blob.declaredDatatype
-    }
-    public class func fromDatatypeValue(_ blobValue: Blob) -> UIImage {
-        return UIImage(data: Data.fromDatatypeValue(blobValue))!
-    }
-    public var datatypeValue: Blob {
-        return self.pngData()!.datatypeValue
-    }
-}
-
 internal class DatabaseHandlerImpl : DatabaseHandler {
-    var db: Connection!
-    var table: Table!
-    let url = Expression<String>("url")
-    let name = Expression<String>("name")
-    let picture = Expression<Blob>("picture")
+    private var db: Connection!
+    private var table: Table!
+    private let url = Expression<String>("url")
+    private let name = Expression<String>("name")
+    private let picture = Expression<Blob>("picture")
     
-    func connect() {
+    internal func connect() {
         do {
             let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
             db = try Connection("\(path)/db.sqlit3")
@@ -43,7 +31,7 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         }
     }
     
-    func insert(url eUrl: String, name eName: String, image: UIImage) {
+    internal func insert(url eUrl: String, name eName: String, image: UIImage) {
         do {
             let blob = image.datatypeValue
             try db.run(table.insert(url <- eUrl, name <- eName, picture <- blob))
@@ -53,7 +41,7 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         }
     }
 
-    func delete(whereUrl: String) {
+    internal func delete(whereUrl: String) {
         do {
             let rows = table.filter(url == whereUrl)
             try db.run(rows.delete())
@@ -63,16 +51,12 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         }
     }
     
-    // Stworzyc model i go zaimplikowac do Master View
-    // Pozniej jakos wytransportowac to do Detail View
-    // Potem ogarniecie UPDATE, DELETE w MasterView
-    // Oraz DELETE w Pages i bedzie raczej gotowe :D
-    func read() -> [DatabaseModel] {
-        var dbModel = [DatabaseModel]()
+    internal func read() -> [FavouriteTable] {
+        var dbModel = [FavouriteTable]()
         do {
             let rows = try db.prepare(table.select(url, name, picture))
             for r in rows {
-                dbModel.append(DatabaseModel(url: r[url], name: r[name], picture: UIImage.fromDatatypeValue(r[picture])))
+                dbModel.append(FavouriteTable(url: r[url], name: r[name], picture: UIImage.fromDatatypeValue(r[picture])))
             }
             print("READ \(dbModel.count)")
         } catch {
@@ -81,7 +65,7 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         return dbModel
     }
     
-    func update(whereUrl: String, toName: String) {
+    internal func update(whereUrl: String, toName: String) {
         do {
             let rows = table.filter(url == whereUrl)
             try db.run(rows.update(name <- toName))
@@ -91,10 +75,10 @@ internal class DatabaseHandlerImpl : DatabaseHandler {
         }
     }
     
-    func contain(url eUrl: String) -> Bool {
+    internal func contain(url eUrl: String) -> Bool {
         do {
             let rows = try db.prepare(table.select(url).where(url == eUrl))
-            for r in rows {
+            for _ in rows {
                 print("R")
                 return true
             }

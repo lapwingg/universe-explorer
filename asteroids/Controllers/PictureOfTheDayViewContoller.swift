@@ -7,15 +7,15 @@
 
 import UIKit
 
-// CORRECT STATE AFTER DELETE SOME ROWS IN DATABASE
 internal class PictureOfTheDayViewController: UIPageViewController {
     @IBOutlet weak var favouriteButton: UIBarButtonItem!
-    private var downloader: DataDownloadService?
-    private var serializer: Serializer?
+    private var downloader: DataDownloadService!
+    private var serializer: Serializer!
     private var uiViewControllerFactory: UIViewControllerFactory!
     private var uiViewControllerValidator: UIViewControllerValidator!
     private var databaseHandler: DatabaseHandler!
     private var sendPicture: [String: PictureOfTheDay?]?
+    private var lastDownloadedPictureOfTheDay: PictureOfTheDay!
     private let FIRST_PAGE_NAME = "PictureOfTheDayFirstPage"
     private let SECOND_PAGE_NAME = "PictureOfTheDaySecondPage"
     private let PARAMETER_NAME = "picture"
@@ -27,22 +27,30 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        getTodayPictureOfTheDay()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if lastDownloadedPictureOfTheDay == nil {
+            getTodayPictureOfTheDay()
+        }
+        else {
+            fillFavouriteButtonText(url: lastDownloadedPictureOfTheDay.url)
+        }
     }
 
     @IBAction internal func searchByDateTapped(_ sender: UIBarButtonItem) {
         let nav = SearchDatePopover.create(controller: self) { [unowned self] date in
-            self.downloadJSONfromServer(date: date)
+            if date <= self.getCurrentDate() {
+                self.downloadJSONfromServer(date: date)
+            } else {
+                return
+            }
         }
         self.present(nav, animated: true)
     }
     
     @IBAction internal func addToFavouriteTapped(_ sender: Any) {
-        if favouriteButton.title == "Delete from favourite" {
-            favouriteButton.title = "Add to favourite"
-        } else {
-            favouriteButton.title = "Delete from favourite"
-        }
+        changeFavouriteButtonText()
         NotificationCenter.default.post(name: .savePictureInDatabase, object: PictureOfTheDayFirstViewPage.self, userInfo: sendPicture)
     }
     
@@ -51,14 +59,11 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     }
     
     internal func downloadJSONfromServer(date: Date) {
-        _ = downloader?.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
-            self.serializer?.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
+        _ = downloader.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
+            self.serializer.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
                 self.databaseHandler.connect()
-                if self.databaseHandler.contain(url: pictureOfTheDay.url) {
-                    self.favouriteButton.title = "Delete from favourite"
-                } else {
-                    self.favouriteButton.title = "Add to favourite"
-                }
+                self.lastDownloadedPictureOfTheDay = pictureOfTheDay
+                self.fillFavouriteButtonText(url: pictureOfTheDay.url)
                 self.sendPicture = [self.PARAMETER_NAME: pictureOfTheDay]
                 self.sendData()
             }
@@ -74,7 +79,6 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     
     @objc private func sendData() {
         NotificationCenter.default.post(name: .newDownloadedData, object: PictureOfTheDayFirstViewPage.self, userInfo: sendPicture)
-    //    NotificationCenter.default.post(name: .newDownloadedData, object: PictureOfTheDaySecondViewPage.self, userInfo: sendPicture)
     }
     
     fileprivate func setupDelegates() {
@@ -100,5 +104,21 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     
     fileprivate func getCurrentDate() -> Date {
         return Date()
+    }
+    
+    fileprivate func fillFavouriteButtonText(url: String) {
+        if databaseHandler.contain(url: url) {
+            favouriteButton.title = "Delete from favourite"
+        } else {
+            favouriteButton.title = "Add to favourite"
+        }
+    }
+    
+    fileprivate func changeFavouriteButtonText() {
+        if favouriteButton.title == "Delete from favourite" {
+            favouriteButton.title = "Add to favourite"
+        } else {
+            favouriteButton.title = "Delete from favourite"
+        }
     }
 }
