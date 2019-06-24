@@ -7,14 +7,13 @@
 
 import UIKit
 
-internal class MarsPhotosCollectionViewController: UICollectionViewController, UICollectionViewDataSourcePrefetching {
+internal class MarsPhotosCollectionViewController: UICollectionViewController {
     private var downloader: DataDownloadService?
     private var serializer: Serializer?
-    private var marsPhotosRoot: MarsPhotosRoot?
     private var marsPhoto: [MarsPhoto] = []
-    private var dateFactory: DateFactory!
     private var imageDownloadService: ImageDownloadService!
     private var lastDownloadedDate: Date!
+    private var activityIndicator: UIActivityIndicatorView!
     private let REUSE_IDENTIFIER = "marsPhoto"
     private let HEADER_REUSE_IDENTIFIER = "marsPhotosHeader"
     
@@ -23,7 +22,6 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
         setupServices()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.prefetchDataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,65 +31,63 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
     }
     
     private func runDownload() {
-        lastDownloadedDate = Date()
-       _ = downloader?.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
-            self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
-                self.marsPhotosRoot = marsPhotosRoot
-                self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate))
-                self.marsPhoto.last?.downloadPhotos(self.marsPhotosRoot!) {
-                    self.collectionView.reloadData()
+        lastDownloadedDate = Date().addingTimeInterval(-1 * 60 * 60 * 24)
+        runActivityIndicator(collectionView)
+        DispatchQueue.global().async { [unowned self] in
+            let group = DispatchGroup()
+            for _ in 1...7 {
+                group.enter()
+                _ = self.downloader?.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
+                    self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
+                        self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate, marsPhotoRoot: marsPhotosRoot))
+                        self.marsPhoto.last?.prepareToDownloadPhoto()
+                        self.lastDownloadedDate = Calendar.current.date(byAdding: .day, value: -1, to: self.lastDownloadedDate)
+                        group.leave()
+                    }
                 }
+                group.wait()
+            }
+            group.notify(queue: .main) {
+                self.activityIndicator.stopAnimating()
+                self.collectionView.reloadData()
             }
         }
+    }
+    
+    private func runActivityIndicator(_ uiView: UICollectionView) {
+        activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+        activityIndicator.center = uiView.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+        uiView.addSubview(activityIndicator)
     }
     
     fileprivate func setupServices() {
         downloader = NASADownloadService()
         serializer = JSONSerializer()
-        dateFactory = DateFactoryImpl()
         imageDownloadService = ImageDownloadServiceImpl()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return marsPhoto.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return marsPhoto[section].photo.count
+        return marsPhoto[section].links.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: REUSE_IDENTIFIER, for: indexPath) as! MarsPhotosCollectionViewCell
-        let photos = photo(for: indexPath)
-        cell.backgroundColor = .white
-        cell.photoImageView.image = photos
-        return cell
-    }
-
-    
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        lastDownloadedDate = Calendar.current.date(byAdding: .day, value: -1, to: lastDownloadedDate)
-        print("DOWNLOAD FOR \(String(describing: lastDownloadedDate))")
-        _ = downloader?.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
-            self.serializer?.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
-                self.marsPhotosRoot = marsPhotosRoot
-                self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate))
-                self.marsPhoto.last?.downloadPhotos(self.marsPhotosRoot!) {
-                    self.collectionView.reloadData()
-                }
-            }
+        let l = link(for: indexPath)
+        cell.backgroundColor = .blue
+        cell.link = l
+        cell.downloadPhoto { image in
+            print("\(indexPath)")
+            cell.photoImageView.image = image
         }
+        return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -141,7 +137,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController, U
 }
 
 extension MarsPhotosCollectionViewController {
-    func photo(for indexPath: IndexPath) -> UIImage {
-        return marsPhoto[indexPath.section].photo[indexPath.row]
+    func link(for indexPath: IndexPath) -> String {
+        return marsPhoto[indexPath.section].links[indexPath.row]
     }
 }

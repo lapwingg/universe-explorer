@@ -178,6 +178,7 @@
                         <connections>
                             <outlet property="dataSource" destination="C6L-G6-oEk" id="oMO-Zt-Cct"/>
                             <outlet property="delegate" destination="C6L-G6-oEk" id="oHC-Pf-SXv"/>
+                            <outlet property="prefetchDataSource" destination="C6L-G6-oEk" id="mgf-EB-Va0"/>
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Mars Photos" id="DcT-fw-lnS"/>

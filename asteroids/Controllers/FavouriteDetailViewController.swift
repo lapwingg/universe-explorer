@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FavouriteDetailViewController: UIViewController {
+internal class FavouriteDetailViewController: UIViewController {
     @IBOutlet weak var presentedImage: UIImageView!
-    var favouriteTableData: FavouriteTable? {
+    internal var favouriteTableData: FavouriteTable? {
         didSet {
             if favouriteTableData != nil {
                 presentedImage.image = favouriteTableData?.picture
