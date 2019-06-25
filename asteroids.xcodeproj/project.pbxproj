@@ -641,7 +641,7 @@
 				986F08745848876009993EA0 /* Pods-asteroidsTests.debug.xcconfig */,
 				8347D0E05A6FDF476DAB398C /* Pods-asteroidsTests.release.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F0A7B0825F596880D4F64DF4 /* Frameworks */ = {
