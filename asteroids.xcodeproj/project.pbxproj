@@ -381,8 +381,7 @@
 				05181A4C22AC0CFF009DD6BF /* PictureOfTheDayFirstViewPage.swift */,
 				05181A4E22AC0D0E009DD6BF /* PictureOfTheDaySecondViewPage.swift */,
 			);
-			name = Pages;
-			path = ..;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		05414B8F22B1032A00307903 /* Helpers */ = {
@@ -538,8 +537,7 @@
 				053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */,
 				05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */,
 			);
-			name = Cells;
-			path = ..;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		05D614E422BD317D005A9C14 /* Extensions */ = {
@@ -556,8 +554,7 @@
 				05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */,
 				05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */,
 			);
-			name = DatabaseServices;
-			path = ..;
+			path = DatabaseServices;
 			sourceTree = "<group>";
 		};
 		05D614E622BD31E5005A9C14 /* FavouriteTableView */ = {
