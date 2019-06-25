@@ -104,7 +104,6 @@
 		05D8201C22A29CEB000E0CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8201B22A29CEB000E0CB7 /* AppDelegate.swift */; };
 		05D8202122A29CEB000E0CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D8201F22A29CEB000E0CB7 /* Main.storyboard */; };
 		05D8202322A29CEC000E0CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D8202222A29CEC000E0CB7 /* Assets.xcassets */; };
-		05D8203122A29CEC000E0CB7 /* asteroidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8203022A29CEC000E0CB7 /* asteroidsTests.swift */; };
 		05FCAFDA22B7E5B400A1E7E5 /* FavouriteSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCAFD922B7E5B400A1E7E5 /* FavouriteSplitViewController.swift */; };
 		921D495B064AF286C9CCEC90 /* Pods_asteroidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4CD399E937742AFFD0F2B8 /* Pods_asteroidsTests.framework */; };
 		F502680CBFCDD73ED4854768 /* Pods_asteroids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C84C72E2C0B8DBEB0E68B3 /* Pods_asteroids.framework */; };
@@ -222,7 +221,6 @@
 		05D8202222A29CEC000E0CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05D8202722A29CEC000E0CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D8202C22A29CEC000E0CB7 /* asteroidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = asteroidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		05D8203022A29CEC000E0CB7 /* asteroidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asteroidsTests.swift; sourceTree = "<group>"; };
 		05D8203222A29CEC000E0CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05FCAFD922B7E5B400A1E7E5 /* FavouriteSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteSplitViewController.swift; sourceTree = "<group>"; };
 		29D5F70EBB3D99BF4FE3505A /* Pods-asteroids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asteroids.release.xcconfig"; path = "Target Support Files/Pods-asteroids/Pods-asteroids.release.xcconfig"; sourceTree = "<group>"; };
@@ -630,7 +628,6 @@
 				05B2A7DD22C2C20700AADC2B /* Providers */,
 				05B2A7CE22C2C0CC00AADC2B /* Validators */,
 				05B2A7CB22C2C09900AADC2B /* Serializers */,
-				05D8203022A29CEC000E0CB7 /* asteroidsTests.swift */,
 				05D8203222A29CEC000E0CB7 /* Info.plist */,
 			);
 			path = asteroidsTests;
@@ -913,7 +910,6 @@
 				05B2A7EA22C2C38B00AADC2B /* DateFactoryImplTest.swift in Sources */,
 				05B2A7E122C2C23C00AADC2B /* URLQueryItemProviderImplTest.swift in Sources */,
 				05B2A7F122C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift in Sources */,
-				05D8203122A29CEC000E0CB7 /* asteroidsTests.swift in Sources */,
 				05B2A7CD22C2C0BE00AADC2B /* JSONSerializerTest.swift in Sources */,
 				05B2A7EF22C2C3DD00AADC2B /* NASADownloadServiceTest.swift in Sources */,
 				05B2A7D822C2C19300AADC2B /* DateValidatorImplTest.swift in Sources */,
