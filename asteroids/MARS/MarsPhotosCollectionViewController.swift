@@ -12,6 +12,8 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
     private var serializer: Serializer?
     private var marsPhoto: [MarsPhoto] = []
     private var imageDownloadService: ImageDownloadService!
+    private var databaseHandler: DatabaseHandler!
+    private static var i = 0
     private var lastDownloadedDate: Date!
     private var activityIndicator: UIActivityIndicatorView!
     private let REUSE_IDENTIFIER = "marsPhoto"
@@ -67,6 +69,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
         downloader = NASADownloadService()
         serializer = JSONSerializer()
         imageDownloadService = ImageDownloadServiceImpl()
+        databaseHandler = DatabaseHandlerImpl()
     }
     
     // MARK: UICollectionViewDataSource
@@ -84,8 +87,8 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
         cell.backgroundColor = .blue
         cell.link = l
         cell.downloadPhoto { image in
-            print("\(indexPath)")
             cell.photoImageView.image = image
+            self.setPhoto(for: indexPath, image: image)
         }
         return cell
     }
@@ -103,41 +106,31 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
         return headerView
     }
     
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Save photo", message: "Do you want to save already selected photo in favourite category?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default){ (_) in
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy_hh:mm:ss"
+            let string = dateFormatter.string(from: self.lastDownloadedDate)
+            self.databaseHandler.connect()
+            self.databaseHandler.insert(url: self.link(for: indexPath), name: "Mars_Photo_\(string)_\(MarsPhotosCollectionViewController.i)", image: self.photo(for: indexPath))
+           MarsPhotosCollectionViewController.i = MarsPhotosCollectionViewController.i + 1
+        })
+        alert.addAction(UIAlertAction(title: "No", style: .destructive))
+        present(alert, animated: true)
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 extension MarsPhotosCollectionViewController {
     func link(for indexPath: IndexPath) -> String {
         return marsPhoto[indexPath.section].links[indexPath.row]
+    }
+    
+    func setPhoto(for indexPath: IndexPath, image: UIImage) {
+        marsPhoto[indexPath.section].photos[indexPath.row] = image
+    }
+    
+    func photo(for indexPath: IndexPath) -> UIImage {
+        return marsPhoto[indexPath.section].photos[indexPath.row]
     }
 }

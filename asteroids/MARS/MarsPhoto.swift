@@ -11,6 +11,7 @@ class MarsPhoto {
     var date: Date
     var marsPhotoRoot: MarsPhotosRoot
     var links: [String] = []
+    var photos: [UIImage] = []
     private var imageDownloadService: ImageDownloadService!
     
     init(date: Date, marsPhotoRoot: MarsPhotosRoot) {
@@ -20,10 +21,9 @@ class MarsPhoto {
     }
 
     func prepareToDownloadPhoto() {
-        print("HRR \(date) \(marsPhotoRoot.photos.count)")
         for m in marsPhotoRoot.photos {
-            print("M")
             self.links.append(m.imgSrc)
+            self.photos.append(UIImage(named: "tmp")!)
         }
     }
 }
