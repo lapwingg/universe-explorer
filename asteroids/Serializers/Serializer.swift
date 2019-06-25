@@ -1,8 +1,5 @@
 //
-//  Serializer.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/5/19.
+//  Created by Czajka, Kamil
 //
 
 import Foundation

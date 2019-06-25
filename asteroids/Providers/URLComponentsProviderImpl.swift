@@ -1,8 +1,5 @@
 //
-//  URLComponentsProvider.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/4/19.
+//  Created by Czajka, Kamil
 //
 
 import Foundation

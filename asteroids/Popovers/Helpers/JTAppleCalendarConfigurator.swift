@@ -1,8 +1,5 @@
 //
-//  JTAppleCalendarViewDataSource.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/11/19.
+//  Created by Czajka, Kamil
 //
 
 import JTAppleCalendar

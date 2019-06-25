@@ -1,8 +1,5 @@
 //
-//  ModelValidatorImpl.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/8/19.
+//  Created by Czajka, Kamil
 //
 
 import Foundation

@@ -1,8 +1,5 @@
 //
-//  asteroidsTests.swift
-//  asteroidsTests
-//
-//  Created by Czajka, Kamil on 6/1/19.
+//  Created by Czajka, Kamil
 //
 
 import XCTest

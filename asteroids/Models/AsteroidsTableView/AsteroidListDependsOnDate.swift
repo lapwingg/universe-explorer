@@ -1,8 +1,5 @@
 //
-//  AsteroidListDependsOnDate.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/21/19.
+//  Created by Czajka, Kamil
 //
 
 import Foundation

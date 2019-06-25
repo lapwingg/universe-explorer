@@ -1,8 +1,5 @@
 //
-//  DateHeader.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/9/19.
+//  Created by Czajka, Kamil
 //
 
 import UIKit

@@ -81,6 +81,22 @@
 		05A1774D22B948A400D2A0D6 /* DatabaseHandlerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */; };
 		05A55E7222B5524700224354 /* MarsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7122B5524700224354 /* MarsPhoto.swift */; };
 		05A55E7422B5834B00224354 /* MarsPhotoCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */; };
+		05B2A7CD22C2C0BE00AADC2B /* JSONSerializerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7CC22C2C0BE00AADC2B /* JSONSerializerTest.swift */; };
+		05B2A7D022C2C0E000AADC2B /* URLComponentsValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7CF22C2C0E000AADC2B /* URLComponentsValidatorImplTest.swift */; };
+		05B2A7D222C2C13100AADC2B /* URLValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7D122C2C13100AADC2B /* URLValidatorImplTest.swift */; };
+		05B2A7D422C2C14B00AADC2B /* URLSessionValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7D322C2C14B00AADC2B /* URLSessionValidatorImplTest.swift */; };
+		05B2A7D622C2C17500AADC2B /* DateParserValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7D522C2C17500AADC2B /* DateParserValidatorImplTest.swift */; };
+		05B2A7D822C2C19300AADC2B /* DateValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7D722C2C19300AADC2B /* DateValidatorImplTest.swift */; };
+		05B2A7DA22C2C1B100AADC2B /* EntityValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7D922C2C1B100AADC2B /* EntityValidatorImplTest.swift */; };
+		05B2A7DC22C2C1D100AADC2B /* UIViewControllerValidatorImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7DB22C2C1D100AADC2B /* UIViewControllerValidatorImplTest.swift */; };
+		05B2A7DF22C2C21C00AADC2B /* URLComponentsProviderImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7DE22C2C21C00AADC2B /* URLComponentsProviderImplTest.swift */; };
+		05B2A7E122C2C23C00AADC2B /* URLQueryItemProviderImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7E022C2C23C00AADC2B /* URLQueryItemProviderImplTest.swift */; };
+		05B2A7E522C2C2B600AADC2B /* DateParserImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7E422C2C2B600AADC2B /* DateParserImplTest.swift */; };
+		05B2A7E822C2C37600AADC2B /* URLFactoryImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7E722C2C37600AADC2B /* URLFactoryImplTest.swift */; };
+		05B2A7EA22C2C38B00AADC2B /* DateFactoryImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7E922C2C38B00AADC2B /* DateFactoryImplTest.swift */; };
+		05B2A7EC22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7EB22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift */; };
+		05B2A7EF22C2C3DD00AADC2B /* NASADownloadServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7EE22C2C3DD00AADC2B /* NASADownloadServiceTest.swift */; };
+		05B2A7F122C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7F022C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift */; };
 		05D614DA22BD00E4005A9C14 /* AsteroidListDependsOnDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */; };
 		05D614E322BD3157005A9C14 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614E222BD3157005A9C14 /* UIImageExt.swift */; };
 		05D614E922BF85D7005A9C14 /* FavouriteCellSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614E822BF85D7005A9C14 /* FavouriteCellSelectionDelegate.swift */; };
@@ -180,6 +196,22 @@
 		05A55E7122B5524700224354 /* MarsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhoto.swift; sourceTree = "<group>"; };
 		05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoCollectionHeader.swift; sourceTree = "<group>"; };
 		05AFD3F422B94D0200479E78 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05B2A7CC22C2C0BE00AADC2B /* JSONSerializerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializerTest.swift; sourceTree = "<group>"; };
+		05B2A7CF22C2C0E000AADC2B /* URLComponentsValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7D122C2C13100AADC2B /* URLValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7D322C2C14B00AADC2B /* URLSessionValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7D522C2C17500AADC2B /* DateParserValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParserValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7D722C2C19300AADC2B /* DateValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7D922C2C1B100AADC2B /* EntityValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7DB22C2C1D100AADC2B /* UIViewControllerValidatorImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerValidatorImplTest.swift; sourceTree = "<group>"; };
+		05B2A7DE22C2C21C00AADC2B /* URLComponentsProviderImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsProviderImplTest.swift; sourceTree = "<group>"; };
+		05B2A7E022C2C23C00AADC2B /* URLQueryItemProviderImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryItemProviderImplTest.swift; sourceTree = "<group>"; };
+		05B2A7E422C2C2B600AADC2B /* DateParserImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParserImplTest.swift; sourceTree = "<group>"; };
+		05B2A7E722C2C37600AADC2B /* URLFactoryImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryImplTest.swift; sourceTree = "<group>"; };
+		05B2A7E922C2C38B00AADC2B /* DateFactoryImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFactoryImplTest.swift; sourceTree = "<group>"; };
+		05B2A7EB22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactoryImplTest.swift; sourceTree = "<group>"; };
+		05B2A7EE22C2C3DD00AADC2B /* NASADownloadServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASADownloadServiceTest.swift; sourceTree = "<group>"; };
+		05B2A7F022C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadServiceImplTest.swift; sourceTree = "<group>"; };
 		05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidListDependsOnDate.swift; sourceTree = "<group>"; };
 		05D614E222BD3157005A9C14 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		05D614E822BF85D7005A9C14 /* FavouriteCellSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCellSelectionDelegate.swift; sourceTree = "<group>"; };
@@ -359,8 +391,6 @@
 				056A3AFD22AF123F00F60225 /* JTAppleCalendarConfigurator.swift */,
 				056A3AFF22AF12C200F60225 /* JTAppleCalendarViewDelegateExt.swift */,
 				056A3AF622AF0BDB00F60225 /* PopoverAdaptation.swift */,
-				056A3AEE22AD1BC800F60225 /* DateCell.swift */,
-				056A3AF022AD3D4800F60225 /* DateHeader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -424,6 +454,73 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		05B2A7CB22C2C09900AADC2B /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				05B2A7CC22C2C0BE00AADC2B /* JSONSerializerTest.swift */,
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
+		05B2A7CE22C2C0CC00AADC2B /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				05B2A7CF22C2C0E000AADC2B /* URLComponentsValidatorImplTest.swift */,
+				05B2A7D722C2C19300AADC2B /* DateValidatorImplTest.swift */,
+				05B2A7D122C2C13100AADC2B /* URLValidatorImplTest.swift */,
+				05B2A7DB22C2C1D100AADC2B /* UIViewControllerValidatorImplTest.swift */,
+				05B2A7D322C2C14B00AADC2B /* URLSessionValidatorImplTest.swift */,
+				05B2A7D922C2C1B100AADC2B /* EntityValidatorImplTest.swift */,
+				05B2A7D522C2C17500AADC2B /* DateParserValidatorImplTest.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		05B2A7DD22C2C20700AADC2B /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				05B2A7DE22C2C21C00AADC2B /* URLComponentsProviderImplTest.swift */,
+				05B2A7E022C2C23C00AADC2B /* URLQueryItemProviderImplTest.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		05B2A7E222C2C28200AADC2B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */,
+				056A3AF022AD3D4800F60225 /* DateHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		05B2A7E322C2C2A800AADC2B /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				05B2A7E422C2C2B600AADC2B /* DateParserImplTest.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		05B2A7E622C2C36600AADC2B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				05B2A7E722C2C37600AADC2B /* URLFactoryImplTest.swift */,
+				05B2A7E922C2C38B00AADC2B /* DateFactoryImplTest.swift */,
+				05B2A7EB22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		05B2A7ED22C2C3C900AADC2B /* DownloadServices */ = {
+			isa = PBXGroup;
+			children = (
+				05B2A7EE22C2C3DD00AADC2B /* NASADownloadServiceTest.swift */,
+				05B2A7F022C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift */,
+			);
+			path = DownloadServices;
+			sourceTree = "<group>";
+		};
 		05D614DF22BD1ADB005A9C14 /* AsteroidsTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,8 +533,8 @@
 		05D614E022BD1AFF005A9C14 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				056A3AEE22AD1BC800F60225 /* DateCell.swift */,
 				0503A39E22B50B80001D3347 /* MarsPhotosCollectionViewCell.swift */,
-				05A55E7322B5834B00224354 /* MarsPhotoCollectionHeader.swift */,
 				053830E822BAE7F40075BB8C /* FavouriteTableViewCell.swift */,
 				05942CDA22B7C8B800EEB089 /* ClosestAsteroidsViewCell.swift */,
 			);
@@ -453,13 +550,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		05D614E522BD3199005A9C14 /* DatabasesServices */ = {
+		05D614E522BD3199005A9C14 /* DatabaseServices */ = {
 			isa = PBXGroup;
 			children = (
 				05A1774C22B948A400D2A0D6 /* DatabaseHandlerImpl.swift */,
 				05A1774A22B9487800D2A0D6 /* DatabaseHandler.swift */,
 			);
-			name = DatabasesServices;
+			name = DatabaseServices;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -506,11 +603,12 @@
 			children = (
 				05D614E022BD1AFF005A9C14 /* Cells */,
 				056A3AFB22AF0D7500F60225 /* Controllers */,
-				05D614E522BD3199005A9C14 /* DatabasesServices */,
+				05D614E522BD3199005A9C14 /* DatabaseServices */,
 				05D614E722BF85BB005A9C14 /* Delegates */,
 				050601E122A6686100EE760C /* DownloadServices */,
 				05D614E422BD317D005A9C14 /* Extensions */,
 				0577A91922A4174200870FED /* Factories */,
+				05B2A7E222C2C28200AADC2B /* Headers */,
 				050601DC22A6641600EE760C /* Models */,
 				056A3AF322AF053300F60225 /* Notifications */,
 				05414B8E22B1024D00307903 /* Pages */,
@@ -529,6 +627,12 @@
 		05D8202F22A29CEC000E0CB7 /* asteroidsTests */ = {
 			isa = PBXGroup;
 			children = (
+				05B2A7ED22C2C3C900AADC2B /* DownloadServices */,
+				05B2A7E622C2C36600AADC2B /* Factories */,
+				05B2A7E322C2C2A800AADC2B /* Parsers */,
+				05B2A7DD22C2C20700AADC2B /* Providers */,
+				05B2A7CE22C2C0CC00AADC2B /* Validators */,
+				05B2A7CB22C2C09900AADC2B /* Serializers */,
 				05D8203022A29CEC000E0CB7 /* asteroidsTests.swift */,
 				05D8203222A29CEC000E0CB7 /* Info.plist */,
 			);
@@ -809,7 +913,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B2A7EA22C2C38B00AADC2B /* DateFactoryImplTest.swift in Sources */,
+				05B2A7E122C2C23C00AADC2B /* URLQueryItemProviderImplTest.swift in Sources */,
+				05B2A7F122C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift in Sources */,
 				05D8203122A29CEC000E0CB7 /* asteroidsTests.swift in Sources */,
+				05B2A7CD22C2C0BE00AADC2B /* JSONSerializerTest.swift in Sources */,
+				05B2A7EF22C2C3DD00AADC2B /* NASADownloadServiceTest.swift in Sources */,
+				05B2A7D822C2C19300AADC2B /* DateValidatorImplTest.swift in Sources */,
+				05B2A7E822C2C37600AADC2B /* URLFactoryImplTest.swift in Sources */,
+				05B2A7DC22C2C1D100AADC2B /* UIViewControllerValidatorImplTest.swift in Sources */,
+				05B2A7D222C2C13100AADC2B /* URLValidatorImplTest.swift in Sources */,
+				05B2A7D622C2C17500AADC2B /* DateParserValidatorImplTest.swift in Sources */,
+				05B2A7D422C2C14B00AADC2B /* URLSessionValidatorImplTest.swift in Sources */,
+				05B2A7EC22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift in Sources */,
+				05B2A7D022C2C0E000AADC2B /* URLComponentsValidatorImplTest.swift in Sources */,
+				05B2A7DF22C2C21C00AADC2B /* URLComponentsProviderImplTest.swift in Sources */,
+				05B2A7E522C2C2B600AADC2B /* DateParserImplTest.swift in Sources */,
+				05B2A7DA22C2C1B100AADC2B /* EntityValidatorImplTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

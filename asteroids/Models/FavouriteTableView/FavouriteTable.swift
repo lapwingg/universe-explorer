@@ -1,8 +1,5 @@
 //
-//  DatabaseModel.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/20/19.
+//  Created by Czajka, Kamil
 //
 
 import UIKit

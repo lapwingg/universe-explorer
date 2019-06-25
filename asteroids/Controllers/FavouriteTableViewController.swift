@@ -1,8 +1,5 @@
 //
-//  FavouriteTableViewController.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/19/19.
+//  Created by Czajka, Kamil
 //
 
 import UIKit

@@ -1,8 +1,5 @@
 //
-//  ClosestAsteroidsViewCell.swift
-//  asteroids
-//
-//  Created by Czajka, Kamil on 6/17/19.
+//  Created by Czajka, Kamil
 //
 
 import UIKit
