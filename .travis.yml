@@ -1,5 +1,8 @@
 os: osx
 language: swift
 osx_image: xcode10.1
+before_script:
+  - pod deintegrate
+  - pod install
 script: xcodebuild -workspace asteroids.xcworkspace -scheme asteroidsTests -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.1,name=iPhone X' test -configuration Debug ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES 
 after_script: bash  <(curl -s https://codecov.io/bash) -J '^asteroids$'
