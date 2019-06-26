@@ -66,7 +66,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
             let string = self.dateParser.parseToString(date: self.lastDownloadedDate, format: "dd-MM-yyyy_hh:mm:ss")
             self.databaseHandler.connect()
             self.databaseHandler.insert(url: self.getLink(for: indexPath), name: "Mars_Photo_\(string)_\(MarsPhotosCollectionViewController.i)", image: self.getPhoto(for: indexPath))
-            MarsPhotosCollectionViewController.i = MarsPhotosCollectionViewController.i + 1
+            MarsPhotosCollectionViewController.i += 1
         })
         alert.addAction(UIAlertAction(title: "No", style: .destructive))
         present(alert, animated: true)

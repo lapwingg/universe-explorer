@@ -118,7 +118,7 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     }
     
     fileprivate func getCurrentDate() -> Date {
-        return Date()
+        return Date().addingTimeInterval(-1 * 60 * 60 * 8)
     }
     
     fileprivate func fillFavouriteButtonText(url: String) {

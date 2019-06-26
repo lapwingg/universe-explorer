@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/lapwingg/universe-explorer/branch/master/graph/badge.svg)](https://codecov.io/gh/lapwingg/universe-explorer)
 [![codebeat badge](https://codebeat.co/badges/9831c129-6f38-4956-bf09-0c6c00179524)](https://codebeat.co/projects/github-com-lapwingg-universe-explorer-master)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org/)
+![iOS 10 GM seed](https://img.shields.io/badge/iOS->=10%20-green.svg)
 
 When you are looking into sky, do you feel that you want to discover places outside the your eyesight range? Now it is possible using your device!
 
