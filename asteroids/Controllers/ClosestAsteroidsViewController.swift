@@ -76,13 +76,18 @@ internal class ClosestAsteroidsViewController: UITableViewController {
     }
     
     internal func runDownload() {
-        _ = downloader.runDownload(date: getTodayDate(), queryType: .closestAsteroids) { [unowned self] data in
-            self.serializer.decode(ofType: ClosestAsteroidsRoot.self, data: data) { closestAsteroids in
-                self.fetchData(from: closestAsteroids)
-                self.sortedByDate(asteroids: self.asteroidsList)
-                self.tableView.reloadData()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                    self.activityIndicator.stopAnimating()
+        if Reachability.isConnectedToNetwork() == false {
+            let alert = UIAlertController(title: "No internet Connection", message: "Check internet connection and run application again", preferredStyle: .alert)
+            present(alert, animated: true)
+        } else {
+            _ = downloader.runDownload(date: getTodayDate(), queryType: .closestAsteroids) { [unowned self] data in
+                self.serializer.decode(ofType: ClosestAsteroidsRoot.self, data: data) { closestAsteroids in
+                    self.fetchData(from: closestAsteroids)
+                    self.sortedByDate(asteroids: self.asteroidsList)
+                    self.tableView.reloadData()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                        self.activityIndicator.stopAnimating()
+                    }
                 }
             }
         }

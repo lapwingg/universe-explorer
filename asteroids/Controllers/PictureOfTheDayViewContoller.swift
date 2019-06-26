@@ -57,14 +57,19 @@ internal class PictureOfTheDayViewController: UIPageViewController {
     }
     
     internal func downloadJSONfromServer(date: Date) {
-        runActivityIndicator(associatedPageViews.first!)
-        _ = downloader.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
-            self.serializer.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
-                self.databaseHandler.connect()
-                self.lastDownloadedPictureOfTheDay = pictureOfTheDay
-                self.fillFavouriteButtonText(url: pictureOfTheDay.url)
-                self.sendPicture = [self.PARAMETER_NAME: pictureOfTheDay]
-                self.sendData()
+        if Reachability.isConnectedToNetwork() == false {
+            let alert = UIAlertController(title: "No internet Connection", message: "Check internet connection and run application again", preferredStyle: .alert)
+            present(alert, animated: true)
+        } else {
+            runActivityIndicator(associatedPageViews.first!)
+            _ = downloader.runDownload(date: date, queryType: .pictureOfTheDay) { [unowned self] data in
+                self.serializer.decode(ofType: PictureOfTheDay.self, data: data) { [unowned self] pictureOfTheDay in
+                    self.databaseHandler.connect()
+                    self.lastDownloadedPictureOfTheDay = pictureOfTheDay
+                    self.fillFavouriteButtonText(url: pictureOfTheDay.url)
+                    self.sendPicture = [self.PARAMETER_NAME: pictureOfTheDay]
+                    self.sendData()
+                }
             }
         }
     }

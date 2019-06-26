@@ -97,6 +97,7 @@
 		05B2A7EC22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7EB22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift */; };
 		05B2A7EF22C2C3DD00AADC2B /* NASADownloadServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7EE22C2C3DD00AADC2B /* NASADownloadServiceTest.swift */; };
 		05B2A7F122C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2A7F022C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift */; };
+		05CAE2C622C3A4C100A6CB03 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CAE2C522C3A4C100A6CB03 /* Reachability.swift */; };
 		05D614DA22BD00E4005A9C14 /* AsteroidListDependsOnDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */; };
 		05D614E322BD3157005A9C14 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614E222BD3157005A9C14 /* UIImageExt.swift */; };
 		05D614E922BF85D7005A9C14 /* FavouriteCellSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D614E822BF85D7005A9C14 /* FavouriteCellSelectionDelegate.swift */; };
@@ -211,6 +212,7 @@
 		05B2A7EB22C2C3A800AADC2B /* UIViewControllerFactoryImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFactoryImplTest.swift; sourceTree = "<group>"; };
 		05B2A7EE22C2C3DD00AADC2B /* NASADownloadServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASADownloadServiceTest.swift; sourceTree = "<group>"; };
 		05B2A7F022C2C40E00AADC2B /* ImageDownloadServiceImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadServiceImplTest.swift; sourceTree = "<group>"; };
+		05CAE2C522C3A4C100A6CB03 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		05D614D922BD00E3005A9C14 /* AsteroidListDependsOnDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidListDependsOnDate.swift; sourceTree = "<group>"; };
 		05D614E222BD3157005A9C14 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		05D614E822BF85D7005A9C14 /* FavouriteCellSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCellSelectionDelegate.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				05181A3C22ABCB2B009DD6BF /* EntityValidatorImpl.swift */,
 				05414B8922B0FC3A00307903 /* UIViewControllerValidator.swift */,
 				05414B8B22B0FD1700307903 /* UIViewControllerValidatorImpl.swift */,
+				05CAE2C522C3A4C100A6CB03 /* Reachability.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				05181A1A22AA8030009DD6BF /* URLQueryItemProviderImpl.swift in Sources */,
 				051819FA22A93064009DD6BF /* PhotoCamera.swift in Sources */,
 				05181A3722ABC7A5009DD6BF /* DateFactory.swift in Sources */,
+				05CAE2C622C3A4C100A6CB03 /* Reachability.swift in Sources */,
 				05181A1622A953C8009DD6BF /* NearEarthObjectLinks.swift in Sources */,
 				05A1774D22B948A400D2A0D6 /* DatabaseHandlerImpl.swift in Sources */,
 				05181A3122ABC151009DD6BF /* URLFactory.swift in Sources */,

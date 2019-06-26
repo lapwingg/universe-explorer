@@ -73,25 +73,30 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
     }
     
     private func runDownload() {
-        lastDownloadedDate = Date().addingTimeInterval(YESTERDAY)
-        runActivityIndicator(collectionView)
-        DispatchQueue.global().async { [unowned self] in
-            let group = DispatchGroup()
-            for _ in 1...7 {
-                group.enter()
-                _ = self.downloader.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
-                    self.serializer.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
-                        self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate, marsPhotoRoot: marsPhotosRoot))
-                        self.marsPhoto.last?.prepareToDownloadPhoto()
-                        self.lastDownloadedDate = Calendar.current.date(byAdding: .day, value: -1, to: self.lastDownloadedDate)
-                        group.leave()
+        if Reachability.isConnectedToNetwork() == false {
+            let alert = UIAlertController(title: "No internet Connection", message: "Check internet connection and run application again", preferredStyle: .alert)
+            present(alert, animated: true)
+        } else {
+            lastDownloadedDate = Date().addingTimeInterval(YESTERDAY)
+            runActivityIndicator(collectionView)
+            DispatchQueue.global().async { [unowned self] in
+                let group = DispatchGroup()
+                for _ in 1...7 {
+                    group.enter()
+                    _ = self.downloader.runDownload(date: self.lastDownloadedDate, queryType: .marsRoverPhotos) { [unowned self] data in
+                        self.serializer.decode(ofType: MarsPhotosRoot.self, data: data) { [unowned self] marsPhotosRoot in
+                            self.marsPhoto.append(MarsPhoto(date: self.lastDownloadedDate, marsPhotoRoot: marsPhotosRoot))
+                            self.marsPhoto.last?.prepareToDownloadPhoto()
+                            self.lastDownloadedDate = Calendar.current.date(byAdding: .day, value: -1, to: self.lastDownloadedDate)
+                            group.leave()
+                        }
                     }
+                    group.wait()
                 }
-                group.wait()
-            }
-            group.notify(queue: .main) {
-                self.activityIndicator.stopAnimating()
-                self.collectionView.reloadData()
+                group.notify(queue: .main) {
+                    self.activityIndicator.stopAnimating()
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
