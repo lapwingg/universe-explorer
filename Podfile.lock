@@ -9,7 +9,7 @@ DEPENDENCIES:
   - SQLite.swift (= 0.11.5)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - JTAppleCalendar
     - SQLite.swift
 
@@ -19,4 +19,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cefc9243d3dff6c5086d955a7d0f463de36efd00
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.8.4

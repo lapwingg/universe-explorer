@@ -16,7 +16,7 @@ internal class MarsPhotosCollectionViewController: UICollectionViewController {
     private var activityIndicator: UIActivityIndicatorView!
     private let REUSE_IDENTIFIER = "marsPhoto"
     private let HEADER_REUSE_IDENTIFIER = "marsPhotosHeader"
-    private let YESTERDAY: Double = -1 * 60 * 60 * 24
+    private let YESTERDAY: Double = -1 * 60 * 60 * 24 * 190
     
     override func viewDidLoad() {
         super.viewDidLoad()
